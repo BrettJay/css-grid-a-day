@@ -4,8 +4,6 @@ import Logo from "../images/logo.svg"
 
 import FooterStyles from "./footer.module.scss"
 
-import { Link } from "gatsby"
-
 function Footer(props) {
   return (
     <div className={FooterStyles.container}>
