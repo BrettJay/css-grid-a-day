@@ -1,0 +1,72 @@
+import Calendar from "../components/index/calendar"
+import Day from "../components/index/day"
+import LayoutStyles from "../components/index/layout.module.scss"
+import Metatags from "../components/metatags"
+
+import Logo from "../images/logo.svg"
+
+<Metatags
+  title="CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail=""
+  url="https://cssgrid30.brett.cool"
+  pathname=""
+/>
+
+<div className={LayoutStyles.container}>
+<div className={LayoutStyles.intro}>
+
+<img className={LayoutStyles.logo} src={Logo} alt="CSS Grid a Day" title="CSS Grid a Day"/>
+
+CSS Grid a day
+==============
+
+An example of using CSS grid every day, running from May&nbsp;1–31st,&nbsp;2019.
+
+An <span class={`${LayoutStyles.badge} ${LayoutStyles.active}`}>active</span> experiment by [@brett_jay][b]. Have an idea? [Tweet me a suggestion][s]!
+
+All source code is [available on Github][g].
+
+[b]: https://twitter.com/brett_jay
+[s]: https://twitter.com/intent/tweet?text=Hey%20@brett_jay,%20try
+[g]: https://github.com/brettjay/css-grid-a-day
+
+</div>
+<Calendar>
+  <Day date="29"  complete={false} placeholder={true}/>
+  <Day date="30"  complete={false} placeholder={true}/>
+  <Day date="1"   complete={true}  label="Hello World" color="#C11"/>
+  <Day date="2"   complete={false}/>
+  <Day date="3"   complete={false}/>
+  <Day date="4"   complete={false}/>
+  <Day date="5"   complete={false}/>
+  <Day date="6"   complete={false}/>
+  <Day date="7"   complete={false}/>
+  <Day date="8"   complete={false}/>
+  <Day date="9"   complete={false}/>
+  <Day date="10"  complete={false}/>
+  <Day date="11"  complete={false}/>
+  <Day date="12"  complete={false}/>
+  <Day date="13"  complete={false}/>
+  <Day date="14"  complete={false}/>
+  <Day date="15"  complete={false}/>
+  <Day date="16"  complete={false}/>
+  <Day date="17"  complete={false}/>
+  <Day date="18"  complete={false}/>
+  <Day date="19"  complete={false}/>
+  <Day date="20"  complete={false}/>
+  <Day date="21"  complete={false}/>
+  <Day date="22"  complete={false}/>
+  <Day date="23"  complete={false}/>
+  <Day date="24"  complete={false}/>
+  <Day date="25"  complete={false}/>
+  <Day date="26"  complete={false}/>
+  <Day date="27"  complete={false}/>
+  <Day date="28"  complete={false}/>
+  <Day date="29"  complete={false}/>
+  <Day date="30"  complete={false}/>
+  <Day date="31"  complete={false}/>
+  <Day date="1"   complete={false} placeholder={true}/>
+  <Day date="2"   complete={false} placeholder={true}/>
+</Calendar>
+</div>

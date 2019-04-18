@@ -1,0 +1,38 @@
+{
+  "name": "css-grid-a-day",
+  "private": true,
+  "description": "31 day CSS grid challenge",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve"
+  },
+  "dependencies": {
+    "@mdx-js/mdx": "^1.0.10",
+    "@mdx-js/react": "^1.0.6",
+    "@mdx-js/tag": "^0.20.3",
+    "gatsby": "^2.3.16",
+    "gatsby-mdx": "^0.6.2",
+    "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-sass": "^2.0.11",
+    "node-sass": "^4.11.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.0",
+    "typeface-inter": "^3.5.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.17.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brettjay/cssgridaday"
+  },
+  "bugs": {
+    "url": "https://github.com/brettjay/cssgridaday/issues"
+  }
+}

@@ -1,0 +1,43 @@
+@import "../styles/settings.colour";
+
+.container {
+  background: $dark__background;
+  color: $dark__primary;
+  padding: 100px 0;
+  h3 {
+    font-size: 21px;
+    line-height: 1.3;
+    margin: 0;
+  }
+  p {
+    line-height: 1.5;
+    color: $dark__secondary;
+    margin: 0;
+  }
+}
+
+.grid {
+  display: grid;
+  max-width: 1000px;
+  margin: 0 auto;
+  grid-template-columns: auto 2fr 3fr 2fr;
+  grid-gap: 40px;
+}
+
+.logo {
+  grid-column: 1 / 2;
+  align-self: center;
+  img {
+    display: block;
+  }
+}
+
+.title {
+  grid-column: 2 / 3;
+  align-self: center;
+}
+
+.caption {
+  grid-column: 3 / 4;
+  align-self: center;
+}

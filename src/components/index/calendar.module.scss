@@ -1,0 +1,56 @@
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 50px repeat(5, 1fr);
+  height: 100vh;
+}
+
+.h {
+  text-align: right;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  font-size: 13px;
+  font-weight: 500;
+  align-self: end;
+  padding: 0 10px 10px 10px
+}
+
+.day {
+  text-align: right;
+  padding: 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  color: rgba(0,0,0,0.4);
+  background: #fcfcfc;
+}
+
+.label {
+  text-align: left;
+  font-size: 13px;
+  padding: 3px;
+  font-weight: 500;
+  border-radius: 3px;
+  color: #fff;
+  margin-top: 5px;
+  transition: transform 0.15s ease;
+}
+
+a.day {
+  color: #000;
+  text-decoration: none;
+  background: #fff;
+  transition: all 0.15s ease;
+  &:hover {
+    background: #D9E9FF;
+    .label {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.day:not(:nth-child(7n)) {
+  border-right: 1px solid rgba(0,0,0,0.1);
+}
+
+.placeholder {
+  background: rgb(247, 247, 247);
+  color: rgba(0,0,0,0.1);
+}
