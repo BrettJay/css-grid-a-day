@@ -1,4 +1,5 @@
 @import "../../styles/settings.colour.scss";
+@import "../../styles/tools.respond_to.sass";
 
 @keyframes pulse {
   0%   { opacity: 0.25; }
@@ -7,8 +8,6 @@
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  height: 100vh;
 }
 
 .badge {
@@ -35,7 +34,6 @@
 }
 
 .intro {
-  grid-column: 1 / 2;
   padding: 40px;
   background: $dark__background;
   color: $dark__primary;
@@ -46,8 +44,6 @@
     font-weight: 800;
   }
   p {
-    line-height: 1.7;
-    font-size: 17px;
     color: $dark__secondary;
   }
   a {
@@ -59,5 +55,15 @@
     &:hover {
       border-bottom: 1px solid $dark__linkUnderline--hover;
     }
+  }
+}
+
+@include respond-to(ipad-up) {
+  .container {
+    grid-template-columns: 1fr 3fr;
+    height: 100vh;
+  }
+  .intro {
+    grid-column: 1 / 2;
   }
 }

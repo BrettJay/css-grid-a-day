@@ -1,8 +1,15 @@
+@import "../../styles/tools.respond_to.sass";
+
 .calendar {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: 50px repeat(5, 1fr);
-  height: 100vh;
+  @include respond-to(small-down) {
+    grid-template-rows: 50px repeat(5, 100px);
+  }
+  @include respond-to(ipad-up) {
+    grid-template-rows: 50px repeat(5, 1fr);
+    min-height: 100vh;
+  }
 }
 
 .h {

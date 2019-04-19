@@ -1,0 +1,27 @@
+$responsive_min: 375px
+$responsive_max: 1200px
+
+$size_scale_1_min: 5px
+$size_scale_2_min: 10px
+$size_scale_3_min: 15px
+$size_scale_4_min: 20px
+
+$size_scale_1_max: 10px
+$size_scale_2_max: 20px
+$size_scale_3_max: 40px
+$size_scale_4_max: 80px
+
+@function strip-unit($value)
+  @return $value / ($value * 0 + 1)
+
+=fluid-scale($properties, $min-vw, $max-vw, $min-value, $max-value)
+  @each $property in $properties
+    #{$property}: $min-value
+
+  @media screen and (min-width: $min-vw)
+    @each $property in $properties
+      #{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+
+  @media screen and (min-width: $max-vw)
+    @each $property in $properties
+      #{$property}: $max-value
