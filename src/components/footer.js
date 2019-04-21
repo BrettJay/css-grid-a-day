@@ -1,5 +1,5 @@
 import React from "react"
-
+import { Link } from "gatsby"
 import Logo from "../images/logo.svg"
 
 import FooterStyles from "./footer.module.scss"
@@ -9,7 +9,9 @@ function Footer(props) {
     <div className={FooterStyles.container}>
       <div className={FooterStyles.grid}>
         <div className={FooterStyles.logo}>
-          <img src={Logo} alt="CSS Grid a Day" title="CSS Grid a Day"/>
+          <Link to="/">
+            <img src={Logo} alt="CSS Grid a Day" title="CSS Grid a Day"/>
+          </Link>
         </div>
         <div className={FooterStyles.title}>
           <h3>This is the ‘CSS Grid a day’ entry for May {props.date}</h3>
