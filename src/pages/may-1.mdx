@@ -3,7 +3,102 @@ Title: May 1
 ---
 
 import Footer from "../components/footer"
+import Metatags from "../components/metatags"
 
-Hello world
+import BookStyles from "../components/may-1/book.module.scss"
+import CanvasStyles from "../components/may-1/canvas.module.scss"
 
-<Footer date="1" />
+<Metatags
+  title="May 1 | CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail=""
+  url="https://cssgrid30.brett.cool"
+  pathname="/may-1"
+/>
+
+<div className={CanvasStyles.main}>
+  <div className={BookStyles.container}>
+    <div className={BookStyles.aspectratio}>
+      <div className={BookStyles.cover}>
+        <div className={BookStyles.grid}>
+          <h2 className={BookStyles.author}>
+            <svg viewBox="0 0 156 44">
+              <text x="0" y="9">
+                Josef Müller-Brockmann
+              </text>
+            </svg>
+          </h2>
+          <h1 className={BookStyles.engTitle}>
+            <svg viewBox="0 0 326 44">
+              <text x="0" y="34">
+                Grid systems
+              </text>
+            </svg>
+          </h1>
+          <h3 className={BookStyles.engSubtitle}>
+            <svg viewBox="0 0 150 44">
+              <text x="0" y="9">
+                in graphic design
+              </text>
+            </svg>
+          </h3>
+          <p className={BookStyles.engDescription}>
+            <svg viewBox="0 0 156 44">
+              <text x="0" y="9">
+                A visual communication manual
+              </text>
+              <text x="0" y="20">
+                for graphic designers,
+              </text>
+              <text x="0" y="31">
+                typographers, and
+              </text>
+              <text x="0" y="42">
+                three dimensional designers
+              </text>
+            </svg>
+          </p>
+          <h1 className={BookStyles.gerTitle}>
+            <svg viewBox="0 0 326 44">
+              <text x="0" y="34">
+                Raster systeme
+              </text>
+            </svg>
+          </h1>
+          <h3 className={BookStyles.gerSubtitle}>
+            <svg viewBox="0 0 150 44">
+              <text x="0" y="9">
+                für die
+              </text>
+              <text x="0" y="20">
+                visuelle Gestaltung
+              </text>
+            </svg>
+          </h3>
+          <p className={BookStyles.gerDescription}>
+            <svg viewBox="0 0 156 44">
+              <text x="0" y="9">
+                Ein Handbuch für
+              </text>
+              <text x="0" y="20">
+                Grafikher, Typographen und
+              </text>
+              <text x="0" y="31">
+                Ausstellungsgestalter
+              </text>
+            </svg>
+          </p>
+          <p className={BookStyles.publisher}>
+            <svg viewBox="0 0 156 13">
+              <text x="0" y="9">
+                Niggli
+              </text>
+            </svg>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<Footer date={1} />
