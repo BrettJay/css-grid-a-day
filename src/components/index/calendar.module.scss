@@ -3,10 +3,10 @@
 .calendar {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  @include respond-to(small-down) {
-    grid-template-rows: 50px repeat(5, 100px);
+  @include respond-to(0, 1099px) {
+    grid-template-rows: 50px repeat(5, 14.3vw);
   }
-  @include respond-to(ipad-up) {
+  @include respond-to(1100px, 0) {
     grid-template-rows: 50px repeat(5, 1fr);
     min-height: 100vh;
   }
@@ -27,6 +27,7 @@
   border-bottom: 1px solid rgba(0,0,0,0.1);
   color: rgba(0,0,0,0.4);
   background: #fcfcfc;
+  position: relative;
 }
 
 .label {
@@ -38,6 +39,17 @@
   color: #fff;
   margin-top: 5px;
   transition: transform 0.15s ease;
+  @include respond-to(small-down) {
+    width: 6px;
+    height: 6px;
+    overflow: hidden;
+    text-indent: -9999px;
+    border-radius: 3px;
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+  }
 }
 
 a.day {

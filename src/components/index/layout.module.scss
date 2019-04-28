@@ -1,5 +1,6 @@
 @import "../../styles/settings.colour.scss";
 @import "../../styles/tools.respond_to.sass";
+@import "../../styles/tools.fluid_scale.sass";
 
 @keyframes pulse {
   0%   { opacity: 0.25; }
@@ -34,7 +35,7 @@
 }
 
 .intro {
-  padding: 40px;
+  @include pa3();
   background: $dark__background;
   color: $dark__primary;
   .logo {
@@ -58,7 +59,7 @@
   }
 }
 
-@include respond-to(ipad-up) {
+@include respond-to(1100px, 0) {
   .container {
     grid-template-columns: 1fr 3fr;
     height: 100vh;
