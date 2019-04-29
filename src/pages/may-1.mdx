@@ -1,7 +1,3 @@
----
-Title: May 1
----
-
 import Footer from "../components/footer"
 import Metatags from "../components/metatags"
 import Opengraph from "../images/opengraph/may-1.png"
@@ -102,4 +98,15 @@ import CanvasStyles from "../components/may-1/canvas.module.scss"
   </div>
 </div>
 
-<Footer date={1} />
+<Footer date={1}>
+
+Josef Müller-Brockmann’s classic, “[Grid systems in graphic design][gs]” provides essential reading for the designing and rationalisation of grid systems used in print design.
+
+Recreating the cover with CSS Grid seemed like a good starting point for this 30 day project.
+
+I had to use _far too many magic numbers_ and hacks than I’d have liked to. Responsive text-fitting was accomplished with &lt;svg&gt; tags, with width set to 100% (hat tip to [CSSTricks][ref]).
+
+[gs]: https://www.niggli.ch/en/grid-systems-in-graphic-design.html "Grid systems in graphic design — Niggli"
+[ref]: https://css-tricks.com/fitting-text-to-a-container/#article-header-id-7 "Fitting Text to a Container — Chris Coyier"
+
+</Footer>
