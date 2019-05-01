@@ -1,0 +1,54 @@
+import Footer from "../components/footer"
+
+import HeroStyles from "../components/blank-canvas-anxiety/hero.module.scss"
+import Section from "../components/blank-canvas-anxiety/section.module.scss"
+import Selection from "../components/blank-canvas-anxiety/selection.module.scss"
+import SelectionTags from "../components/blank-canvas-anxiety/handles"
+
+import Hero from "../images/blank-canvas-anxiety/rectangle.png"
+
+<Metatags
+  title="May 2 | CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail=""
+  url="https://cssgrid31.brett.cool"
+  pathname="/may-1"
+/>
+
+<div className={HeroStyles.canvas}>
+  <div className={HeroStyles.lock} />
+  <div className={HeroStyles.stroke_v} />
+  <div className={HeroStyles.stroke_v2} />
+  <div className={HeroStyles.stroke_h} />
+  <h1 className={Selection.box}>
+    Blank
+    <br />
+    Canvas
+    <br />
+    Anxiety
+    <SelectionTags />
+  </h1>
+  <div className={HeroStyles.rectangles}>
+    <img src={Hero} alt="Dragging out a rectangle in Sketch" width="585" />
+  </div>
+  <div className={`${HeroStyles.subtitle} ${Selection.box}`}>
+    <p>A blank document illuminates my screen.</p>
+    <p>
+      Frowning, I tap the <kbd>A</kbd> key, and draw an artboard.
+    </p>
+    <p>Hmm, what size should it be...?</p>
+    <SelectionTags />
+  </div>
+</div>
+
+<!-- <div className={Section.container}>
+<h2>have you been here before?</h2>
+<p>Lorem ipsum</p>
+
+</div> -->
+
+<Footer date={2} prev={true}>
+
+Ahh, starting a design from scratch.
+
+</Footer>
