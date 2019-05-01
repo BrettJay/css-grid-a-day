@@ -1,0 +1,38 @@
+@import "../../styles/_tools.respond_to.sass";
+
+.container {
+  display: grid;
+  min-height: 100vh;
+  color: #fff;
+}
+
+@include respond-to(small-down) {
+  .container {
+    background-image: radial-gradient(50% 100%, #00B0DD 0%, #004D99 100%);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+@include respond-to(ipad-up) {
+  .container {
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    background-image: radial-gradient(farthest-corner at 37% 0%, #00B0DD 0%, #004D99 100%);
+    grid-template-areas:
+      "t d1"
+      "t d2"
+      "t d3"
+      "t d4"
+      "t d5"
+      "t d6"
+  }
+
+  .today {
+    grid-area: t;
+  }
+
+  .next {
+    grid-area: d1;
+  }
+}
