@@ -7,9 +7,13 @@ class Wearther extends React.Component {
     return (
       <div className={App.container}>
         <div className={App.today}>
-          <div>24°</div>
-          <div>H: 26°</div>
-          <div>L: 19°</div>
+          <div className={App.temperatures}>
+            <div className={App.now}>24°</div>
+            <div className={App.lowhi}>
+              <span className={App.low}>19</span> –{" "}
+              <span className={App.high}>26°</span>
+            </div>
+          </div>
         </div>
 
         <div className={App.next}>Foo</div>

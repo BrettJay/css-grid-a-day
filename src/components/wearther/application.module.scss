@@ -1,4 +1,5 @@
 @import "../../styles/_tools.respond_to.sass";
+@import "../../styles/_tools.fluid_scale.sass";
 
 .container {
   display: grid;
@@ -30,9 +31,18 @@
 
   .today {
     grid-area: t;
+    text-align: center;
   }
 
   .next {
     grid-area: d1;
   }
+}
+
+.now {
+  @include fluid-scale(font-size, $responsive_min, $responsive_max, 48px, 144px);
+}
+
+.lowhi {
+  @include fluid-scale(font-size, $responsive_min, $responsive_max, 19px, 25px);
 }
