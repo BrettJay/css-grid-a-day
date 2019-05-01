@@ -1,0 +1,39 @@
+.row1,
+.row2,
+.row3 {
+  display: grid;
+  grid-template-rows: repeat(1, 6vw);
+  grid-gap: 6px;
+  margin: 6px auto;
+}
+
+.row1 {
+  grid-template-columns: repeat(10, 6vw);
+  max-width: calc(60vw + (6px * 9));
+}
+
+.row2 {
+  grid-template-columns: repeat(9, 6vw);
+  max-width: calc(54vw + (6px * 8));
+}
+
+.row3 {
+  grid-template-columns: repeat(8, 6vw);
+  max-width: calc(48vw + (6px * 7));
+}
+
+.cap {
+  background: #333;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  kbd {
+    font-family: inherit;
+    color: #fff;
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.2vw;
+  }
+}
