@@ -1,4 +1,4 @@
-@import "../../styles/_tools.fluid_scale.sass";
+@import "../../styles/_tools.respond_to.sass";
 
 .container {
   background: #0b1d2d;
@@ -13,8 +13,25 @@
   margin-right: auto;
 }
 
+.form {
+  padding: 40px 0;
+}
+
 .heading {
   background: #092640;
   color: #fff;
-  padding: 40px;
+  font-weight: bold;
+  padding: 10px 0;
+  font-size: 29px;
+}
+
+.content {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+
+  @include respond-to(ipad-up) {
+    padding: 40px;
+  }
 }

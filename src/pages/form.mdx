@@ -14,24 +14,32 @@ import FormStyles from "../components/responsive-form/form.module.scss"
 
 <div className={LayoutStyles.container}>
   <div className={LayoutStyles.page}>
-    <div className={LayoutStyles.heading}>Your account</div>
-    <form className={FormStyles.form}>
-      <label for="name">Your name</label>
-      <input id="name" type="text" placeholder="Bob Smith" />
-      <label for="email">Email</label>
-      <input id="email" type="email" placeholder="hello@example.com" />
-      <p className={FormStyles.hint}>
-        Your email is used to sign in, and notifications will be delivered
-        there.
-      </p>
-      <label>Lorem ipsum</label>
-      <select>
-        <option>Foo</option>
-        <option>Bar</option>
-        <option>Bing</option>
-      </select>
-      <label>Dolor</label>
-      <input type="text" />
-    </form>
+    <div className={LayoutStyles.heading}>
+      <div className={LayoutStyles.content}>Your account</div>
+    </div>
+    <div className={LayoutStyles.form}>
+      <div className={LayoutStyles.content}>
+        <form className={FormStyles.form}>
+          <label for="name">Your name</label>
+          <input id="name" type="text" placeholder="Bob Smith" />
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="hello@example.com" />
+          <p className={FormStyles.hint}>
+            Your email is used to sign in, and notifications will be delivered
+            there.
+          </p>
+          <label>Lorem ipsum</label>
+          <select>
+            <option>Bing</option>
+            <option>Bing</option>
+            <option>Wahoo</option>
+          </select>
+          <div className={FormStyles.submit}>
+            <input type="submit" value="Save Changes"/>
+          </div>
+        </form>
+      </div>
+    </div>
+
   </div>
 </div>
