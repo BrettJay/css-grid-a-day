@@ -1,0 +1,39 @@
+import Board from "../components/boardgame/board.module.scss"
+
+import Space from "../components/boardgame/space"
+
+# Boardgame
+
+<div className={Board.grid}>
+  <div className={Board.branding}>CSS Gridopoly</div>
+  <div className={`${Board.corner_space} ${Board.corner_space_topleft}`}>
+    Free Parking
+  </div>
+  <Space position="top" color="red" price="1kb">
+    spacer gif
+  </Space>
+  <Space position="top" color="red" price="1kb">
+    display: table
+  </Space>
+  <Space position="top" color="red" price="1kb">
+    *zoom: 1;
+  </Space>
+  <Space position="top" color="#444" price="1kb">
+    clearfix
+  </Space>
+  <Space position="top" color="#444" price="1kb">
+    Float
+  </Space>
+  <Space position="top" color="#444" price="1kb">
+    Block
+  </Space>
+  <div className={`${Board.corner_space} ${Board.corner_space_topleft}`}>
+    Fix for IE6
+  </div>
+  <Space position="left" color="red" price="1kb">
+    Block
+  </Space>
+  <Space position="left" color="red" price="1kb">
+    Block
+  </Space>
+</div>
