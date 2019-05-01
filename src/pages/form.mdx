@@ -1,19 +1,37 @@
-# Responsive form with grid
+import Footer from "../components/footer"
+import Metatags from "../components/metatags"
 
-<form>
-  <fieldset>
-    <legend>Personal details</legend>
-    <label>Your name</label>
-    <input type="text" />
-    <label>Email</label>
-    <input type="text" />
-  </fieldset>
+import LayoutStyles from "../components/responsive-form/layout.module.scss"
+import FormStyles from "../components/responsive-form/form.module.scss"
 
-  <fieldset>
-    <legend>Profile settings</legend>
-    <label>Lorem ipsum</label>
-    <input type="text" />
-    <label>Dolor</label>
-    <input type="text" />
-  </fieldset>
-</form>
+<Metatags
+  title="May 1 | CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail=""
+  url="https://cssgrid31.brett.cool"
+  pathname="/"
+/>
+
+<div className={LayoutStyles.container}>
+  <div className={LayoutStyles.page}>
+    <div className={LayoutStyles.heading}>Your account</div>
+    <form className={FormStyles.form}>
+      <label for="name">Your name</label>
+      <input id="name" type="text" placeholder="Bob Smith" />
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="hello@example.com" />
+      <p className={FormStyles.hint}>
+        Your email is used to sign in, and notifications will be delivered
+        there.
+      </p>
+      <label>Lorem ipsum</label>
+      <select>
+        <option>Foo</option>
+        <option>Bar</option>
+        <option>Bing</option>
+      </select>
+      <label>Dolor</label>
+      <input type="text" />
+    </form>
+  </div>
+</div>

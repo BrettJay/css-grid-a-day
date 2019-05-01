@@ -1,0 +1,99 @@
+@import "../../styles/_tools.respond_to.sass";
+
+.form {
+  display: grid;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form label {
+  font-weight: bold;
+  grid-column: 1 / span 1;
+  line-height: 40px;
+
+  &:after {
+    content: ":"
+  }
+}
+
+@include respond-to(376px, 0) {
+
+  .form input,
+  .form select,
+  .hint {
+    grid-column: 2 / span 1;
+  }
+}
+
+@include respond-to(0px, 375px) {
+  .form {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    padding: 15px;
+  }
+
+  .form label {
+    margin-top: 20px;
+    line-height: 20px;
+  }
+}
+
+@include respond-to(376px, 767px) {
+  .form {
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 30px 15px;
+    padding: 15px;
+  }
+}
+
+@include respond-to(ipad-up) {
+  .form {
+    grid-template-columns: 1fr 2fr 1.25fr;
+    grid-gap: 2.5vw 2vw;
+    padding: 40px;
+  }
+
+  .form input,
+  .form select {
+    align-self: start;
+  }
+
+  .hint {
+    grid-column: 3 / span 1;
+  }
+}
+
+.hint {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.form input,
+.form select {
+  background: #FFFFFF;
+  border: 1px solid rgba(92, 92, 92, 0.30);
+  border-radius: 3px;
+  font-size: 16px;
+  padding: 10px;
+  transition: box-shadow 0.2s ease;
+  -webkit-appearance: none;
+}
+
+.form input {
+  box-shadow: inset 0 1px 3px 0 rgba(92, 92, 92, 0.21);
+
+  &:focus {
+    outline: none;
+    box-shadow: inset 0 1px 3px 0 rgba(92, 92, 92, 0.21), 0 0 0 1px #004cff, 0 0 14px 0 hsla(222, 100%, 50%, 0.35);
+  }
+}
+
+.form select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='60' viewBox='0 0 30 60'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Crect width='30' height='60' fill='%23E7F3F8'/%3E%3Cpolyline stroke='%2351717E' stroke-linecap='round' stroke-linejoin='round' points='10.5 24.5 14.5 20.5 18.5 24.5'/%3E%3Cpolyline stroke='%2351717E' stroke-linecap='round' stroke-linejoin='round' points='10.5 39.5 14.5 35.5 18.5 39.5' transform='matrix(1 0 0 -1 0 75)'/%3E%3C/g%3E%3C/svg%3E%0A");
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  box-shadow: 0 1px 3px 0 rgba(92, 92, 92, 0.21);
+}

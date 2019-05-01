@@ -1,0 +1,20 @@
+@import "../../styles/_tools.fluid_scale.sass";
+
+.container {
+  background: #0b1d2d;
+  height: 100vh;
+}
+
+.page {
+  background: #f7f7f7;
+  height: 100vh;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heading {
+  background: #092640;
+  color: #fff;
+  padding: 40px;
+}
