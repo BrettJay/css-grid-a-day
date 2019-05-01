@@ -95,3 +95,9 @@
     box-shadow: 0 1px 3px 0 rgba(92, 92, 92, 0.21), 0 0 0 1px #004cff, 0 0 14px 0 hsla(222, 100%, 50%, 0.35);
   }
 }
+
+input[type="submit"] {
+  box-shadow: 0 1px 3px 0 rgba(92, 92, 92, 0.21);
+  cursor: pointer;
+  font-weight: bold;
+}
