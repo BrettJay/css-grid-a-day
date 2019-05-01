@@ -1,0 +1,38 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 50px 1fr;
+  grid-gap: 1px;
+  grid-template-areas:
+    "monh tueh wedh thuh frih sath sunh"
+    "mon tue wed thu fri sat sun";
+  height: 100vh;
+}
+
+.monh {
+  grid-area: monh;
+}
+
+.tueh {
+  grid-area: tueh;
+}
+
+.wedh {
+  grid-area: wedh;
+}
+
+.thuh {
+  grid-area: thuh;
+}
+
+.frih {
+  grid-area: frih;
+}
+
+.sath {
+  grid-area: sath;
+}
+
+.sunh {
+  grid-area: sunh;
+}
