@@ -5,10 +5,18 @@ import Footer from "../components/footer"
 import Metatags from "../components/metatags"
 import Opengraph from "../images/opengraph/may-3.png"
 
+<Metatags
+  title="May 3 | CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail={Opengraph}
+  url="https://cssgrid31.brett.cool"
+  pathname="/may-3"
+/>
+
 <div className={Board.canvas}>
   <div className={Board.grid}>
     <div className={Board.branding}>
-      <div className={Board.logo}>CSS Gridopoly</div>
+      <div className={Board.logo}>Frontendopoly</div>
     </div>
     <div className={`${Board.corner_space} ${Board.corner_space_topleft}`} />
     <Space position="top" color="red" price="1kb">
