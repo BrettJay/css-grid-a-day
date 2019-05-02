@@ -33,13 +33,15 @@
 
   h1 {
     font-size: 25px;
-    margin: 0 0 0.5em;
+    margin: 0 0 0.66em;
     font-weight: normal;
+    color: #801180;
   }
 
   h2 {
     font-size: 17px;
     font-weight: normal;
+    color: #7b557b;
     margin: 0;
   }
 }
@@ -49,16 +51,17 @@
 }
 
 .hint {
-  padding: 20px 0;
+  padding: 10px 0;
 
   p {
     margin: 0;
     font-size: 14px;
-    color: #808080;
+    color: #7b557b;
   }
 
   a {
     text-decoration: none;
-    color: purple;
+    color: hsla(220, 100%, 38%, 1);
+    border-bottom: 1px solid hsla(220, 100%, 38%, 0.1);
   }
 }
