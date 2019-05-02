@@ -1,5 +1,17 @@
+import Footer from "../components/footer"
+import Metatags from "../components/metatags"
+import Opengraph from "../images/opengraph/may-2.png"
+
 import LayoutStyles from "../components/signup/layout.module.scss"
 import FormStyles from "../components/signup/form.module.scss"
+
+<Metatags
+  title="May 2 | CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail={Opengraph}
+  url="https://cssgrid31.brett.cool"
+  pathname="/may-2"
+/>
 
 <div className={LayoutStyles.canvas}>
   <div className={LayoutStyles.page}>
@@ -7,11 +19,16 @@ import FormStyles from "../components/signup/form.module.scss"
     <div className={LayoutStyles.main}>
       <div className={LayoutStyles.intro}>
         <h1>Get started</h1>
-        <h2>Sign up for Widgets Inc. today!</h2>
+        <h2>
+          Join Milligram to share your coffee brewing prints, and recipes with
+          our community!
+        </h2>
       </div>
       <form className={FormStyles.form}>
         <div className={LayoutStyles.hint}>
-          <p>Already have an account? <a href="#">Sign in</a></p>
+          <p>
+            Already have an account? <a href="#">Sign in</a>
+          </p>
         </div>
         <label for="email">Email</label>
         <input id="email" type="email" placeholder="hello@example.com" />
@@ -20,6 +37,11 @@ import FormStyles from "../components/signup/form.module.scss"
         <button>Sign up</button>
       </form>
     </div>
-
   </div>
 </div>
+
+<Footer date={2} prev={true}>
+
+Ahh, signup forms.
+
+</Footer>
