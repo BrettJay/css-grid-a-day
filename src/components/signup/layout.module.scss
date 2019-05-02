@@ -20,7 +20,7 @@
 
 .sidebar,
 .main {
-  padding: 40px;
+  padding: 60px;
 }
 
 .sidebar {
@@ -30,4 +30,16 @@
 
 .main {
   grid-area: m;
+
+  h1 {
+    font-size: 21px;
+    margin-bottom: 0;
+    font-weight: normal;
+  }
+
+  h2 {
+    font-size: 19px;
+    font-weight: normal;
+    margin: 0;
+  }
 }

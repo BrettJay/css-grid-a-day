@@ -5,14 +5,21 @@ import FormStyles from "../components/signup/form.module.scss"
   <div className={LayoutStyles.page}>
     <div className={LayoutStyles.sidebar} />
     <div className={LayoutStyles.main}>
-      <h1>Get started</h1>
-      <p>Sign up for Widgets Inc. today!</p>
+      <div className={LayoutStyles.intro}>
+        <h1>Get started</h1>
+        <h2>Sign up for Widgets Inc. today!</h2>
+      </div>
+      <div className={LayoutStyles.hint}>
+        <p>Already have an account?<a href="#">Sign in</a></p>
+      </div>
       <form className={FormStyles.form}>
-        <label for="email">Email address</label>
+        <label for="email">Email</label>
         <input id="email" type="email" placeholder="hello@example.com" />
         <label for="password">Password</label>
         <input id="password" type="password" placeholder="••••••••" />
+        <button>Sign up</button>
       </form>
     </div>
+
   </div>
 </div>
