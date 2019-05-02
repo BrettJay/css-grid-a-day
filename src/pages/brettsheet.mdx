@@ -1,0 +1,32 @@
+import LayoutStyles from "../components/brettsheet/layout.module.scss"
+import Header from "../components/brettsheet/header"
+import Story from "../components/brettsheet/story"
+import Footer from "../components/footer"
+import Metatags from "../components/metatags"
+require('typeface-libre-baskerville')
+require('typeface-work-sans')
+
+<Metatags
+  title="Brettsheet | CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail=""
+  url="https://cssgrid31.brett.cool"
+  pathname="/"
+/>
+
+<div className={LayoutStyles.container}>
+  <Header/>
+
+  <Story
+    title="Mane Liquor finally runs out of Colonial Inquest 2018"
+    category="Food &amp; Drink"
+    type="primary">
+    Well, it’s finally happened.
+  </Story>
+</div>
+
+<Footer date={4} prev={true}>
+
+Ahh Broadsheet.
+
+</Footer>

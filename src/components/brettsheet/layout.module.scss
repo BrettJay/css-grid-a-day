@@ -1,0 +1,25 @@
+@import "../../styles/_tools.fluid_scale.sass";
+
+.container {
+  min-height: 100vh;
+  h1 {
+    
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 28px, 48px);
+    @include fluid-scale(letter-spacing, $responsive_min, $responsive_max, -0.021em, -0.022em);
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+  }
+
+  h1, h2, p {
+    font-family: 'Libre Baskerville', serif;
+  }
+
+  strong {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
