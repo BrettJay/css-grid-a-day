@@ -32,14 +32,27 @@
   grid-area: m;
 
   h1 {
-    font-size: 21px;
-    margin-bottom: 0;
+    font-size: 25px;
+    margin: 0 0 0.5em;
     font-weight: normal;
   }
 
   h2 {
-    font-size: 19px;
+    font-size: 17px;
     font-weight: normal;
     margin: 0;
+  }
+}
+
+.intro {
+  padding: 20px 0;
+}
+
+.hint {
+  padding: 20px 0;
+
+  p {
+    margin: 0;
+    font-size: 14px;
   }
 }

@@ -9,10 +9,10 @@ import FormStyles from "../components/signup/form.module.scss"
         <h1>Get started</h1>
         <h2>Sign up for Widgets Inc. today!</h2>
       </div>
-      <div className={LayoutStyles.hint}>
-        <p>Already have an account?<a href="#">Sign in</a></p>
-      </div>
       <form className={FormStyles.form}>
+        <div className={LayoutStyles.hint}>
+          <p>Already have an account?<a href="#">Sign in</a></p>
+        </div>
         <label for="email">Email</label>
         <input id="email" type="email" placeholder="hello@example.com" />
         <label for="password">Password</label>
