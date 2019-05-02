@@ -9,7 +9,7 @@ function Space(props) {
         style={{ backgroundColor: props.color }}
       />
       <div className={`${SpaceStyles.label}`}>
-        <span>{props.children}</span>
+        <div>{props.children}</div>
       </div>
       <div className={`${SpaceStyles.price}`}>{props.price}</div>
     </div>
