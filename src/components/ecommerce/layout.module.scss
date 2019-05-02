@@ -1,0 +1,11 @@
+.container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 40px 1fr;
+  grid-template-areas: "h h h h""m m m m";
+}
+
+.header {
+  grid-area: h;
+}
