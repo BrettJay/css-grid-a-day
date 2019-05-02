@@ -1,4 +1,32 @@
 .canvas {
   min-height: 100vh;
   background: #eeeef8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page {
+  background: #fff;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 34% 1fr;
+  grid-template-areas: "s m"
+}
+
+
+.sidebar,
+.main {
+  padding: 40px;
+}
+
+.sidebar {
+  grid-area: s;
+  background: purple;
+}
+
+.main {
+  grid-area: m;
 }
