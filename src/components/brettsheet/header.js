@@ -11,7 +11,7 @@ export default () => (
     <Main>
       <div className={Styles.navigation}>
         <div className={Styles.link}>Perth</div>
-        <div className={Styles.link}>Melbourne</div>
+        <div className={Styles.link}>Melbs</div>
         <div className={Styles.link}>Tokyo</div>
         <div className={Styles.link}>Kyoto</div>
         <div className={Styles.link}>Osaka</div>

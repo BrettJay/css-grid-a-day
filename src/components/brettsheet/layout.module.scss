@@ -3,8 +3,7 @@
 .container {
   min-height: 100vh;
   h1 {
-    
-    @include fluid-scale(font-size, $responsive_min, $responsive_max, 28px, 48px);
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 28px, 39px);
     @include fluid-scale(letter-spacing, $responsive_min, $responsive_max, -0.021em, -0.022em);
     line-height: 1.2;
     font-weight: 400;
@@ -15,11 +14,12 @@
 
   h1, h2, p {
     font-family: 'Libre Baskerville', serif;
+    font-weight: normal;
   }
 
   strong {
     font-family: 'Work Sans', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
   }
 }
