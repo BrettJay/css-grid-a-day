@@ -1,5 +1,9 @@
 .form {
   display: grid;
-
+  padding: 20px 0;
   grid-gap: 10px;
+
+  input+label {
+    margin-top: 10px;
+  }
 }
