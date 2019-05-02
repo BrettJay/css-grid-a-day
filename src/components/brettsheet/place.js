@@ -7,7 +7,7 @@ function place(props) {
       { props.img &&
         <img className={PlaceStyles.image} src={props.img} alt={props.title}/>
       }
-      <h2>{props.title}</h2>
+      <h3>{props.title}</h3>
       <p><strong>{props.category}</strong></p>  
     </div>
   )

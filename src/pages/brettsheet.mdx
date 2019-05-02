@@ -5,12 +5,17 @@ import Header from "../components/brettsheet/header"
 import Main from "../components/brettsheet/main"
 import Stories from "../components/brettsheet/stories"
 import Story from "../components/brettsheet/story"
+import Places from "../components/brettsheet/places"
 import Place from "../components/brettsheet/place"
 import HeroImg from "../images/brettsheet/P5023397.jpg"
 import CoffeeImg from "../images/brettsheet/P5023367.jpg"
 import JapanImg from "../images/brettsheet/P2152776.jpg"
 import DTCImg from "../images/brettsheet/dtc.jpg"
 import SavoyImg from "../images/brettsheet/savoy.jpg"
+import IppudoImg from "../images/brettsheet/ippudo.jpg"
+import LaikaImg from "../images/brettsheet/laika.jpg"
+import BlastaImg from "../images/brettsheet/blasta.jpg"
+import OnibusImg from "../images/brettsheet/onibus.jpg"
 require('typeface-libre-baskerville')
 require('typeface-work-sans')
 
@@ -25,35 +30,45 @@ require('typeface-work-sans')
 <div className={LayoutStyles.container}>
   <Header/>
 
-  <Stories>
-    <Story
-      title="Mane Liquor finally runs out of Colonial Inquest 2018"
-      category="Drinks"
-      img={HeroImg}>
-      Well, it’s finally happened—Mane Liquor has sold out of Colonial Brewing’s 2018 Inquest release. Here’s what it means for you, and my fridge...
-    </Story>
-    <Story
-      title="Honey or Natural processing?"
-      category="Coffee"
-      img={CoffeeImg}/>
-    <Story
-      title="All the places you should visit in Japan. You don’t even have to ask—I’ll be sure to tell you."
-      category="Travel"
-      img={JapanImg}/>
-    <Story
-      title="My favourite times at DTC, that I can remember."
-      category="Drinks"
-      img={DTCImg}/>
-    <Story
-      title="An ode to Savoy"
-      category="Food &amp; Drink"
-      img={SavoyImg}/>
-  </Stories>
-
-  <Main>
-    <h2>Favourites</h2>
-
-  </Main>
+  <section className={LayoutStyles.section}>
+    <Stories>
+      <Story
+        title="Mane Liquor finally runs out of Colonial Inquest 2018"
+        category="Drinks"
+        img={HeroImg}>
+        Well, it’s finally happened—Mane Liquor has sold out of Colonial Brewing’s 2018 Inquest release. Here’s what it means for you, and my fridge...
+      </Story>
+      <Story
+        title="Honey or Natural processing?"
+        category="Coffee"
+        img={CoffeeImg}/>
+      <Story
+        title="All the places you should visit in Japan. You don’t even have to ask—I’ll be sure to tell you."
+        category="Travel"
+        img={JapanImg}/>
+      <Story
+        title="My favourite times at DTC, that I can remember."
+        category="Drinks"
+        img={DTCImg}/>
+      <Story
+        title="An ode to Savoy"
+        category="Food &amp; Drink"
+        img={SavoyImg}/>
+    </Stories>
+  </section>
+  <section className={LayoutStyles.section}>
+    <Main>
+      <h2 className={LayoutStyles.altHeading}>Favourites</h2>
+      <Places>
+        <Place img={DTCImg} title="Dutch Trading Co" category="Bar"/>
+        <Place img={DTCImg} title="Humblebee Rivervale" category="Coffee"/>
+        <Place img={BlastaImg} title="Blasta Brewing Co" category="Bar"/>
+        <Place img={IppudoImg} title="Ippudo" category="Restaurant"/>
+        <Place img={LaikaImg} title="Laika" category="Coffee"/>
+        <Place img={OnibusImg} title="Onibus" category="Coffee"/>
+      </Places>
+    </Main>
+  </section>
 </div>
 
 <Footer date={4} prev={true}>

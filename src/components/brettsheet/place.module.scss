@@ -1,3 +1,25 @@
+@import "../../styles/_tools.fluid_scale.sass";
+@import "../../styles/_tools.respond_to.sass";
+
 .container {
   display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 15px;
+  @include respond-to(small-down) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+.item{
+  h3 {
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 13px, 17px);
+    margin-bottom: 0;
+  }
+  img {
+    width: 100%;
+  }
+  p {
+    margin-top: 0;
+  }
 }

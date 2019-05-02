@@ -5,7 +5,6 @@
   display: grid;
   grid-template-columns: 3fr 2fr;
   grid-template-rows: repeat(4, auto);
-  padding: 0 0 40px;
   grid-gap: 20px 20px;
   grid-template-areas:
     "main a1"
