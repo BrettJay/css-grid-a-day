@@ -1,6 +1,13 @@
 @import "../../styles/_tools.respond_to.sass";
 
 $hours: sixam, sevenam, eightam, nineam, tenam, elevenam, twelvepm, onepm, twopm, threepm, fourpm, fivepm, sixpm, sevenpm, eightpm, ninepm, tenpm, elevenpm, twelveam;
+
+.canvas {
+  width: 100vw;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
 .container {
   display: grid;
   grid-template-columns: 
@@ -38,7 +45,7 @@ $hours: sixam, sevenam, eightam, nineam, tenam, elevenam, twelvepm, onepm, twopm
   min-height: 100vh;
   @include respond-to(small-down) {
     grid-template-columns: 
-      [time] 10vw
+      [time] 15vw
       [monday] 40vw
       [tuesday] 40vw
       [wednesday] 40vw
@@ -107,7 +114,7 @@ $hours: sixam, sevenam, eightam, nineam, tenam, elevenam, twelvepm, onepm, twopm
   }
 }
 
-@for $i from 1 through 8 {
+@for $i from 1 through 10 {
   .span#{$i} {
     grid-row-end: span #{$i};
   }
