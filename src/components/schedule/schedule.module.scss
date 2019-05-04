@@ -1,14 +1,38 @@
 .container {
   display: grid;
-  grid-template-columns: 50px repeat(7, 1fr);
-  grid-template-rows: 50px repeat(16, 50px);
+  grid-template-columns: 
+    [time] 50px
+    [monday] 1fr
+    [tuesday] 1fr
+    [wednesday] 1fr
+    [thursday] 1fr
+    [friday] 1fr
+    [saturday] 1fr
+    [sunday] 1fr;
+  grid-template-rows:
+    [header] 50px
+    [sixam] 6vh
+    [sevenam] 6vh
+    [eightam] 6vh
+    [nineam] 6vh
+    [tenam] 6vh
+    [elevenam] 6vh
+    [twelvepm] 6vh
+    [onepm] 6vh
+    [twopm] 6vh
+    [threepm] 6vh
+    [fourpm] 6vh
+    [fivepm] 6vh
+    [sixpm] 6vh
+    [sevenpm] 6vh
+    [eighpm] 6vh
+    [ninepm] 6vh
+    [tenpm] 6vh
+    [elevenpm] 6vh
+    [twelveam] 6vh;
   grid-gap: 1px;
-  padding: 20px;
-  grid-template-areas:
-    ". monh tueh wedh thuh frih sath sunh"
-    "t mon tue wed thu fri sat sun"
-    "t mon tue wed thu fri sat sun";
-  height: 100vh;
+  padding: 10px;
+  min-height: 100vh;
 }
 
 .head {
@@ -16,39 +40,54 @@
 }
 
 .time {
-  grid-area: t;
+  grid-column: time / span 1;
+  font-size: 11px;
 }
 
-.monh {
-  grid-area: monh;
+.mon {
+  grid-column: monday / span 1;
 }
 
-.tueh {
-  grid-area: tueh;
+.tue {
+  grid-column: tuesday / span 1;
 }
 
-.wedh {
-  grid-area: wedh;
+.wed {
+  grid-column: wednesday / span 1;
 }
 
-.thuh {
-  grid-area: thuh;
+.thu {
+  grid-column: thursday / span 1;
 }
 
-.frih {
-  grid-area: frih;
+.fri {
+  grid-column: friday / span 1;
 }
 
-.sath {
-  grid-area: sath;
+.sat {
+  grid-column: saturday / span 1;
 }
 
-.sunh {
-  grid-area: sunh;
+.sun {
+  grid-column: sunday / span 1;
 }
 
 .event {
   border-radius: 3px;
   background: blue;
   color: #fff;
+  font-size: 13px;
+  padding: 3px 5px;
+}
+
+.sixam {
+  grid-row-start: sixam;
+}
+
+.nineam {
+  grid-row-start: nineam;
+}
+
+.span8 {
+  grid-row-end: span 8;
 }

@@ -1,22 +1,40 @@
 import Schedule from "../components/schedule/schedule.module.scss"
+import Event from "../components/schedule/event.js"
 
 <div className={Schedule.container}>
-  <div className={`${Schedule.head} ${Schedule.monh}`}>Monday</div>
-  <div className={`${Schedule.head} ${Schedule.tueh}`}>Tuesday</div>
-  <div className={`${Schedule.head} ${Schedule.wedh}`}>Wednesday</div>
-  <div className={`${Schedule.head} ${Schedule.thuh}`}>Thursday</div>
-  <div className={`${Schedule.head} ${Schedule.frih}`}>Friday</div>
-  <div className={`${Schedule.head} ${Schedule.sath}`}>Saturday</div>
-  <div className={`${Schedule.head} ${Schedule.sunh}`}>Sunday</div>
+  <div className={`${Schedule.head} ${Schedule.mon}`}>Monday</div>
+  <div className={`${Schedule.head} ${Schedule.tue}`}>Tuesday</div>
+  <div className={`${Schedule.head} ${Schedule.wed}`}>Wednesday</div>
+  <div className={`${Schedule.head} ${Schedule.thu}`}>Thursday</div>
+  <div className={`${Schedule.head} ${Schedule.fri}`}>Friday</div>
+  <div className={`${Schedule.head} ${Schedule.sat}`}>Saturday</div>
+  <div className={`${Schedule.head} ${Schedule.sun}`}>Sunday</div>
 
-  <div className={`${Schedule.time}`}>aam</div>
   <div className={`${Schedule.time}`}>6am</div>
-  
-  <div className={`${Schedule.event}`}>Gym</div>
-  <div className={`${Schedule.event}`}>Gym</div>
-  <div className={`${Schedule.event}`}>Gym</div>
-  <div className={`${Schedule.event}`}>Gym</div>
-  <div className={`${Schedule.event}`}>Gym</div>
-  <div className={`${Schedule.event}`}>Gym</div>
-  <div className={`${Schedule.event}`}>Gym</div>
+  <div className={`${Schedule.time}`}>7am</div>
+  <div className={`${Schedule.time}`}>8am</div>
+  <div className={`${Schedule.time}`}>9am</div>
+  <div className={`${Schedule.time}`}>10am</div>
+  <div className={`${Schedule.time}`}>11am</div>
+  <div className={`${Schedule.time}`}>12pm</div>
+  <div className={`${Schedule.time}`}>1pm</div>
+  <div className={`${Schedule.time}`}>2pm</div>
+  <div className={`${Schedule.time}`}>3pm</div>
+  <div className={`${Schedule.time}`}>4pm</div>
+  <div className={`${Schedule.time}`}>5pm</div>
+  <div className={`${Schedule.time}`}>6pm</div>
+  <div className={`${Schedule.time}`}>7pm</div>
+  <div className={`${Schedule.time}`}>8pm</div>
+  <div className={`${Schedule.time}`}>9pm</div>
+  <div className={`${Schedule.time}`}>10pm</div>
+  <div className={`${Schedule.time}`}>11pm</div>
+  <div className={`${Schedule.time}`}>12am</div>
+
+  <Event day="mon" starttime="sixam">CSS Grid work</Event>
+  <Event day="tue" starttime="sixam">CSS Grid work</Event>
+  <Event day="mon" starttime="nineam" duration="span8" color="#333" bgcolor="#eee">Work</Event>
+  <Event day="tue" starttime="nineam" duration="span8" color="#333" bgcolor="#eee">Work</Event>
+  <Event day="wed" starttime="nineam" duration="span8" color="#333" bgcolor="#eee">Work</Event>
+  <Event day="thu" starttime="nineam" duration="span8" color="#333" bgcolor="#eee">Work</Event>
+  <Event day="fri" starttime="nineam" duration="span8" color="#333" bgcolor="#eee">Work</Event>
 </div>
