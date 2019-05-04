@@ -1,4 +1,6 @@
-$hours: sixam, sevenam, eightam, nineam, tenam, elevenam, twelvepm, onepm, twopm, threepm, fourpm, fivepm, sixpm, sevenpm, eighpm, ninepm, tenpm, elevenpm, twelveam;
+@import "../../styles/_tools.respond_to.sass";
+
+$hours: sixam, sevenam, eightam, nineam, tenam, elevenam, twelvepm, onepm, twopm, threepm, fourpm, fivepm, sixpm, sevenpm, eightpm, ninepm, tenpm, elevenpm, twelveam;
 .container {
   display: grid;
   grid-template-columns: 
@@ -12,37 +14,55 @@ $hours: sixam, sevenam, eightam, nineam, tenam, elevenam, twelvepm, onepm, twopm
     [sunday] 1fr;
   grid-template-rows:
     [header] 50px
-    [sixam] 6vh
-    [sevenam] 6vh
-    [eightam] 6vh
-    [nineam] 6vh
-    [tenam] 6vh
-    [elevenam] 6vh
-    [twelvepm] 6vh
-    [onepm] 6vh
-    [twopm] 6vh
-    [threepm] 6vh
-    [fourpm] 6vh
-    [fivepm] 6vh
-    [sixpm] 6vh
-    [sevenpm] 6vh
-    [eighpm] 6vh
-    [ninepm] 6vh
-    [tenpm] 6vh
-    [elevenpm] 6vh
-    [twelveam] 6vh;
+    [sixam] 5vh
+    [sevenam] 5vh
+    [eightam] 5vh
+    [nineam] 5vh
+    [tenam] 5vh
+    [elevenam] 5vh
+    [twelvepm] 5vh
+    [onepm] 5vh
+    [twopm] 5vh
+    [threepm] 5vh
+    [fourpm] 5vh
+    [fivepm] 5vh
+    [sixpm] 5vh
+    [sevenpm] 5vh
+    [eightpm] 5vh
+    [ninepm] 5vh
+    [tenpm] 5vh
+    [elevenpm] 5vh
+    [twelveam] 5vh;
   grid-gap: 1px;
-  padding: 10px;
+  padding: 1px;
   min-height: 100vh;
+  @include respond-to(small-down) {
+    grid-template-columns: 
+      [time] 10vw
+      [monday] 40vw
+      [tuesday] 40vw
+      [wednesday] 40vw
+      [thursday] 40vw
+      [friday] 40vw
+      [saturday] 40vw
+      [sunday] 40vw;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+  }
 }
 
 .head {
   padding: 10px 0;
+  line-height: 40px;
+  scroll-snap-align: center;
+  text-align: center;
 }
 
 .time {
   grid-column: time / span 1;
   font-size: 11px;
+  text-align: right;
+  padding-right: 10px;
 }
 
 .mon {
@@ -88,7 +108,7 @@ $hours: sixam, sevenam, eightam, nineam, tenam, elevenam, twelvepm, onepm, twopm
 }
 
 @for $i from 1 through 8 {
-  .span-#{$i} {
+  .span#{$i} {
     grid-row-end: span #{$i};
   }
 }

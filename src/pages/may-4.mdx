@@ -1,5 +1,6 @@
 import Schedule from "../components/schedule/schedule.module.scss"
-import Event from "../components/schedule/event.js"
+import Event from "../components/schedule/event"
+import Footer from "../components/footer"
 
 <div className={Schedule.container}>
   <div className={`${Schedule.head} ${Schedule.mon}`}>Monday</div>
@@ -30,11 +31,32 @@ import Event from "../components/schedule/event.js"
   <div className={`${Schedule.time}`}>11pm</div>
   <div className={`${Schedule.time}`}>12am</div>
 
-  <Event day="mon" starttime="sixam">CSS Grid work</Event>
-  <Event day="tue" starttime="sixam">CSS Grid work</Event>
+
+  <Event day="mon" starttime="elevenpm" duration="span2" color="#333" bgcolor="#eee">Sleep</Event>
+  <Event day="tue" starttime="elevenpm" duration="span2" color="#333" bgcolor="#eee">Sleep</Event>
+  <Event day="wed" starttime="elevenpm" duration="span2" color="#333" bgcolor="#eee">Sleep</Event>
+  <Event day="thu" starttime="elevenpm" duration="span2" color="#333" bgcolor="#eee">Sleep</Event>
+  <Event day="fri" starttime="elevenpm" duration="span2" color="#333" bgcolor="#eee">Sleep</Event>
+  <Event day="sat" starttime="twelveam" duration="span1" color="#333" bgcolor="#eee">Sleep</Event>
+  <Event day="sun" starttime="twelveam" duration="span1" color="#333" bgcolor="#eee">Sleep</Event>
+  <Event day="sat" starttime="sixam"    duration="span4" color="#333" bgcolor="#eee">Sleep</Event>
+  <Event day="sun" starttime="sixam"    duration="span4" color="#333" bgcolor="#eee">Sleep</Event>
+
+  <Event day="mon" starttime="eightpm" bgcolor="#ff5722">Gym</Event>
+  <Event day="wed" starttime="eightpm" bgcolor="#ff5722">Gym</Event>
+  <Event day="sat" starttime="threepm" bgcolor="#ff5722">Gym</Event>
+  <Event day="sun" starttime="threepm" bgcolor="#ff5722">Gym</Event>
+  <Event day="tue" starttime="fivepm" duration="span6" color="#710013" bgcolor="#ff9aab">Date nite</Event>
+  <Event day="fri" starttime="fivepm" duration="span6" color="#710013" bgcolor="#ff9aab">Date nite</Event>
+
   <Event day="mon" starttime="nineam" duration="span8" color="#333" bgcolor="#eee">Work</Event>
   <Event day="tue" starttime="nineam" duration="span8" color="#333" bgcolor="#eee">Work</Event>
   <Event day="wed" starttime="nineam" duration="span8" color="#333" bgcolor="#eee">Work</Event>
   <Event day="thu" starttime="nineam" duration="span8" color="#333" bgcolor="#eee">Work</Event>
   <Event day="fri" starttime="nineam" duration="span8" color="#333" bgcolor="#eee">Work</Event>
 </div>
+
+<Footer date={4} prev={true}>
+  
+  Ah scheduling
+</Footer>
