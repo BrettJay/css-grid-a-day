@@ -1,0 +1,96 @@
+import Schedule from "../components/schedule/schedule.module.scss"
+import Event from "../components/schedule/event"
+import Footer from "../components/footer"
+
+import Opengraph from "../images/opengraph/may-4.png"
+import Metatags from "../components/metatags"
+
+<Metatags
+  title="Weekly schedule | May 4 | CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail={Opengraph}
+  url="https://cssgrid31.brett.cool"
+  pathname="/may-4"
+/>
+
+<div className={Schedule.canvas}>
+<div className={Schedule.container}>
+  <div className={`${Schedule.head} ${Schedule.mon}`}>Monday</div>
+  <div className={`${Schedule.head} ${Schedule.tue}`}>Tuesday</div>
+  <div className={`${Schedule.head} ${Schedule.wed}`}>Wednesday</div>
+  <div className={`${Schedule.head} ${Schedule.thu}`}>Thursday</div>
+  <div className={`${Schedule.head} ${Schedule.fri}`}>Friday</div>
+  <div className={`${Schedule.head} ${Schedule.sat}`}>Saturday</div>
+  <div className={`${Schedule.head} ${Schedule.sun}`}>Sunday</div>
+
+  <div className={`${Schedule.time}`}>6am</div>
+  <div className={`${Schedule.time}`}>7am</div>
+  <div className={`${Schedule.time}`}>8am</div>
+  <div className={`${Schedule.time}`}>9am</div>
+  <div className={`${Schedule.time}`}>10am</div>
+  <div className={`${Schedule.time}`}>11am</div>
+  <div className={`${Schedule.time}`}>12pm</div>
+  <div className={`${Schedule.time}`}>1pm</div>
+  <div className={`${Schedule.time}`}>2pm</div>
+  <div className={`${Schedule.time}`}>3pm</div>
+  <div className={`${Schedule.time}`}>4pm</div>
+  <div className={`${Schedule.time}`}>5pm</div>
+  <div className={`${Schedule.time}`}>6pm</div>
+  <div className={`${Schedule.time}`}>7pm</div>
+  <div className={`${Schedule.time}`}>8pm</div>
+  <div className={`${Schedule.time}`}>9pm</div>
+  <div className={`${Schedule.time}`}>10pm</div>
+  <div className={`${Schedule.time}`}>11pm</div>
+  <div className={`${Schedule.time}`}>12am</div>
+
+  <Event day="mon" bgcolor="#cfc6e7" color="#221D31" starttime="sevenam" duration="span1">🛠 CSS grid a day</Event>
+  <Event day="mon" bgcolor="#cfc6e7" color="#221D31" starttime="sixpm" duration="span2">🛠 CSS grid a day</Event>
+  <Event day="mon" bgcolor="#cfc6e7" color="#221D31" starttime="ninepm" duration="span2">🛠 CSS grid a day</Event>
+  <Event day="tue" bgcolor="#cfc6e7" color="#221D31" starttime="sevenam" duration="span1">🛠 CSS grid a day</Event>
+  <Event day="wed" bgcolor="#cfc6e7" color="#221D31" starttime="sevenam" duration="span1">🛠 CSS grid a day</Event>
+  <Event day="wed" bgcolor="#cfc6e7" color="#221D31" starttime="sixpm" duration="span2">🛠 CSS grid a day</Event>
+  <Event day="wed" bgcolor="#cfc6e7" color="#221D31" starttime="ninepm" duration="span2">🛠 CSS grid a day</Event>
+  <Event day="thu" bgcolor="#cfc6e7" color="#221D31" starttime="ninepm" duration="span2">🛠 CSS grid a day</Event>
+  <Event day="thu" bgcolor="#cfc6e7" color="#221D31" starttime="sevenam" duration="span1">🛠 CSS grid a day</Event>
+  <Event day="fri" bgcolor="#cfc6e7" color="#221D31" starttime="sevenam" duration="span1">🛠 CSS grid a day</Event>
+  <Event day="sat" bgcolor="#cfc6e7" color="#221D31"  starttime="fourpm" duration="span1">🛠 CSS grid a day</Event>
+  <Event day="sat" bgcolor="#cfc6e7" color="#221D31"  starttime="eightpm" duration="span2">🛠 CSS grid a day</Event>
+  <Event day="sun" bgcolor="#cfc6e7" color="#221D31"  starttime="elevenam" duration="span3">🛠 CSS grid a day</Event>
+  <Event day="sun" bgcolor="#cfc6e7" color="#221D31"  starttime="fivepm" duration="span3">🛠 CSS grid a day</Event>
+  <Event day="sun" bgcolor="#cfc6e7" color="#221D31"  starttime="ninepm" duration="span3">🛠 CSS grid a day</Event>
+
+  <Event day="mon" starttime="elevenpm" duration="span2" color="#333" bgcolor="#eee">Sleep</Event>
+  <Event day="tue" starttime="elevenpm" duration="span2" color="#333" bgcolor="#eee">Sleep</Event>
+  <Event day="wed" starttime="elevenpm" duration="span2" color="#333" bgcolor="#eee">Sleep</Event>
+  <Event day="thu" starttime="elevenpm" duration="span2" color="#333" bgcolor="#eee">Sleep</Event>
+  <Event day="fri" starttime="elevenpm" duration="span2" color="#333" bgcolor="#eee">Sleep</Event>
+  <Event day="sat" starttime="twelveam" duration="span1" color="#333" bgcolor="#eee">Sleep</Event>
+  <Event day="sun" starttime="twelveam" duration="span1" color="#333" bgcolor="#eee">Sleep</Event>
+  <Event day="sat" starttime="sixam"    duration="span4" color="#333" bgcolor="#eee">Sleep</Event>
+  <Event day="sun" starttime="sixam"    duration="span4" color="#333" bgcolor="#eee">Sleep</Event>
+
+  <Event day="mon" starttime="eightpm" color="#6d1a00" bgcolor="#ffbea9">🏃🏻‍♂️Gym</Event>
+  <Event day="wed" starttime="eightpm" color="#6d1a00" bgcolor="#ffbea9">🏃🏻‍♂️Gym</Event>
+  <Event day="thu" starttime="eightpm" color="#6d1a00" bgcolor="#ffbea9">🏃🏻‍♂️Gym</Event>  
+  <Event day="sun" starttime="threepm" color="#6d1a00" bgcolor="#ffbea9">🏃🏻‍♂️Gym</Event>
+
+  <Event day="tue" starttime="fivepm" duration="span6" color="#710013" bgcolor="#ffb7c3">🤩 Date tiem</Event>
+  <Event day="fri" starttime="fivepm" duration="span6" color="#710013" bgcolor="#ffb7c3">🤩 Date tiem</Event>
+  <Event day="sat" starttime="tenam"  duration="span10" color="#710013" bgcolor="#ffb7c3">🤩 Date tiem</Event>
+
+  <Event day="mon" starttime="nineam" duration="span8" color="#333" bgcolor="#eee">💻 Work</Event>
+  <Event day="tue" starttime="nineam" duration="span8" color="#333" bgcolor="#eee">💻 Work</Event>
+  <Event day="wed" starttime="nineam" duration="span8" color="#333" bgcolor="#eee">💻 Work</Event>
+  <Event day="thu" starttime="nineam" duration="span8" color="#333" bgcolor="#eee">💻 Work</Event>
+  <Event day="fri" starttime="nineam" duration="span8" color="#333" bgcolor="#eee">💻 Work</Event>
+</div>
+</div>
+
+<Footer date={4} prev={true}>
+
+One of the biggest challenges I have is time management. And this is becoming a bit of a problem, as I attempt to continue churning out CSS Grids on a daily basis.
+
+It also provides a great opportunity to try making a schedule with CSS Grid.
+
+Using track names for grid template columns and rows makes it easy to declare the appropriate positoning of events, using start points, and number of hours to span.
+</Footer>

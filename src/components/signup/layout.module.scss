@@ -11,7 +11,7 @@
 .page {
   background: #fff;
   max-width: 900px;
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 34% 1fr;
@@ -23,6 +23,8 @@
     grid-template-rows: 70px auto;
     grid-template-areas: "s""m";
     grid-gap: 20px;
+  }
+  @include respond-to(mobile-down) {
     width: 100%;
   }
 }
@@ -31,8 +33,10 @@
 .sidebar,
 .main {
   padding: 60px;
-
   @include respond-to(small-down) {
+    padding: 40px;
+  }
+  @include respond-to(mobile-down) {
     padding: 20px;
   }
 }

@@ -1,0 +1,144 @@
+@import "../../styles/_tools.fluid_scale.sass";
+
+$board_bg: #c5e8ce;
+
+.canvas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: linear-gradient(135deg, #F6F6F6 0%, #D8D8D8 100%);
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  padding: 2vh;
+}
+
+.grid {
+  grid-template-columns: repeat(26, 3vh);
+  grid-template-rows: repeat(26, 3vh);
+  display: grid;
+  margin: 0 auto;
+  max-width: calc(78vh + 108px);
+  grid-gap: 4px;
+  background: #000;
+  border: 4px solid #000;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.branding {
+  grid-column: 5 / span 18;
+  grid-row: 5 / span 18;
+  background: $board_bg;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo {
+  transform: rotate(-45deg);
+  padding: 2vh;
+  color: #fff;
+  background-image: linear-gradient(180deg, #FF000D 0%, #FFCEBC 2%, #FF000D 17%, #FF0007 85%, #C60005 100%);
+  font-weight: bold;
+  border: 4px solid #000;
+  text-shadow: 2px 2px 0 #000;
+  @include fluid-scale(font-size, $responsive_min, $responsive_max, 19px, 48px);
+}
+
+.space {
+  grid-column: span 3;
+  grid-row: span 4;
+  text-align: center;
+  background: $board_bg;
+  display: grid;
+  grid-template-columns: repeat(3, 3vh);
+  grid-template-rows: repeat(4, 3vh);
+  grid-template-areas:
+    "c c c"
+    "l l l"
+    "l l l"
+    "p p p";
+  grid-gap: 4px;
+}
+
+.corner_space {
+  grid-column: span 4;
+  grid-row: span 4;
+  background: $board_bg;
+}
+
+.colour {
+  grid-area: c;
+}
+
+.label {
+  @include fluid-scale(font-size, $responsive_min, $responsive_max, 11px, 13px);
+  grid-column: 1 / 4;
+  grid-row: 2 / 4;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  position: relative;
+  grid-area: l;
+}
+
+.price {
+  @include fluid-scale(font-size, $responsive_min, $responsive_max, 11px, 13px);
+  grid-area: p;
+}
+
+.top {
+  transform: rotate(180deg);
+}
+
+.left,
+.right {
+  grid-column: span 4;
+  grid-row: span 3;
+  grid-template-rows: repeat(3, 3vh);
+  grid-template-columns: repeat(4, 3vh);
+  grid-template-areas:
+    "p l l c"
+    "p l l c"
+    "p l l c";
+
+  .label,
+  .price {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+}
+
+.right {
+  transform: rotate(180deg);
+}
+
+.left .colour,
+.right .colour {
+  box-shadow: inset 4px 0 0 0 #000;
+}
+
+.bottom .colour,
+.top .colour {
+  box-shadow: inset 0 -4px 0 0 #000;
+}
+
+.corner_space_topleft {
+  background: $board_bg url(../../images/board/inspect-element.svg) 50% 50% no-repeat;
+  background-size: 80%;
+}
+
+.corner_space_topright {
+  background: $board_bg url(../../images/board/fixie.svg) 50% 50% no-repeat;
+  background-size: cover;
+}
+
+.corner_space_bottomleft {
+  background: $board_bg url(../../images/board/ie6.svg) 100% 100% no-repeat;
+  background-size: cover;
+}
+
+.corner_space_bottomright {
+  background: $board_bg url(../../images/board/code.svg) 100% 100% no-repeat;
+  background-size: cover;
+}

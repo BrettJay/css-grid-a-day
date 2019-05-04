@@ -1,0 +1,112 @@
+import Board from "../components/boardgame/board.module.scss"
+import Space from "../components/boardgame/space"
+
+import Footer from "../components/footer"
+import Opengraph from "../images/opengraph/may-3.png"
+import Metatags from "../components/metatags"
+
+<Metatags
+  title="Frontendopoly | May 3 | CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail={Opengraph}
+  url="https://cssgrid31.brett.cool"
+  pathname="/may-3"
+/>
+
+<div className={Board.canvas}>
+  <div className={Board.grid}>
+    <div className={Board.branding}>
+      <div className={Board.logo}>Frontendopoly</div>
+    </div>
+    <div className={`${Board.corner_space} ${Board.corner_space_topleft}`} />
+    <Space position="top" color="red" price="3kb">
+      linear-gradient
+    </Space>
+    <Space position="top" color="red" price="3kb">
+      radial-gradient
+    </Space>
+    <Space position="top" color="red" price="3kb">
+      @keyframes
+    </Space>
+    <Space position="top" color="#FFF100" price="2kb">
+      transition
+    </Space>
+    <Space position="top" color="#FFF100" price="2kb">
+      transform
+    </Space>
+    <Space position="top" color="#FFF100" price="2kb">
+      animation
+    </Space>
+    <div className={`${Board.corner_space} ${Board.corner_space_topright}`} />
+    <Space position="left" color="#FF8E00" price="1mb">
+      box-shadow
+    </Space>
+    <Space position="right" color="#00B64E" price="2kb">
+      Gatsby
+    </Space>
+    <Space position="left" color="#FF8E00" price="1mb">
+      text-shadow
+    </Space>
+    <Space position="right" color="#00B64E" price="2kb">
+      Web components
+    </Space>
+    <Space position="left" color="#FF8E00" price="1mb">
+      border-radius
+    </Space>
+    <Space position="right" color="#00B64E" price="2kb">
+      SVG
+    </Space>
+    <Space position="left" color="#EC1F99" price="3mb">
+      inline-block;
+    </Space>
+    <Space position="right" color="#00B64E" price="2kb">
+      Houdini
+    </Space>
+    <Space position="left" color="#EC1F99" price="3mb">
+      block;
+    </Space>
+    <Space position="right" color="#0073C1" price="1kb">
+      Flexbox
+    </Space>
+    <Space position="left" color="#EC1F99" price="3mb">
+      inline;
+    </Space>
+    <Space position="right" color="#0073C1" price="1kb">
+      Css Grid
+    </Space>
+    <div className={`${Board.corner_space} ${Board.corner_space_bottomleft}`} />
+    <Space position="bottom" color="#99E2FE" price="4mb">
+      clearfix
+    </Space>
+    <Space position="bottom" color="#99E2FE" price="4mb">
+      float right
+    </Space>
+    <Space position="bottom" color="#99E2FE" price="4mb">
+      float left
+    </Space>
+    <Space position="bottom" color="#A0502E" price="5mb">
+      spacer gif
+    </Space>
+    <Space position="bottom" color="#A0502E" price="5mb">
+      display: table
+    </Space>
+    <Space position="bottom" color="#A0502E" price="5mb">
+      *zoom: 0;
+    </Space>
+    <div
+      className={`${Board.corner_space} ${Board.corner_space_bottomright}`}
+    />
+  </div>
+</div>
+
+<Footer date={3} prev={true} next={true}>
+
+In trying to come up with ideas to play around with CSS Grid, an unexpected novel idea came up—representing a boardgame.
+
+In looking for grids everywhere, you start to _see_ them everywhere. Looking at Monopoly, I started to discern the grid it was based on. I simplified it a little, because I was running out of ideas for spaces, and because it’s hard to display on small screens.
+
+I cheated with the corners a little too using SVG images. Transforming and positioning text is a nightmare (thankful for the admittedly not-widely supported [writing-mode][w] property).
+
+[w]: https://developer.mozilla.org/en/docs/Web/CSS/writing-mode
+
+</Footer>
