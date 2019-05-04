@@ -1,3 +1,4 @@
+$hours: sixam, sevenam, eightam, nineam, tenam, elevenam, twelvepm, onepm, twopm, threepm, fourpm, fivepm, sixpm, sevenpm, eighpm, ninepm, tenpm, elevenpm, twelveam;
 .container {
   display: grid;
   grid-template-columns: 
@@ -80,14 +81,14 @@
   padding: 3px 5px;
 }
 
-.sixam {
-  grid-row-start: sixam;
+@each $hour in $hours {
+  .#{$hour} {
+    grid-row-start: #{$hour};
+  }
 }
 
-.nineam {
-  grid-row-start: nineam;
-}
-
-.span8 {
-  grid-row-end: span 8;
+@for $i from 1 through 8 {
+  .span-#{$i} {
+    grid-row-end: span #{$i};
+  }
 }
