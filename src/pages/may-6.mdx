@@ -1,5 +1,6 @@
 import LayoutStyles from "../components/brettsheet/layout.module.scss"
 import Footer from "../components/footer"
+import Opengraph from "../images/opengraph/may-6.png"
 import Metatags from "../components/metatags"
 import Header from "../components/brettsheet/header"
 import Main from "../components/brettsheet/main"
@@ -23,9 +24,9 @@ require('typeface-work-sans')
 <Metatags
   title="Brettsheet | May 6 | CSS Grid a day"
   description="An example of using CSS grid every day, from May 1–31st, 2019."
-  thumbnail=""
+  thumbnail={Opengraph}
   url="https://cssgrid31.brett.cool"
-  pathname="/"
+  pathname="/may-6"
 />
 
 <div className={LayoutStyles.container}>
