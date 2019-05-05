@@ -3,14 +3,19 @@
 
 .canvas {
   background-image: linear-gradient(135deg, #F8F8F8 0%, #E7E7E7 100%);
+  padding: 2vw 1vw;
+  position: relative;
   min-height: 100vh;
-  padding: 1vw;
   button {
+    position: sticky;
+    top: 10px;
+    z-index: 10;
     display: block;
     width: 160px;
-    margin: 0 auto 30px;
+    margin: 20px auto;
     background: #FFFFFF;
-    box-shadow: 0 1px 3px 0 rgba(92, 92, 92, 0.21);
+    box-shadow: 0 1px 3px 0 rgba(92, 92, 92, 0.21), 0 3px 18px 0 rgba(92, 92, 92, 0.4);
+    border: 1px solid rgba(0,0,0,0.4);
     cursor: pointer;
     font-weight: bold;
     border-radius: 20px;
@@ -20,6 +25,14 @@
     -webkit-appearance: none;
     &:active {
       outline: none;
+      border: 0 none;
+      border: 1px solid rgba(0,0,0,0.3);
+      box-shadow: inset 0 1px 3px 0 rgba(92, 92, 92, 0.33), 0 3px 18px 0 rgba(92, 92, 92, 0.4);
+    }
+    &:focus {
+      border-radius: 20px;
+      outline: 0 none;
+      box-shadow: 0 1px 3px 0 rgba(92, 92, 92, 0.21), 0 3px 18px 0 rgba(92, 92, 92, 0.4), 0 0 0 1px #000;
     }
   }
 }
@@ -126,6 +139,10 @@
     @include fluid-scale(font-size, $responsive_min, $responsive_max, 9px, 21px);
     margin: 0.5em 0;
   }
+  h3 {
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 8px, 16px);
+    margin: 1em 0;
+  }
   p {
     @include fluid-scale(font-size, $responsive_min, $responsive_max, 7px, 14px);
     margin: 0.5em 0;
@@ -207,7 +224,7 @@
 .re5 { grid-column-end: r5; min-width: 0; }
 .re6 { grid-column-end: r6; min-width: 0; }
 .re7 { grid-column-end: r7; min-width: 0; }
-.re-1 { grid-column-end: r-1; min-width: 0; }
+.ren1 { grid-column-end: r-1; min-width: 0; }
 
 .ae {
   align-self: end;
@@ -239,4 +256,18 @@
     grid-column-end: r7;
     text-align: right;
   }
+}
+
+.cs3 {
+  grid-column-end: span 3;
+}
+.cs4 {
+  grid-column-end: span 4;
+}
+.cs9 {
+  grid-column-end: span 9;
+}
+
+.tspan9 {
+  grid-row-end: span 10;
 }
