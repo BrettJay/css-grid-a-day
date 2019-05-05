@@ -4,11 +4,12 @@ import Spread from "../components/vandegraaf/spread"
 import PageNumber from "../components/vandegraaf/pagenumber"
 import Footer from "../components/footer"
 import Img from "../images/canon/hero.jpg"
+import Examples from "../images/canon/constructions.png"
 
 <Collection>
   <Spread>
     <div className={`${Canon.t0} ${Canon.te4h} ${Canon.ln1} ${Canon.re0}`}>
-      <img src={Img} alt="Hero Image"/>
+      <img className={Canon.cover} src={Img} alt="Hero Image"/>
     </div>
     <h1 className={`${Canon.t5} ${Canon.l1} ${Canon.le7} ${Canon.m0} ${Canon.ae}`}>
       Canons of page construction
@@ -16,23 +17,32 @@ import Img from "../images/canon/hero.jpg"
     <h2 className={`${Canon.t6} ${Canon.l1} ${Canon.le7} ${Canon.ae} ${Canon.m0}`}>
       A CSS Grid example
     </h2>
-    <div className={`${Canon.t1} ${Canon.r1} ${Canon.re7}`}>
+    <div className={`${Canon.t4} ${Canon.ae} ${Canon.r1} ${Canon.re7}`}>
       <h2 className={Canon.mt0}>An introduction</h2>
       <p>The creation of simplistic page layouts is deceptively complex.</p>
       <p>Though the grids and margins used to lay out print publications are invisible, you’d immediately notice if they were absent.</p>
       <h2>Harmony and balance</h2>
-      <p>There are several methods to rationalise the proportions of a printed page.</p>
+      <p className={Canon.mb0}>Two methods of resolving margins and layouts.</p>
+    </div>
+    <div className={`${Canon.t5} ${Canon.r1} ${Canon.ren1}`}>
+      <img src={Examples} alt="Canon constructions"/>
     </div>
     <PageNumber side="left">1</PageNumber>
     <PageNumber side="right">2</PageNumber>
   </Spread>  
 </Collection>
 
-<Footer>
+<Footer date={5} prev={true}>
 
 I remember coming across the Van de Graaf Canon some years ago, from an article entitled [“The Secret Law of Page Harmony”][ph] on Retinart.
 
-[Photo by Banter Snaps on Unsplash][credit]
+I’m fascinated by the prospect of rich layouts using CSS grids that we more commonly associate with print design.
+
+Granted, using ratios and proportions for physical printed pages doesn’t make sense given the different context, but I wanted to see if it would be possible to use CSS Grid to visualise page construction canons.
+
+Turns out it’s quite possible
+
+*[Photo by Banter Snaps on Unsplash][credit]*
 
 [ph]: http://retinart.net/graphic-design/secret-law-of-page-harmony/ "The Secret Law of Page Harmony"
 [credit]: https://unsplash.com/photos/eY7ETwocMyU "Photo by Banter Snaps on Unsplash"

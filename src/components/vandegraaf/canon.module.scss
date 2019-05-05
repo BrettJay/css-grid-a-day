@@ -105,6 +105,8 @@
     min-width: 0;
     min-height: 0;
     width: 100%;
+  }
+  .cover {
     height: 100%;
     object-fit: cover;
   }
@@ -176,6 +178,7 @@
 .t2 { grid-row-start: t2; min-height: 0; }
 .t3 { grid-row-start: t3; min-height: 0; }
 .t4 { grid-row-start: t4; min-height: 0; }
+.t4h { grid-row-start: t4h; min-height: 0; }
 .t5 { grid-row-start: t5; min-height: 0; }
 .t6 { grid-row-start: t6; min-height: 0; }
 .t7 { grid-row-start: t7; min-height: 0; }
@@ -235,6 +238,10 @@
 }
 
 .grid .mt0 {
+  margin-top: 0;
+}
+
+.grid .mb0 {
   margin-top: 0;
 }
 
