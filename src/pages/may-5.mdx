@@ -1,0 +1,59 @@
+import Canon from "../components/vandegraaf/canon.module.scss"
+import Collection from "../components/vandegraaf/collection"
+import Opengraph from "../images/opengraph/may-5.png"
+import Metatags from "../components/metatags"
+import Spread from "../components/vandegraaf/spread"
+import PageNumber from "../components/vandegraaf/pagenumber"
+import Footer from "../components/footer"
+import Img from "../images/canon/hero.jpg"
+import Examples from "../images/canon/constructions.png"
+
+<Metatags
+  title="Van de Graaf | May 5 | CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail={Opengraph}
+  url="https://cssgrid31.brett.cool"
+  pathname="/may-5"
+/>
+
+<Collection>
+  <Spread>
+    <div className={`${Canon.t0} ${Canon.te4h} ${Canon.ln1} ${Canon.re0}`}>
+      <img className={Canon.cover} src={Img} alt="Hero Image"/>
+    </div>
+    <h1 className={`${Canon.t5} ${Canon.l1} ${Canon.le7} ${Canon.m0} ${Canon.ae}`}>
+      Canons of page construction
+    </h1>
+    <h2 className={`${Canon.t6} ${Canon.l1} ${Canon.le7} ${Canon.ae} ${Canon.m0}`}>
+      A CSS Grid example
+    </h2>
+    <div className={`${Canon.t4} ${Canon.ae} ${Canon.r1} ${Canon.re7}`}>
+      <h2 className={Canon.mt0}>The Van de Graaf canon</h2>
+      <p>The creation of simplistic page layouts is deceptively complex.</p>
+      <p>Though the grids and margins used to lay out print publications are invisible, you’d immediately notice if they were absent.</p>
+      <p className={Canon.mb0}>Using the Van de Graaf canon, you always end up with a 9×9 grid. Use this to help proportion your inner and outer margins:</p>
+    </div>
+    <div className={`${Canon.t5} ${Canon.r1} ${Canon.ren1}`}>
+      <img src={Examples} alt="Canon constructions"/>
+      <p><em>See—“<a href="http://retinart.net/graphic-design/secret-law-of-page-harmony/">The Secret Law of Page Harmony</a>”</em>.</p>
+    </div>
+    <PageNumber side="left">1</PageNumber>
+    <PageNumber side="right">2</PageNumber>
+  </Spread>  
+</Collection>
+
+<Footer date={5} prev={true}>
+
+I remember coming across the Van de Graaf Canon some years ago, from an article entitled [“The Secret Law of Page Harmony”][ph] on Retinart.
+
+I’m fascinated by the prospect of rich layouts using CSS grids that we more commonly associate with print design.
+
+Granted, using ratios and proportions for physical printed pages doesn’t make sense given the different context, but I wanted to see if it would be possible to use CSS Grid to visualise page construction canons.
+
+Turns out it’s quite possible
+
+*[Photo by Banter Snaps on Unsplash][credit]*
+
+[ph]: http://retinart.net/graphic-design/secret-law-of-page-harmony/ "The Secret Law of Page Harmony"
+[credit]: https://unsplash.com/photos/eY7ETwocMyU "Photo by Banter Snaps on Unsplash"
+</Footer>
