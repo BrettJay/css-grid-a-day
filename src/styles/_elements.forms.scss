@@ -3,7 +3,8 @@ label {
 }
 
 input,
-select {
+select,
+textarea {
   background: #FFFFFF;
   border: 1px solid rgba(92, 92, 92, 0.30);
   border-radius: 3px;
@@ -11,9 +12,11 @@ select {
   padding: 10px;
   transition: box-shadow 0.2s ease;
   -webkit-appearance: none;
+  resize: none;
 }
 
-input {
+input,
+textarea {
   box-shadow: inset 0 1px 3px 0 rgba(92, 92, 92, 0.1);
 
   &:focus {
