@@ -149,6 +149,11 @@
     @include fluid-scale(font-size, $responsive_min, $responsive_max, 7px, 14px);
     margin: 0.5em 0;
     line-height: 1.44;
+    a {
+      color: #07D;
+      text-decoration: none;
+      border-bottom: 1px solid hsla(208, 100%, 43%, 0.54);
+    }
   }
 
   p+p {

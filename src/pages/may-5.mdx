@@ -1,10 +1,20 @@
 import Canon from "../components/vandegraaf/canon.module.scss"
 import Collection from "../components/vandegraaf/collection"
+import Opengraph from "../images/opengraph/may-5.png"
+import Metatags from "../components/metatags"
 import Spread from "../components/vandegraaf/spread"
 import PageNumber from "../components/vandegraaf/pagenumber"
 import Footer from "../components/footer"
 import Img from "../images/canon/hero.jpg"
 import Examples from "../images/canon/constructions.png"
+
+<Metatags
+  title="Van de Graaf | May 5 | CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail={Opengraph}
+  url="https://cssgrid31.brett.cool"
+  pathname="/may-5"
+/>
 
 <Collection>
   <Spread>
@@ -18,14 +28,14 @@ import Examples from "../images/canon/constructions.png"
       A CSS Grid example
     </h2>
     <div className={`${Canon.t4} ${Canon.ae} ${Canon.r1} ${Canon.re7}`}>
-      <h2 className={Canon.mt0}>An introduction</h2>
+      <h2 className={Canon.mt0}>Van de Graaf canon</h2>
       <p>The creation of simplistic page layouts is deceptively complex.</p>
       <p>Though the grids and margins used to lay out print publications are invisible, you’d immediately notice if they were absent.</p>
-      <h2>Harmony and balance</h2>
-      <p className={Canon.mb0}>Two methods of resolving margins and layouts.</p>
+      <p className={Canon.mb0}>Using the Van de Graaf canon, you always end up with a 9×9 grid:</p>
     </div>
     <div className={`${Canon.t5} ${Canon.r1} ${Canon.ren1}`}>
       <img src={Examples} alt="Canon constructions"/>
+      <p><em>Learn more—“<a href="http://retinart.net/graphic-design/secret-law-of-page-harmony/">The Secret Law of Page Harmony</a>”</em>.</p>
     </div>
     <PageNumber side="left">1</PageNumber>
     <PageNumber side="right">2</PageNumber>
