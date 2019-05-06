@@ -1,0 +1,40 @@
+@import "../../styles/_tools.fluid_scale.sass";
+
+.container {
+  @include pb4();
+}
+
+.container p {
+  @include fluid-scale(font-size, $responsive_min, $responsive_max, 16px, 21px);
+  line-height: 1.4;
+  max-width: 580px;
+  margin: 1.5em auto;
+  width: 90%;
+}
+
+.photoGrid {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-gap: 10px;
+  @include pt3();
+  @include pb3();
+}
+
+.image {
+  object-fit: cover;
+}
+
+.photoGrid .image {
+  grid-column: span 6;
+  grid-row: span 4;
+}
+
+.photoGrid .image:first-child {
+  grid-column: 2 / span 4;
+  grid-row: 1 / span 4;
+  align-self: end;
+}

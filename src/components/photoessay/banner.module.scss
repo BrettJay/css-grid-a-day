@@ -1,0 +1,33 @@
+@import "../../styles/_tools.fluid_scale.sass";
+
+.container {
+  height: 100vh;
+  background: #000;
+  color: #fff;
+  position: relative;
+  @include mb4();
+}
+
+.caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  left: 0;
+  right: 0;
+}
+
+
+.title {
+  @include fluid-scale(font-size, $responsive_min, $responsive_max, 32px, 64px);
+  margin: 0;
+  font-weight: 800;
+}
+
+.subtitle {
+  @include fluid-scale(font-size, $responsive_min, $responsive_max, 17px, 30px);
+  margin: 0.5em 0 0;
+  font-family: serif;
+  font-style: italic;
+  font-weight: normal;
+}

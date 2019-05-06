@@ -1,0 +1,48 @@
+import Footer from "../components/footer"
+import Metatags from "../components/metatags"
+
+import { graphql } from "gatsby"
+
+import Article from "../components/photoessay/article"
+import Banner from "../components/photoessay/banner"
+import Photogrid from "../components/photoessay/photogrid"
+import Image from "../components/photoessay/image"
+import PhotoessayStyles from "../components/photoessay/photoessay.module.scss"
+
+<Metatags
+  title="May 2 | CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail=""
+  url="https://cssgrid30.brett.cool"
+  pathname="/may-2"
+/>
+
+<div className={PhotoessayStyles.container}>
+  <Banner
+    title="Arashiyama"
+    subtitle="and a Monkey Park"
+  />
+
+We emerged from our Hotel to find it lightly snowing.
+
+Walking through the gentle snowfall, we made our way towards Karasuma subway station.
+
+<Image filename="P2101453.jpg" alt="A photo" />
+
+We rode the subway to Kyoto station.
+
+Picking up an onigiri en route from a convenience store station, we eventually found our way to the JR office, and activated our JR pass.
+
+We then used our pass to board a train bound for Arashiyama.
+
+  <Photogrid style="default">
+    <Image filename="P2101464.jpg" alt="A photo"/>
+    <Image filename="P2101466.jpg" alt="A photo"/>
+    <Image filename="P2101468.jpg" alt="A photo"/>
+    <Image filename="P2101477.jpg" alt="A photo"/>
+  </Photogrid>
+</div>
+
+<Footer date="7">
+Hi
+</Footer>
