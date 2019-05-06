@@ -1,14 +1,13 @@
 import Footer from "../components/footer"
 import Metatags from "../components/metatags"
-import Opengraph from "../images/opengraph/may-2.png"
 
 import LayoutStyles from "../components/signup/layout.module.scss"
 import FormStyles from "../components/signup/form.module.scss"
 
 <Metatags
-  title="May 2 | CSS Grid a day"
+  title="Signup form | May 2 | CSS Grid a day"
   description="An example of using CSS grid every day, from May 1–31st, 2019."
-  thumbnail={Opengraph}
+  thumbnail="https://cssgrid31.brett.cool/opengraph/may-2.png"
   url="https://cssgrid31.brett.cool"
   pathname="/may-2"
 />
@@ -40,9 +39,9 @@ import FormStyles from "../components/signup/form.module.scss"
   </div>
 </div>
 
-<Footer date={2} prev={true}>
+<Footer date={2} prev={true} next={true}>
 
-Ahh, signup forms. A common UI playground (along with Weather Apps, and Twitter clients). Here’s a signup screen for Milligram, a fictional coffee social network, which I have now half the mind to build.
+Ahh, signup forms. A common UI playground (along with Weather apps, and Twitter clients). Here’s a signup screen for Milligram, a fictional coffee social network, which I have now half the mind to build.
 
 CSS Grid areas provide an interesting option for responsive design. Being able to specify layouts visually with an ascii representation.
 

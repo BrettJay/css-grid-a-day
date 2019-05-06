@@ -1,0 +1,87 @@
+import LayoutStyles from "../components/brettsheet/layout.module.scss"
+import Footer from "../components/footer"
+import Metatags from "../components/metatags"
+import Header from "../components/brettsheet/header"
+import Main from "../components/brettsheet/main"
+import Stories from "../components/brettsheet/stories"
+import Story from "../components/brettsheet/story"
+import Places from "../components/brettsheet/places"
+import Place from "../components/brettsheet/place"
+import HeroImg from "../images/brettsheet/P5023397.jpg"
+import CoffeeImg from "../images/brettsheet/P5023367.jpg"
+import JapanImg from "../images/brettsheet/P2152776.jpg"
+import DTCImg from "../images/brettsheet/dtc.jpg"
+import SavoyImg from "../images/brettsheet/savoy.jpg"
+import IppudoImg from "../images/brettsheet/ippudo.jpg"
+import LaikaImg from "../images/brettsheet/laika.jpg"
+import BlastaImg from "../images/brettsheet/blasta.jpg"
+import OnibusImg from "../images/brettsheet/onibus.jpg"
+import AboutLifeImg from "../images/brettsheet/alc.jpg"
+require('typeface-libre-baskerville')
+require('typeface-work-sans')
+
+<Metatags
+  title="Brettsheet | May 6 | CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail="https://cssgrid31.brett.cool/opengraph/may-6.png"
+  url="https://cssgrid31.brett.cool"
+  pathname="/may-6"
+/>
+
+<div className={LayoutStyles.container}>
+  <Header/>
+
+  <section className={LayoutStyles.section}>
+    <Stories>
+      <Story
+        title="Mane Liquor finally runs out of Colonial Inquest 2018"
+        category="Drinks"
+        img={HeroImg}>
+        Well, it’s finally happened—Mane Liquor has sold out of Colonial Brewing’s 2018 Inquest release. Here’s what it means for you, and my fridge...
+      </Story>
+      <Story
+        title="Honey or Natural processing?"
+        category="Coffee"
+        img={CoffeeImg}/>
+      <Story
+        title="All the places you should visit in Japan. You don’t even have to ask—I’ll be sure to tell you."
+        category="Travel"
+        img={JapanImg}/>
+      <Story
+        title="My favourite times at DTC, that I can remember."
+        category="Drinks"
+        img={DTCImg}/>
+      <Story
+        title="An ode to Savoy"
+        category="Food &amp; Drink"
+        img={SavoyImg}/>
+    </Stories>
+  </section>
+  <section className={LayoutStyles.section}>
+    <Main>
+      <h2 className={LayoutStyles.altHeading}>Favourites</h2>
+      <Places>
+        <Place img={DTCImg} title="Dutch Trading Co" category="Bar"/>
+        <Place img={AboutLifeImg} title="About Life Coffee Brewers" category="Coffee"/>
+        <Place img={BlastaImg} title="Blasta Brewing Co" category="Bar"/>
+        <Place img={IppudoImg} title="Ippudo" category="Restaurant"/>
+        <Place img={LaikaImg} title="Laika" category="Coffee"/>
+        <Place img={OnibusImg} title="Onibus" category="Coffee"/>
+      </Places>
+    </Main>
+  </section>
+</div>
+
+<Footer date={6} prev={true}>
+
+Ahh [Broadsheet][b], the go-to guide for Aussie urbanites on what’s new in town. Way back in 2015, before they launched their Perth publication, some of the Melbies at [Pin][pin] used to joke about me setting up an unofficial Perth edition.
+
+To be fair, I was trying to make my way through every newly-opened coffee shop, restaurant, and bar back then. I’m busier these days, and there are people far more knowledgeable than I [who cover Perth’s hospitality scene][josh] far better than I ever could.
+
+Anyway, this is pretty shamelessly inspired by the actual Broadsheet, by design. But with CSS Grid, and without banner ads.
+
+[pin]: https://pinpayments.com "Pin Payments"
+[b]: https://www.broadsheet.com.au/perth "Broadsheet"
+[josh]: http://downby12th.com "Down by 12th Avenue, a project by Josh Wells"
+
+</Footer>
