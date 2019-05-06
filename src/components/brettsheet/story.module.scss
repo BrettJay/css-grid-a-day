@@ -1,0 +1,80 @@
+@import "../../styles/_tools.fluid_scale.sass";
+@import "../../styles/_tools.respond_to.sass";
+
+.container {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: repeat(4, auto);
+  grid-gap: 20px 20px;
+  grid-template-areas:
+    "main a1"
+    "main a2"
+    "main a3"
+    "main a4";
+  @include respond-to(small-down) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-gap: 10px;
+    grid-template-areas:
+      "main main"
+      "a1 a2"
+      "a3 a4";
+  }
+}
+
+.item {
+  h2 {
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 14px, 17px);
+    line-height: 1.6;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.item:first-child {
+  grid-area: main;
+  h2 {
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 15px, 24px);
+  }
+  p {
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 13px, 17px);
+  }
+}
+
+.item:nth-child(2) {
+  grid-area: a1;
+}
+.item:nth-child(3) {
+  grid-area: a2;
+}
+.item:nth-child(4) {
+  grid-area: a3;
+}
+
+@include respond-to(ipad-up) {
+  .item:not(:first-child) {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-areas: "i c";
+    grid-gap: 15px;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 20px;
+    .image {
+      grid-area: i;
+    }
+    .caption {
+      grid-area: c;
+    }
+    h2 {
+      margin-top: 0;
+    }
+  }
+}
+
+
+.item:nth-child(5) {
+  grid-area: a4;
+  border-bottom: 0 none;
+  padding-bottom: 0;
+}
