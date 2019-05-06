@@ -1,0 +1,30 @@
+.header {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.navigation {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 20px 0;
+}
+
+.link {
+  color: #000;
+  text-decoration: none;
+  font-family: 'Work Sans', sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.66px;
+}
+
+.link + .link {
+  border-left: 1px solid #000;
+}
+
+.link:not(:last-child) {
+  border-right: 1px solid #000;
+}
