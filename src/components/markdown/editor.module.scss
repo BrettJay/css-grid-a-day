@@ -23,7 +23,8 @@
       "header header header"
       ". editor ."
       ". preview ."
-      ". toolbar .";
+      ". toolbar ."
+      ". . .";
   }
 }
 
@@ -33,7 +34,11 @@
   grid-area: header;
   grid-template-columns: [logo] 40px [title] 1fr [avatar] 40px;
   background: #0E1D2F;
-  color: #fff;
+  color: #c1cad6;
+  @include respond-to(small-down) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 .title {
@@ -85,11 +90,10 @@
     "bodylabel"
     "bodytextarea";
   textarea {
-    font-family: 'Menlo', monospace;
-    font-size: 13px;
     line-height: 1.3;
     width: 100%;
     min-height: 300px;
+    -webkit-overflow-scrolling: touch;
     grid-area: bodytextarea;
   }
   input {
@@ -123,9 +127,10 @@
 }
 .render {
   grid-area: preview;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
   overflow: scroll;
   background: #fff;
+  border-radius: 3px;
   -webkit-overflow-scrolling: touch;
 }
 
