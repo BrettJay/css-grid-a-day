@@ -1,0 +1,32 @@
+import Footer from "../components/footer"
+
+import Metatags from "../components/metatags"
+import MarkdownEditor from "../components/markdown/application"
+
+<Metatags
+  title="Blog composer | May 7 | CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail="https://cssgrid31.brett.cool/opengraph/may-7.png"
+  url="https://cssgrid31.brett.cool"
+  pathname="/may-7"
+/>
+
+<MarkdownEditor />
+
+<Footer date={7} prev={true}>
+
+A demo blog admin built with CSS Grid, and rendering inputted markdown with Remarkable (blatantly lifted from an example on [Reactjs.org]).
+
+I’ve been a [Markdown][md] fan for a long time. I love how readable it is in plaintext, especially when using reference style links.
+
+Plus the tooling around it is great. Writing [blog posts][example] is so frictionless with static site generators like Jekyll, Middleman, and Gatsby working great with Markdown out of the box.
+
+[I’m using][using] [mdx] on this project, and I’m quite liking it so far.
+
+[md]: https://daringfireball.net/projects/markdown/ "Markdown by John Gruber"
+[example]: https://github.com/BrettJay/brett.cool/blob/master/source/blog/2019-05-02-css-grid-a-day.md.erb "Source for reference blog post on Github"
+[using]: https://github.com/BrettJay/css-grid-a-day/tree/master/src/pages
+[mdx]: https://mdxjs.com/
+[reactjs.org]: https://reactjs.org#a-component-using-external-plugins
+</Footer>
+
