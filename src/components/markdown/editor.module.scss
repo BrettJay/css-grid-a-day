@@ -12,21 +12,26 @@
   padding: 0;
   background: #EEF5FD;
   @include respond-to(small-down) {
-    grid-template-columns: 0 1fr 0;
+    grid-template-columns: 60px 1fr;
     grid-template-rows: 60px auto auto;
     max-height: none;
     grid-template-areas:
-      "header header header"
-      ". editor ."
-      ". preview ."
-      "toolbar toolbar toolbar"
+      "header header"
+      "menu editor"
+      "menu preview";
   }
 }
 
 .menu {
   grid-area: menu;
   background: #233342;
+  background-image: linear-gradient(90deg, #233242 0%, #233242 70%, #1B2735 100%);
+  img {
+    position: sticky;
+    top: 60px;
+  }
 }
+
 .header {
   display: grid; 
   grid-area: header;
@@ -34,9 +39,11 @@
   background: #559DE6;
   align-items: center;
   color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   @include respond-to(small-down) {
-    padding-left: 10px;
-    padding-right: 10px;
+    grid-template-columns: [logo] 60px 20px [title] 1fr [avatar] 40px 10px;
   }
 }
 
@@ -47,6 +54,7 @@
   height: 60px;
   padding: 20px 0;
   font-weight: bold;
+  text-shadow: 0 1px 0 rgba(4, 53, 103, 0.32);
 }
 
 .logo {
@@ -96,7 +104,7 @@
   background: #fff;
   grid-template-rows: auto auto auto 1fr auto;
   grid-gap: 20px;
-  
+  padding: 20px;
   grid-template-areas:
     "titlelabel"
     "titleinput"
@@ -116,6 +124,9 @@
   input,
   textarea{
     border-color: #d2e1f0;
+  }
+  @include respond-to(small-down) {
+    box-shadow: 0 1px 3px rgba(4, 53, 103, 0.32);
   }
   @include respond-to(ipad-up) {
     padding: 30px;
@@ -150,9 +161,10 @@
   -webkit-overflow-scrolling: touch;
   box-shadow: 0 1px 3px rgba(4, 53, 103, 0.32);
   background: #fff;
-  border-radius: 3px 3px 0 0;
+  margin-top: 5px;
   @include respond-to(ipad-up) {
     margin: 40px 40px 0;
+    border-radius: 3px 3px 0 0;
   }
 }
 

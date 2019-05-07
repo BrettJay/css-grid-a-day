@@ -1,8 +1,8 @@
 import React from "react"
 import Remarkable from "remarkable"
 
-
 import Logo from "../../images/markdown/icon.svg"
+import Menu from "../../images/markdown/menu.svg"
 import Profile from "../../images/markdown/avatar.jpg"
 
 import Editor from "./editor.module.scss"
@@ -19,15 +19,11 @@ class MarkdownEditor extends React.Component {
 
 I’ve been meaning to properly learn CSS Grid for some time now.
 
-Two things occurred recently. I finally got around to watching Wes Bos’ excellent
-(and free) [Learn Grid screencast series][lg], and my hardcover copy of Andy Clarke’s
-[Art Direction for the Web][a] arrived.
+Two things occurred recently. I finally got around to watching Wes Bos’ excellent (and free) [Learn Grid screencast series][lg], and my hardcover copy of Andy Clarke’s [Art Direction for the Web][a] arrived.
 
-So late in April I thought I’d give myself a little challenge—design a layout
-with CSS Grid—some practical, many not-so practical—every day in May.
+So late in April I thought I’d give myself a little challenge—design a layout with CSS Grid—some practical, many not-so practical—every day in May.
 
-It’ll be a miracle if I can keep to the schedule, but so far it’s been a lot of
-fun. We’re only two days in though—check in with me in a week’s time![^1] 😅
+It’ll be a miracle if I can keep to the schedule, but so far it’s been a lot of fun. We’re only two days in though—check in with me in a week’s time![^1] 😅
 
 You can follow my experiments in CSS grid here: [cssgrid31.brett.cool][w]
 
@@ -64,7 +60,7 @@ You can follow my experiments in CSS grid here: [cssgrid31.brett.cool][w]
           <div className={Editor.title}>New Post</div>
           <div className={`${Editor.avatar} ${Editor.avatar_active}`}><img src={Profile} alt="Profile"/></div>
         </div>
-        <div className={Editor.menu}/>
+        <div className={Editor.menu}><img src={Menu} alt="Menu"/></div>
         <div className={Editor.editor}>
           <label htmlFor="markdown-title">Title:</label>
           <input type="text" id="markdown-title" placeholder="Title" onChange={this.handleTitleChange} defaultValue={this.state.title}/>
