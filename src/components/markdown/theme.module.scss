@@ -46,6 +46,7 @@
   }
   h1 {
     @include fluid-scale(font-size, $responsive_min, $responsive_max, 19px, 34px);
+    font-weight: 800;
   }
   p {
     @include fluid-scale(font-size, $responsive_min, $responsive_max, 13px, 17px);
