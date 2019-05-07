@@ -1,0 +1,60 @@
+@import "../../styles/_tools.fluid_scale.sass";
+
+.header {
+  padding: 30px 20px;
+  position: relative;
+  height: 80px;
+  margin: 0 0 20px;
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+  }
+  li {
+    opacity: 0.5;
+    float: left;
+    font-size: 14px;
+    margin-left: 20px;
+    &.active_nav {
+      opacity: 1;
+    }    
+  }
+}
+
+.logo {
+  float: left;
+  opacity: 0.5;
+  transition: 0.2s ease opacity;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.preview {
+  padding: 0 0 80px;
+  img {
+    width: 100%;
+  }
+  p {
+    line-height: 1.45;
+  }
+  a {
+    text-decoration: none;
+    color: #00559e;
+    border-bottom: 1px solid rgba(43, 157, 255, 0.3);
+  }
+  h1 {
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 19px, 34px);
+  }
+  p {
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 13px, 17px);
+  }
+  hr {
+    border: 0 none;
+    max-width: 120px;
+    margin: 60px auto;
+    height: 2px;
+    background: #eee;
+  }
+}
