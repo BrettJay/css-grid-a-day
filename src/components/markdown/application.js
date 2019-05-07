@@ -58,10 +58,13 @@ You can follow my experiments in CSS grid here: [cssgrid31.brett.cool][w]
     return (
       <div className={Editor.container}>
         <div className={Editor.header}>
-          <img src={Logo} alt="Editor" className={Editor.logo}/>
+          <div className={Editor.logo}>
+            <img src={Logo} alt="Editor"/>
+          </div>
           <div className={Editor.title}>New Post</div>
           <div className={`${Editor.avatar} ${Editor.avatar_active}`}><img src={Profile} alt="Profile"/></div>
         </div>
+        <div className={Editor.menu}/>
         <div className={Editor.editor}>
           <label htmlFor="markdown-title">Title:</label>
           <input type="text" id="markdown-title" placeholder="Title" onChange={this.handleTitleChange} defaultValue={this.state.title}/>
@@ -71,6 +74,10 @@ You can follow my experiments in CSS grid here: [cssgrid31.brett.cool][w]
             onChange={this.handleChange}
             defaultValue={this.state.body}
           />
+          <div className={Editor.actions}>
+            <button>Save draft</button>
+            <button>Publish</button>
+          </div>
         </div>
         <div className={Editor.render}>        
           <div className={Theme.preview}>
@@ -88,10 +95,6 @@ You can follow my experiments in CSS grid here: [cssgrid31.brett.cool][w]
               <div dangerouslySetInnerHTML={this.getRawMarkup()} />
             </div>
           </div>
-        </div>
-        <div className={Editor.actions}>
-          <button>Save draft</button>
-          <button>Publish</button>
         </div>
       </div>
     );

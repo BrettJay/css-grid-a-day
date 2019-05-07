@@ -2,21 +2,18 @@
 
 .container {
   display: grid;
-  grid-template-columns: 0 1fr 1fr 0;
-  grid-template-rows: 60px 1fr auto;
+  grid-template-columns: 60px 1fr 1.5fr;
+  grid-template-rows: 60px 1fr;
   min-height: 100vh;
   max-height: 100vh;
   grid-template-areas:
-    "header header header header"
-    ". editor preview ."
-    "toolbar toolbar toolbar toolbar";
-  grid-gap: 20px;
+    "header header header"
+    "menu editor preview";
   padding: 0;
-  background: #f7f7f7;
+  background: #EEF5FD;
   @include respond-to(small-down) {
     grid-template-columns: 0 1fr 0;
     grid-template-rows: 60px auto auto;
-    grid-gap: 20px;
     max-height: none;
     grid-template-areas:
       "header header header"
@@ -26,13 +23,17 @@
   }
 }
 
+.menu {
+  grid-area: menu;
+  background: #233342;
+}
 .header {
-  padding: 10px 40px;
   display: grid; 
   grid-area: header;
-  grid-template-columns: [logo] 40px [title] 1fr [avatar] 40px;
-  background: #0E1D2F;
-  color: #c1cad6;
+  grid-template-columns: [logo] 60px [title] 1fr [avatar] 40px 40px;
+  background: #559DE6;
+  align-items: center;
+  color: #fff;
   @include respond-to(small-down) {
     padding-left: 10px;
     padding-right: 10px;
@@ -42,13 +43,25 @@
 .title {
   grid-column: title;
   text-align: center;
-  line-height: 40px;
+  line-height: 20px;
+  height: 60px;
+  padding: 20px 0;
   font-weight: bold;
 }
 
 .logo {
   grid-column: logo;
-  opacity: 0.3;
+  background: #142433;
+  text-align: center;
+  padding: 10px;
+  height: 60px;
+  img {
+    width: 40px;
+    height: 40px;
+    display: block;
+    vertical-align: middle;
+    overflow: hidden;
+  }
 }
 
 .avatar {
@@ -74,19 +87,22 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  border: 2px solid #0E1D2F;
+  border: 2px solid #3885D2;
 }
 
 .editor {
   grid-area: editor;
   display: grid;
-  grid-template-rows: auto auto auto 1fr;
+  background: #fff;
+  grid-template-rows: auto auto auto 1fr auto;
   grid-gap: 20px;
+  
   grid-template-areas:
     "titlelabel"
     "titleinput"
     "bodylabel"
-    "bodytextarea";
+    "bodytextarea"
+    "toolbar";
   textarea {
     line-height: 1.3;
     width: 100%;
@@ -97,31 +113,26 @@
   input {
     width: 100%;
   }
-  label {
-    margin: 10px 0 0;
+  input,
+  textarea{
+    border-color: #d2e1f0;
   }
   @include respond-to(ipad-up) {
-    padding: 20px 10px 20px 20px;
+    padding: 30px;
+    border-right: 1px solid #C5D9E8;
   }
 }
 
 .actions {
-  grid-area: toolbar;
   display: flex;
+  grid-area: "toolbar";
   justify-content: flex-end;
-  background: #fefefe;
-  padding: 20px;
-  box-shadow: 0 0px 3px rgba(0,0,0,0.2);
-  @include respond-to(ipad-up) {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
   button {
     background: #FFFFFF;
-    border: 1px solid rgba(92, 92, 92, 0.30);
+    border: 1px solid hsla(210, 80%, 30%, 0.3);
     border-radius: 3px;
-    font-size: 16px;
-    padding: 10px 20px;
+    font-size: 13px;
+    padding: 8px 18px;
     transition: box-shadow 0.2s ease;
     -webkit-appearance: none;
     resize: none;
@@ -130,18 +141,18 @@
     font-weight: bold;
   }
   button + button {
-    margin-left: 20px;
+    margin-left: 15px;
   }
 }
 .render {
   grid-area: preview;
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 3px rgba(4, 53, 103, 0.32);
   background: #fff;
-  border-radius: 3px;
+  border-radius: 3px 3px 0 0;
   @include respond-to(ipad-up) {
-    margin: 20px 20px 20px 10px;
+    margin: 40px 40px 0;
   }
 }
 
