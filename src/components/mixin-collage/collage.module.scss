@@ -100,9 +100,6 @@
 .playIcon {
   float: left;
   @include pr1();
-  @include respond-to(mobile) {
-    display: none;
-  }
 }
 
 .speaker {
@@ -118,9 +115,9 @@
   @include fluid-scale(font-size, $responsive_min, $responsive_max, 11px, 12px);
 }
 
-@include respond-to(mobile) {
+@include respond-to(mobile-down) {
   .grid {
-    grid-auto-rows: 0.25fr;
+    grid-auto-rows: auto;
     grid-template-columns: 1fr 1fr
   }
   .item {
