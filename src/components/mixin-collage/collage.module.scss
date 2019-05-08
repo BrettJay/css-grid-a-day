@@ -1,0 +1,134 @@
+@import "../../styles/_tools.fluid_scale.sass";
+@import "../../styles/_tools.respond_to.sass";
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 0.8fr;
+  position: relative;
+  background: #583ca0;
+  color: #ffffff;
+}
+
+.item {
+  background: #5437A1;
+  grid-column: span 2;
+  position: relative;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: 0.2s ease transform;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+.large {
+  grid-column: span 3;
+}
+
+.talkItem:hover img {
+  transform: scale(1.1);
+}
+
+.quote {
+  @include pa3();
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  blockquote {
+    margin: 0;
+  }
+  p {
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 11px, 18px);
+    line-height: 1.4;
+    color: #fff;
+    margin: 0;
+    span, a {
+      color: #50E3C2;
+    }
+    & + p {
+      @include mt1();
+    }
+  }
+  cite {
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 8px, 14px);
+    border-top: 2px solid rgba(255, 255, 255, 0.25);
+    color: #fff;
+    display: block;
+    font-style: normal;
+    padding-top: 1vw;
+    .arrow {
+      opacity: 0.5;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+    a {
+      color: inherit;
+      color: #50E3C2;
+      &:hover .arrow {
+        opacity: 1;
+        transform: translateX(4px);
+      }
+    }
+    a:last-child {
+      float: right; 
+    }
+  }
+}
+
+
+
+.talk {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color: #fff;
+  @include pt3();
+  @include pb3();
+  @include pl2();
+  @include pr2();
+}
+
+.playIcon {
+  float: left;
+  @include pr1();
+}
+
+.speaker {
+  @include fluid-scale(font-size, $responsive_min, $responsive_max, 13px, 16px);
+  font-weight: bold;
+  padding-bottom: 3px;
+  margin: 0;
+}
+
+.talkTitle {
+  font-weight: 600;
+  margin: 0;
+  @include fluid-scale(font-size, $responsive_min, $responsive_max, 11px, 12px);
+}
+
+@include respond-to(mobile-down) {
+  .grid {
+    grid-auto-rows: auto;
+    grid-template-columns: 1fr 1fr
+  }
+  .item {
+    grid-column-start: span 1;
+  }
+  .large,
+  .responsive,
+  .talkItem {
+    grid-column-start: span 2;
+  }
+  .quote {
+    @include pa4();
+  }
+}
