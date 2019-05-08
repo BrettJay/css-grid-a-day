@@ -10,7 +10,7 @@ class Talk extends React.Component {
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className={`${Collage.item} ${Collage.title}`}
+        className={`${Collage.item} ${Collage.talkItem}`}
         title={`Watch ${title} by ${speaker}`}>
         <div className={Collage.talk}>
           <div className={Collage.playIcon}>

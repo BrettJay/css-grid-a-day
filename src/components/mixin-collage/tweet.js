@@ -24,6 +24,7 @@ class Talk extends React.Component {
             <a href={`https://twitter.com/${account}`}>@{account}</a>
             <a href={`https://twitter.com/${account}/status/${id}`}>
               View tweet
+              <svg  className={Collage.arrow} height="8" viewBox="0 0 29 8" width="29" xmlns="http//www.w3.org/2000/svg"> <g fillRule="evenodd" fill="none" strokeLinecap="round" strokeLinejoin="round" stroke="#FFFFFF" transform="translate(1)"> <path d="M0.28064343,4 L26.6666667,4"></path> <polyline points="22.667 0 26.667 4 22.667 8"></polyline> </g> </svg>
             </a>
           </cite>
         </div>

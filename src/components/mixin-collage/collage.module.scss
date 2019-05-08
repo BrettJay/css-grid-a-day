@@ -46,8 +46,8 @@
     margin: 0;
   }
   p {
-    @include fluid-scale(font-size, $responsive_min, $responsive_max, 11px, 19px);
-    line-height: 1.3;
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 11px, 18px);
+    line-height: 1.4;
     color: #fff;
     margin: 0;
     span, a {
@@ -64,14 +64,25 @@
     display: block;
     font-style: normal;
     padding-top: 1vw;
+    .arrow {
+      opacity: 0.5;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
     a {
       color: inherit;
+      color: #50E3C2;
+      &:hover .arrow {
+        opacity: 1;
+        transform: translateX(4px);
+      }
     }
     a:last-child {
       float: right; 
     }
   }
 }
+
+
 
 .talk {
   position: absolute;
