@@ -1,0 +1,47 @@
+@import "../../styles/_tools.respond_to.sass";
+
+.post {
+  max-width: 640px;
+  background: #fff;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  float: left;
+  margin-right: 10px;
+}
+
+.photo {
+  width: 100%;
+}
+
+.account,
+.caption {
+  padding: 15px;
+  font-size: 14px;
+}
+
+.caption {
+  border-bottom: 40px;
+}
+
+.account {
+  font-weight: bold;
+  line-height: 30px;
+  height: 60px;
+}
+
+@include respond-to(ipad-up) {
+  .post {
+    border: 0 none;
+    border-radius: 3px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 1px 4px 0 rgba(144,194,215,0.65), 0 1px 8px 0 rgba(144,194,215,0.25);
+  }
+}

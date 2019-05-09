@@ -1,0 +1,57 @@
+import Menu from "../components/responsive-menu/menu.module.scss"
+import Image from "../components/responsive-menu/image"
+import Footer from "../components/footer"
+
+<div className={Menu.container}>
+  <div className={Menu.header}/>
+  <nav className={Menu.navigation}>
+    <a className={Menu.active}>
+      <div className={`${Menu.icon} ${Menu.home}`}/>
+      <div className={Menu.label}>Feed</div>
+    </a>
+    <a>
+      <div className={`${Menu.icon} ${Menu.search}`}/>
+      <div className={Menu.label}>Search</div>
+    </a>
+    <a>
+      <div className={`${Menu.icon} ${Menu.add}`}/>
+      <div className={Menu.label}>New</div>
+    </a>
+    <a>
+      <div className={`${Menu.icon} ${Menu.notifications}`}/>
+      <div className={Menu.label}>Notifications</div>
+    </a>
+    <a>
+      <div className={`${Menu.icon} ${Menu.profile}`}/>
+      <div className={Menu.label}>Profile</div>
+    </a>
+  </nav>
+
+  <div className={Menu.posts}>
+    <Image
+      account="brettjay"
+      filename="P5023345"
+      caption="A pretty good caff"
+      />
+    <Image
+      account="brettjay"
+      filename="P5023353"
+      caption="Getting them beans"
+      />
+    <Image
+      account="brettjay"
+      filename="P5023364"
+      caption="Views from above"
+      />
+    <Image
+      account="brettjay"
+      filename="P5023384"
+      caption="Nearly ready ☕️👌"
+      />
+  </div>
+</div>
+
+<Footer date={9}>
+
+Hello
+</Footer>

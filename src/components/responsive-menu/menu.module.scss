@@ -1,0 +1,125 @@
+@import "../../styles/_tools.respond_to.sass";
+
+.container {
+  background: #EDF4F7;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 60px 1fr;
+  grid-template-areas: "header navigation" "post post";
+  @include respond-to(mobile-down) {
+    max-height: 85vh;
+  }
+  @include respond-to(small-down) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr 60px;
+    grid-template-areas:
+      "header"
+      "post"
+      "navigation";
+    .label {
+      display: none;
+    }
+    .header {
+      box-shadow: 0 1px 4px 0 rgba(144,194,215,0.65);
+      position: sticky;
+      top: 0;
+    }
+    .navigation {
+      box-shadow: 0 0px 4px 0 rgba(144,194,215,0.65);
+      position: sticky;
+      bottom: 0;
+    }
+  }
+}
+
+.posts {
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  grid-area: post;
+}
+
+.header {
+  background: #fff url(../../images/responsive-menu/logo.svg) 50% 50% no-repeat;
+  grid-area: header;
+}
+
+.navigation {
+  display: grid;
+  background: #fff;
+  grid-area: navigation;
+  color: #000;
+  grid-template-columns: repeat(5, 1fr);
+  a {
+    color: inherit;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 15px 5px;
+  }
+}
+
+.icon {
+  width: 30px;
+  height: 30px; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.label {
+  line-height: 30px;
+  transition: color 0.2s ease;
+}
+
+.home {
+  background: url(../../images/responsive-menu/home.svg) 50% 50% no-repeat;
+}
+
+.search {
+  background: url(../../images/responsive-menu/search.svg) 50% 50% no-repeat;
+}
+
+.add {
+  background: url(../../images/responsive-menu/add.svg) 50% 50% no-repeat;
+}
+
+.notifications {
+  background: url(../../images/responsive-menu/notifications.svg) 50% 50% no-repeat;
+}
+
+.profile {
+  background: url(../../images/responsive-menu/profile.svg) 50% 50% no-repeat;
+}
+
+@include respond-to(ipad-up) {
+  .navigation a {
+    display: flex;
+    justify-content: center;
+  }
+  .icon {
+    margin: 0 5px 0 0;
+    display: inline-block;
+  }
+  .label {
+    display: inline-block;
+  }
+
+  .header,
+  .navigation {
+    position: sticky;
+    top: 0;
+  }
+}
+
+.active {
+  box-shadow: inset 0 -3px 0 #800080;
+  .label {
+    color: #800080;
+  }
+} 
+
+a {
+  transition: all 0.2s ease;
+  &:hover {
+    box-shadow: inset 0 -3px 0 #800080;
+  }
+}
