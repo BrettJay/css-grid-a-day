@@ -1,23 +1,7 @@
 @import "../../styles/_tools.respond_to.sass";
 
-.container {
-  display: grid;
-  grid-template-columns: 60px 1fr;
-  grid-template-rows: 60px 1fr;
-  min-height: 100vh;
-  grid-template-areas:
-    "logo header"
-    "menu body";
-  padding: 0;
+.canvas {
   background: #15171D;
-  @include respond-to(small-down) {
-    grid-template-columns: 60px 1fr;
-    grid-template-rows: 60px 1fr 60px;
-    grid-template-areas:
-    "logo header"
-    "body body"
-    "menu menu";
-  }
 }
 
 .logo {
@@ -28,16 +12,14 @@
 .header {
   background: #3E4451;
   grid-area: header;
-}
-
-.menu {
-  background: #0F1116;
-  grid-area: menu;
+  color: #fff;
+  text-align: Center;
 }
 
 .body {
   grid-area: body;
   display: grid;
+  min-height: 100vh;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 10px;

@@ -1,3 +1,5 @@
+@import "../../styles/_tools.fluid_scale.sass";
+
 .container {
   list-style: none;
   margin: 0;
@@ -8,8 +10,61 @@
   color: #fff;
   font-size: 13px;
   padding: 12px 0 12px 20px;
+  position: relative;
+  transition: 0.2s ease opacity;
+  input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    border: 2px solid #2C303D;
+    background: transparent;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 3px;
+      background: rgba(255,255,255,0.3) url(../../images/personal-dashboard/check.svg) 50% 50% no-repeat;
+      transform: scale(0);
+      transition: transform 0.2s ease;
+    }
+    &:checked:after {
+      transform:scale(1);
+    }
+    &:focus {
+      outline: 0 none;
+    }
+  }
 }
+
+.todo {
+  padding-left: 34px;
+}
+
+.todo.true {
+  opacity: 0.8;
+  .itemTitle {
+    text-decoration: line-through;
+  }
+}
+
 
 .item + .item {
   border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.itemTitle {
+  @include fluid-scale(font-size, $responsive_min, $responsive_max, 11px, 13px);
+  margin: 0;
+}
+
+.itemSubTitle {
+  @include fluid-scale(font-size, $responsive_min, $responsive_max, 9px, 11px);
+  color: rgba(255,255,255,0.5);
+  margin: 0;
 }
