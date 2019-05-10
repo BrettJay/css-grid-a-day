@@ -1,0 +1,15 @@
+.container {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  color: #fff;
+  font-size: 13px;
+  padding: 12px 0 12px 20px;
+}
+
+.item + .item {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}

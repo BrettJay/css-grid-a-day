@@ -1,0 +1,79 @@
+import Tile from "../components/personal-dashboard/tile"
+import Icon from "../components/personal-dashboard/icon"
+
+import Primary from "../components/personal-dashboard/primary"
+import Secondary from "../components/personal-dashboard/secondary"
+
+import List from "../components/personal-dashboard/list"
+import ListItem from "../components/personal-dashboard/listItem"
+
+import DashboardStyles from "../components/personal-dashboard/dashboard.module.scss"
+
+<div className={DashboardStyles.container}>
+  <div className={DashboardStyles.logo}/>
+  <div className={DashboardStyles.header}/>
+  <div className={DashboardStyles.menu}/>
+  <div className={DashboardStyles.body}>
+    <Tile type="primary">
+      
+    </Tile>
+    <Tile colour="red">
+      <Icon filename="heart" description="Heart rate"/>
+      <div>
+        <Primary>58 bpm</Primary>
+        <Secondary>5 minutes ago</Secondary>
+      </div>
+    </Tile>
+    <Tile colour="green">
+      <Icon filename="steps" description="Steps"/>
+      <div>
+        <Primary>3,271</Primary>
+        <Secondary>steps today</Secondary>
+      </div>
+    </Tile>
+    <Tile colour="darkblue">
+      <Icon filename="sleep" description="Sleep"/>
+      <div>
+        <Primary>7.3h</Primary>
+        <Secondary>sleep last night</Secondary>
+      </div>
+    </Tile>
+    <Tile colour="orange">
+      <Icon filename="computer" description="Computer"/>
+      <div>
+        <Primary>1.4h</Primary>
+        <Secondary>hours on computer</Secondary>
+      </div>
+    </Tile>
+    <Tile type="list">
+      <Icon filename="todo" description="To-do"/>
+      <List>
+        <ListItem type="todo" complete={true}>Empty bins</ListItem>
+        <ListItem type="todo" complete={false}>Pay rent</ListItem>
+        <ListItem type="todo" complete={false}>Do things</ListItem>
+      </List>
+    </Tile>
+    <Tile type="list">
+      <Icon filename="email" description="E-mail"/>
+      <List type="email">
+        <ListItem>Empty bins</ListItem>
+        <ListItem>Pay rent</ListItem>
+        <ListItem>Do things</ListItem>
+      </List>
+    </Tile>
+    <Tile type="list">
+      <Icon filename="places" description="Places"/>
+      <List type="places">
+        <ListItem>Home</ListItem>
+      </List>
+    </Tile>
+    <Tile type="list">
+      <Icon filename="notifications" description="Notifications"/>
+      <List type="notifications">
+        <ListItem>Empty bins</ListItem>
+        <ListItem>Pay rent</ListItem>
+        <ListItem>Do things</ListItem>
+      </List>
+    </Tile>
+  </div>
+</div>
