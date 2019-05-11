@@ -1,3 +1,5 @@
+@import "../../styles/_tools.respond_to.sass";
+
 .month {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -33,10 +35,16 @@
   grid-template-rows: 1fr;
   grid-gap: 15px;
   height: 100%;
+  @include respond-to(mobile-down) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .dayline {
   display: grid;
+  @include respond-to(mobile-down) {
+    display: none;
+  }
 }
 
 .hour {

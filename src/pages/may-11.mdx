@@ -1,0 +1,62 @@
+import LayoutStyles from "../components/review/layout.module.scss"
+import MovieCard from "../components/review/movie"
+
+import Footer from "../components/footer"
+import Metatags from "../components/metatags"
+
+<Metatags
+  title="Review Modules | May 11 | CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail="https://cssgrid31.brett.cool/opengraph/may-11.png"
+  url="https://cssgrid31.brett.cool"
+  pathname="/may-11"
+/>
+
+<div className={LayoutStyles.canvas}> 
+  <MovieCard
+    title="Detective Pikachu"
+    art="detectivepikachu"
+    rating={4}
+    released="9 May 2019"
+    runtime="1hr 44m">
+    <p>An enjoyable film, carried by Ryan Reynolds and a very cutely rendered Pikachu. It’s tough to appeal to older fans, families, and kids, but Detective Pikachu mostly manages to stick the landing.</p>
+    <p>Not a technically impressive film (well-rendered Pokémon aside), but one I still enjoyed a lot</p>
+  </MovieCard>
+  <MovieCard
+    title="Avengers Endgame"
+    art="endgame"
+    rating={3}
+    released="24 April 2019"
+    runtime="3hr 1m">
+    <p>A satisfying ending to the first ten years of the MCU. Satisfying story that “subvert expectations” mostly successfully.</p>
+    <p>Fanservice aplomb, for anyone who’s invested time into the cinematic universe.</p>
+  </MovieCard>
+  <MovieCard
+    title="You Were Never Really Here"
+    art="ywnrh"
+    rating={5}
+    released="6 April 2018"
+    runtime="1hr 30m">
+    <p>A visual and auditorily stunning, and disorienting character film.</p>
+    <p>Successfully creates tension, panic, and a sense of disorientation.</p>
+  </MovieCard>
+  <MovieCard
+    title="Incredibles 2"
+    art="inc2"
+    rating={3}
+    released="5 June 2018"
+    runtime="2hr 5m">
+    <p>An enjoyable, competent, but somewhat forgettable followup to the Incredibles.</p>
+  </MovieCard>
+</div>
+
+<Footer date={11} prev={true}>
+
+Last night I saw Detective Pikachu.
+
+It was pretty good, with the qualifiers “for a Pokémon movie”, “for a kids movie”, “for an animé movie”, and “for a videogame movie”. The writing and acting were just passable, but still made for a very enjoyable movie watching experience.
+
+Contrast that with Avengers Endgame—a technically impressive, high budget film, that went above and beyond in fanservice and more—and yet, I just didn’t *enjoy* the experience of watching is quite as much.
+
+Anywho, this isn’t for my trash takes. I don’t watch enough movies these days.
+</Footer>
