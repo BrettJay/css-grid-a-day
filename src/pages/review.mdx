@@ -1,7 +1,16 @@
 import LayoutStyles from "../components/review/layout.module.scss"
 import MovieCard from "../components/review/movie"
 
+import Footer from "../components/footer"
+import Metatags from "../components/metatags"
 
+<Metatags
+  title="Personal dashboard | May 10 | CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail="https://cssgrid31.brett.cool/opengraph/may-10.png"
+  url="https://cssgrid31.brett.cool"
+  pathname="/may-10"
+/>
 
 <div className={LayoutStyles.canvas}> 
   <MovieCard
@@ -29,3 +38,8 @@ import MovieCard from "../components/review/movie"
     A satisfying ending to the first ten years of the MCU. Satisfying story that “subvert expectation mostly successfully.
   </MovieCard>
 </div>
+
+<Footer date={11} prev={true}>
+
+Hello
+</Footer>
