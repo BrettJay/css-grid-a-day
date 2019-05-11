@@ -124,11 +124,17 @@
 .body {
   padding: 30px 30px 30px 15px;
   font-size: 16px;
-  color: #333333;
-  line-height: 1.4375;
-  @include fluid-scale(font-size, $responsive_min, $responsive_max, 13px, 16px);
   @include respond-to(small-down) { 
     padding: 20px 20px 20px 10px;
+  }
+  p {
+    margin: 0;
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 13px, 16px);
+    color: #333333;
+    line-height: 1.4375;
+  }
+  p + p {
+    margin-top: 1em;
   }
 }
 
