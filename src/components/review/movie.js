@@ -13,11 +13,11 @@ class Movie extends React.Component {
     return (
       <div className={CardStyles.card}>
         <h2 className={CardStyles.title}>
-          <div className={CardStyles.label}>{title}</div>
           <div className={CardStyles.rating}>
             { Array.apply(null, { length: rating }).map((e, i) => ( <img src={Star} alt={rating_desc} title={rating_desc}/> )) }
             { Array.apply(null, { length: remainder }).map((e, i) => ( <img src={Estar} alt={rating_desc} title={rating_desc}/> )) }
           </div>
+          <div className={CardStyles.label}>{title}</div>
         </h2>
         <div className={CardStyles.header}><img src={coverUrl} alt={title}/></div>
         <div className={CardStyles.metadata}>
