@@ -1,0 +1,101 @@
+import Footer from "../components/footer"
+import Metatags from "../components/metatags"
+
+import Tile from "../components/personal-dashboard/tile"
+import Icon from "../components/personal-dashboard/icon"
+
+import Primary from "../components/personal-dashboard/primary"
+import Secondary from "../components/personal-dashboard/secondary"
+
+import Cal from "../components/personal-dashboard/cal"
+import CalStyles from "../components/personal-dashboard/calendar.module.scss"
+import DayLine from "../components/personal-dashboard/dayline"
+import List from "../components/personal-dashboard/list"
+import ListItem from "../components/personal-dashboard/listItem"
+
+import DashboardStyles from "../components/personal-dashboard/dashboard.module.scss"
+import TileStyles from "../components/personal-dashboard/tile.module.scss"
+
+<Metatags
+  title="Personal dashboard | May 10 | CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail="https://cssgrid31.brett.cool/opengraph/may-10.png"
+  url="https://cssgrid31.brett.cool"
+  pathname="/may-10"
+/>
+
+<div className={DashboardStyles.canvas}>
+  <div className={DashboardStyles.body}>
+    <Tile type="primary">
+      <div className={CalStyles.combo}>
+        <DayLine />
+        <Cal />
+      </div>
+    </Tile>
+    <Tile colour="red">
+      <Icon filename="heart" description="Heart rate"/>
+      <div>
+        <Primary>58 <span className={TileStyles.sc}>bpm</span></Primary>
+        <Secondary>5 minutes ago</Secondary>
+      </div>
+    </Tile>
+    <Tile colour="green">
+      <Icon filename="steps" description="Steps"/>
+      <div>
+        <Primary>3,271</Primary>
+        <Secondary>steps today</Secondary>
+      </div>
+    </Tile>
+    <Tile colour="darkblue">
+      <Icon filename="sleep" description="Sleep"/>
+      <div>
+        <Primary>7.3h</Primary>
+        <Secondary>sleep last night</Secondary>
+      </div>
+    </Tile>
+    <Tile colour="orange">
+      <Icon filename="computer" description="Computer"/>
+      <div>
+        <Primary>1.4h</Primary>
+        <Secondary>hours on computer</Secondary>
+      </div>
+    </Tile>
+    <Tile type="list">
+      <Icon filename="todo" description="To-do"/>
+      <List>
+        <ListItem type="todo" list="Home" complete={true}>Empty bins</ListItem>
+        <ListItem type="todo" list="Home" complete={false}>Pay rent</ListItem>
+        <ListItem type="todo" list="Work" complete={false}>Do things</ListItem>
+      </List>
+    </Tile>
+    <Tile type="list">
+      <Icon filename="email" description="E-mail"/>
+      <List type="email">
+        <ListItem unread={true} type="email" from="hello@brettjones.me" date="10 May 2019">That thing</ListItem>
+        <ListItem type="email" from="coffee@place.co" date="9 May 2019">Your order has shipped</ListItem>
+        <ListItem type="email" from="foo@bar.com" date="10 May 2019">Hello world</ListItem>
+      </List>
+    </Tile>
+    <Tile type="empty">
+      <Icon filename="places" description="Places" />
+      <div className={TileStyles.emptystate}>
+        <h3>No places visited today</h3>
+      </div>
+    </Tile>
+    <Tile type="list">
+      <Icon filename="notifications" description="Notifications"/>
+      <List type="notifications">
+        <ListItem unread={true}>A notification has occured</ListItem>
+        <ListItem>Another thing happened</ListItem>
+        <ListItem>And a third thing happened</ListItem>
+      </List>
+    </Tile>
+  </div>
+</div>
+
+<Footer date={10} prev={true} next={true}>
+
+I was feeling under the weather today and so nearly missed this entry.
+
+It’s a personal dashboard. Showing I basically went nowhere, and did nothing today. All in all, it was an excellent day!
+</Footer>
