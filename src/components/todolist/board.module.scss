@@ -30,9 +30,9 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 15px;
-  @include respond-to(ipad-down) {
+  @include respond-to(0, 1200px) {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 480px);
+    grid-template-rows: repeat(3, 380px);
   }
   @include respond-to(small-down) {
     grid-template-columns: repeat(2, 1fr);
