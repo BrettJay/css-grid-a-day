@@ -19,12 +19,12 @@
 
 .empty {
   border-radius: 3px;
-  background: #e2e2e2;
+  background: #17141b;
   box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
   padding: 15px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   button {
     display: block;
     background: #FFFFFF;

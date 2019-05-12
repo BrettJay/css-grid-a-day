@@ -13,6 +13,7 @@ class Application extends React.Component {
         { name: 'CSS Grid a day', colour: '#3F51B5' },
         { name: 'Side Projects', colour: '#e05f00' },
         { name: 'work', colour: '#cc113b' },
+        { name: 'Backlog', colour: '#3c1d46' },
       ],
       todos: [
         { text: 'Pay rent', complete: true, list: 'home'},
@@ -40,6 +41,10 @@ class Application extends React.Component {
         { text: 'CSS Grid a Day', complete: false, list: 'Side Projects'},
         { text: 'Suitup', complete: false, list: 'Side Projects'},
         { text: 'Go<Figure>', complete: false, list: 'Side Projects'},
+        { text: 'Watch Detective Pikachu', complete: true, list: 'Backlog'},
+        { text: 'Watch Avengers Endgame', complete: true, list: 'Backlog'},
+        { text: 'Read ‘The Death of Truth’', complete: false, list: 'Backlog'},
+        { text: 'Watch You Were Never Really Here', complete: true, list: 'Backlog'},
       ]
     };
   }
