@@ -53,7 +53,7 @@ class Application extends React.Component {
     return (
       <div className={BoardStyles.container}>
         <div className={BoardStyles.header}>
-          <h1>Todo</h1>
+          <h1>Todo Boards</h1>
         </div>
         <div className={BoardStyles.board}>
           {this.state.lists.map(list => (

@@ -32,9 +32,10 @@
   grid-gap: 15px;
   @include respond-to(ipad-down) {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 240px);
+    grid-template-rows: repeat(3, 480px);
   }
   @include respond-to(small-down) {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 240px);
   }
 }
