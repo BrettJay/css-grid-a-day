@@ -10,9 +10,11 @@
     "calendar day detail";
 }
 
-
 .header {
   grid-area: header;
   text-align: center;
   background: #fff;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
 }
