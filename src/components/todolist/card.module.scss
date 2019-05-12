@@ -2,5 +2,59 @@
   border-radius: 3px;
   background: #000;
   color: #fff;
+  display: grid;
   padding: 15px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 30px 1fr 40px;
+  grid-template-areas: "header" "items" "button";
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.title {
+  margin: 0 0 15px;
+  font-size: 16px;
+  text-transform: capitalize;
+  grid-area: header;
+}
+
+.empty {
+  border-radius: 3px;
+  background: #e2e2e2;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  button {
+    display: block;
+    background: #FFFFFF;
+    box-shadow: 0 1px 3px 0 rgba(92, 92, 92, 0.21);
+    border-radius: 3px;
+    font-size: 16px;
+    padding: 10px;
+    transition: box-shadow 0.2s ease;
+    -webkit-appearance: none;
+  }
+}
+
+.items {
+  grid-area: items;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.new {
+  grid-area: button;
+  -webkit-appearance: none;
+  border: 0 none;
+  font-size: 14px;
+  padding: 10px 0;
+  display: block;
+  color: #fff;
+  background: rgba(0,0,0,0.3);
+  border-radius: 3px;
+  transition: background 0.2s ease;
+  &:hover {
+    background: rgba(0,0,0,0.5);
+  }
 }
