@@ -1,0 +1,9 @@
+@import "../../styles/_tools.fluid_scale.sass";
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  width: 76.66%;
+  @include pt4();  
+  @include pb4();  
+}
