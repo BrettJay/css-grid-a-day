@@ -55,6 +55,7 @@
     @include fluid-scale(font-size, $responsive_min, $responsive_max, 12px, 19px);
     margin-bottom: 2em;
     font-style: normal;
+    color: #000;
     letter-spacing: 0.08em;
   }
   dt {
