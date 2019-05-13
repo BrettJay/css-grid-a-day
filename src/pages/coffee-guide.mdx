@@ -7,8 +7,19 @@ import stepTwoImg from "../images/brewguide/P5023367.jpg"
 import stepThreeImg from "../images/brewguide/P5023369.jpg"
 import stepFourImg from "../images/brewguide/P5023374.jpg"
 import stepFiveImg from "../images/brewguide/P5023381.jpg"
+import stepSixImg from "../images/brewguide/P5023394.jpg"
+import Metatags from "../components/metatags"
 require('typeface-league-spartan')
 require('typeface-work-sans')
+
+<Metatags
+  title="Coffee brewing guide | May 13 | CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail="https://cssgrid31.brett.cool/opengraph/may-13.png"
+  url="https://cssgrid31.brett.cool"
+  pathname="/may-13"
+/>
+
 
 
 <div className={Layout.page}>
@@ -104,9 +115,20 @@ require('typeface-work-sans')
       <img src={stepFiveImg} alt="Step 5"/>
     </div>
   </div>
+  <div className={Layout.stepEven}>
+    <div className={Layout.step_description}>
+      <h3>Step Six</h3>
+      <p>Once the coffee filters through, serve, and enjoy!</p>
+    </div>
+    <div className={Layout.step_image}>
+      <img src={stepSixImg} alt="Step 6"/>
+    </div>
+  </div>
 </div>
 
 <Footer>
 
-Coffee
+Ah coffee.
+
+
 </Footer>
