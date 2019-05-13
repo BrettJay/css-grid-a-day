@@ -1,0 +1,31 @@
+@import "../../styles/_tools.respond_to.sass";
+@import "../../styles/_tools.fluid_scale.sass";
+
+.page {
+  h1, h2, h3 {
+    font-family: LeagueSpartan, 'League Spartan', sans-serif;
+  }
+
+  p {
+    font-family: 'Work Sans', WorkSans, WorkSans-Regular, sans-serif;
+    font-size: 25px;
+    color: #545454;
+    letter-spacing: 0.01em;
+    letter-spacing: -0.2px;
+    line-height: 35px;
+  }
+}
+
+.billboard {
+  min-height: 100vh;
+  display: grid;
+  background: #222;
+  grid-template-columns: 44% 66%;
+  grid-template-rows: 60px 1fr 1fr 1fr 60px;
+  h1 {
+    font-size: 72px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 90px;
+  }
+}
