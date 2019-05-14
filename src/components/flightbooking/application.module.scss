@@ -13,7 +13,7 @@
 
 .logo {
   grid-area: logo;
-  background: rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.2) url(../../images/flightbooking/logo.svg) 50% 50% no-repeat;
 }
 
 .progress {
@@ -25,9 +25,16 @@
   grid-area: main;
 }
 
-.plane {
+.seatpicker {
   grid-area: plane;
   background: #fff;
+}
+
+.plane {
+  background: url(../../images/flightbooking/plane.svg) 50% 50% no-repeat;
+  width: 350px;
+  height: 100%;
+  margin: 0 auto;
 }
 
 .footer {
