@@ -42,6 +42,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  z-index: 100;
   @include respond-to(small-down) {
     display: none;
   }
