@@ -4,7 +4,7 @@ import Progress from "./progress.module.scss"
 import SeatStyles from "./seat.module.scss"
 import Seat from "./seat"
 import Ailse from "./ailse"
-
+import PlaneBG from "../../images/flightbooking/plane.svg"
 class FlightBooking extends React.Component {
   state = { seat: 'Please select' }
 
@@ -151,7 +151,41 @@ class FlightBooking extends React.Component {
                 <Seat setSeat={this.setSeat} seat="H7" available={true} />
                 <Seat setSeat={this.setSeat} seat="H8" available={true} />
               </div>
+              <div className={SeatStyles.economy}>
+                <Seat setSeat={this.setSeat} seat="I1" available={false} />
+                <Seat setSeat={this.setSeat} seat="I2" available={false} />
+                <Ailse/>
+                <Seat setSeat={this.setSeat} seat="I3" available={false} />
+                <Seat setSeat={this.setSeat} seat="I4" available={true} />
+                <Seat setSeat={this.setSeat} seat="I5" available={true} />
+                <Seat setSeat={this.setSeat} seat="I6" available={true} />
+                <Ailse/>
+                <Seat setSeat={this.setSeat} seat="I7" available={false} />
+                <Seat setSeat={this.setSeat} seat="I8" available={false} />
+
+                <Seat setSeat={this.setSeat} seat="J1" available={true} />
+                <Seat setSeat={this.setSeat} seat="J2" available={true} />
+                <Ailse/>
+                <Seat setSeat={this.setSeat} seat="J3" available={false} />
+                <Seat setSeat={this.setSeat} seat="J4" available={true} />
+                <Seat setSeat={this.setSeat} seat="J5" available={false} />
+                <Seat setSeat={this.setSeat} seat="J6" available={true} />
+                <Ailse/>
+                <Seat setSeat={this.setSeat} seat="K7" available={true} />
+                <Seat setSeat={this.setSeat} seat="K8" available={true} />
+                <Seat setSeat={this.setSeat} seat="K1" available={false} />
+                <Seat setSeat={this.setSeat} seat="K2" available={true} />
+                <Ailse/>
+                <Seat setSeat={this.setSeat} seat="K3" available={true} />
+                <Seat setSeat={this.setSeat} seat="K4" available={false} />
+                <Seat setSeat={this.setSeat} seat="K5" available={true} />
+                <Seat setSeat={this.setSeat} seat="K6" available={true} />
+                <Ailse/>
+                <Seat setSeat={this.setSeat} seat="K7" available={false} />
+                <Seat setSeat={this.setSeat} seat="K8" available={false} />
+              </div>
             </div>
+            <img src={PlaneBG} alt="Plane" className={Application.plane_bg}/>
           </div>
         </div>
       </div>
