@@ -59,3 +59,27 @@
   background: #0E1521;
   box-shadow: inset 60px 0 0 #FF930F;
 }
+
+.table {
+  width: 100%;
+  padding: 40px 0 0;
+  color: #fff;
+  th {
+    text-align: left;
+    height: 40px;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  td {
+    height: 60px;
+    font-size: 19px;
+  }
+  th:first-child,
+  td:first-child {
+    width: 60%;
+  }
+  th:last-child,
+  td:last-child {
+    width: 40%;
+  }
+}

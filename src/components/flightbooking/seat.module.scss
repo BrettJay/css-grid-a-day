@@ -1,0 +1,19 @@
+.container {
+  padding: 288px 10px;
+}
+
+.business {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 20px;
+}
+
+.button {
+  -webkit-appearance: none;
+  border: 0 none;
+  background: url(../../images/flightbooking/seat.svg) 50% 50% no-repeat;
+  display: block;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+}
