@@ -1,11 +1,7 @@
 .container {
-  padding: 288px 10px;
-}
-
-
-
-.overflow {
+  padding: 288px 10px 0;
   overflow-y: scroll;
+  height: 100%;
   -webkit-overflow-scrolling: touch;
 }
 

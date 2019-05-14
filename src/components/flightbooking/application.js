@@ -69,33 +69,31 @@ class FlightBooking extends React.Component {
         <div className={Application.seatpicker}>
           <div className={Application.plane}>
             <div className={SeatStyles.container}>  
-              <div className={SeatStyles.overflow}>
-                <div className={SeatStyles.business}>
-                  <Seat setSeat={this.setSeat} seat="A1" available={true} />
-                  <Seat setSeat={this.setSeat} seat="A2" available={true} />
-                  <Ailse/>
-                  <Seat setSeat={this.setSeat} seat="A3" available={false} />
-                  <Seat setSeat={this.setSeat} seat="A4" available={true} />
-                  <Ailse/>
-                  <Seat setSeat={this.setSeat} seat="A5" available={false} />
-                  <Seat setSeat={this.setSeat} seat="A6" available={true} />
-                  <Seat setSeat={this.setSeat} seat="B1" available={false} />
-                  <Seat setSeat={this.setSeat} seat="B2" available={false} />
-                  <Ailse/>
-                  <Seat setSeat={this.setSeat} seat="B3" available={true} />
-                  <Seat setSeat={this.setSeat} seat="B4" available={true} />
-                  <Ailse/>
-                  <Seat setSeat={this.setSeat} seat="B5" available={false} />
-                  <Seat setSeat={this.setSeat} seat="B6" available={true} />
-                  <Seat setSeat={this.setSeat} seat="C1" available={false} />
-                  <Seat setSeat={this.setSeat} seat="C2" available={false} />
-                  <Ailse/>
-                  <Seat setSeat={this.setSeat} seat="C3" available={false} />
-                  <Seat setSeat={this.setSeat} seat="C4" available={true} />
-                  <Ailse/>
-                  <Seat setSeat={this.setSeat} seat="C5" available={false} />
-                  <Seat setSeat={this.setSeat} seat="C6" available={true} />
-                </div>
+              <div className={SeatStyles.business}>
+                <Seat setSeat={this.setSeat} seat="A1" available={true} />
+                <Seat setSeat={this.setSeat} seat="A2" available={true} />
+                <Ailse/>
+                <Seat setSeat={this.setSeat} seat="A3" available={false} />
+                <Seat setSeat={this.setSeat} seat="A4" available={true} />
+                <Ailse/>
+                <Seat setSeat={this.setSeat} seat="A5" available={false} />
+                <Seat setSeat={this.setSeat} seat="A6" available={true} />
+                <Seat setSeat={this.setSeat} seat="B1" available={false} />
+                <Seat setSeat={this.setSeat} seat="B2" available={false} />
+                <Ailse/>
+                <Seat setSeat={this.setSeat} seat="B3" available={true} />
+                <Seat setSeat={this.setSeat} seat="B4" available={true} />
+                <Ailse/>
+                <Seat setSeat={this.setSeat} seat="B5" available={false} />
+                <Seat setSeat={this.setSeat} seat="B6" available={true} />
+                <Seat setSeat={this.setSeat} seat="C1" available={false} />
+                <Seat setSeat={this.setSeat} seat="C2" available={false} />
+                <Ailse/>
+                <Seat setSeat={this.setSeat} seat="C3" available={false} />
+                <Seat setSeat={this.setSeat} seat="C4" available={true} />
+                <Ailse/>
+                <Seat setSeat={this.setSeat} seat="C5" available={false} />
+                <Seat setSeat={this.setSeat} seat="C6" available={true} />
               </div>
               <div className={SeatStyles.economy}>
                 <Seat setSeat={this.setSeat} seat="D1" available={false} />
