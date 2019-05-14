@@ -1,0 +1,20 @@
+import Application from "../components/flightbooking/application"
+import Footer from "../components/footer"
+import Metatags from "../components/metatags"
+
+<Metatags
+  title="Flight seat picker | May 14 | CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail="https://cssgrid31.brett.cool/opengraph/may-14.png"
+  url="https://cssgrid31.brett.cool"
+  pathname="/may-14"
+/>
+
+<Application />
+
+<Footer date={14} prev={true}>
+
+Unlike booking flights, creating this flight seat picker was fun, and a good opportunity to practice setting state in React.
+
+I particularly like how easy it is to declare a responsive layout by changing a grid’s template columns, rows, and areas for certain media queries—it’s pretty easy to work with.
+</Footer>
