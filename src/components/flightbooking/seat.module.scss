@@ -2,10 +2,26 @@
   padding: 288px 10px;
 }
 
+
+
+.overflow {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
 .business {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-gap: 20px;
+  grid-template-columns: repeat(2, 30px) 5px repeat(2, 30px) 5px repeat(2, 30px);
+  grid-gap: 15px;
+  padding: 10px;
+  padding: 15px;
+}
+
+.economy {
+  display: grid;
+  grid-template-columns: repeat(2, 30px) 5px repeat(4, 30px) 5px repeat(2, 30px);
+  grid-gap: 10px 5px;
+  padding: 40px 15px 0;
 }
 
 .button {
@@ -16,4 +32,21 @@
   padding: 0;
   width: 30px;
   height: 30px;
+  opacity: 1;
+  cursor: not-allowed;
+}
+
+button.button {
+  cursor: pointer;
+}
+
+button.button:active,
+button.button:focus {
+  opacity: 1;
+  outline: 0 none;
+  background: url(../../images/flightbooking/seat_active.svg) 50% 50% no-repeat;
+}
+
+.button_unavailable {
+  opacity: 0.4;
 }

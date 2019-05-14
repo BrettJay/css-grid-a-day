@@ -58,6 +58,33 @@
   z-index: 1;
   background: #0E1521;
   box-shadow: inset 60px 0 0 #FF930F;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 25px 25px 90px;
+  color: #fff;
+  button {
+    height: 50px;
+    background: #FF930F;
+    -webkit-appearance: none;
+    border: 0;
+    display: block;
+    padding: 0 50px;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+  }
+  button[disabled] {
+    background: #343d4c;
+  }
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h3,
+  p {
+    margin: 0;
+  }
 }
 
 .table {
@@ -67,6 +94,8 @@
   th {
     text-align: left;
     height: 40px;
+    font-weight: normal;
+    color: rgba(255,255,255,0.6);
     font-size: 15px;
     border-bottom: 1px solid rgba(255,255,255,0.05);
   }
@@ -83,3 +112,4 @@
     width: 40%;
   }
 }
+
