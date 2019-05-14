@@ -1,0 +1,139 @@
+import Footer from "../components/footer"
+import Container from "../components/brewguide/container.module.scss"
+import Layout from "../components/brewguide/layout.module.scss"
+import recipeImg from "../images/brewguide/P5023354.jpg"
+import stepOneImg from "../images/brewguide/P5023340.jpg"
+import stepTwoImg from "../images/brewguide/P5023367.jpg"
+import stepThreeImg from "../images/brewguide/P5023369.jpg"
+import stepFourImg from "../images/brewguide/P5023374.jpg"
+import stepFiveImg from "../images/brewguide/P5023381.jpg"
+import stepSixImg from "../images/brewguide/P5023394.jpg"
+import Metatags from "../components/metatags"
+require('typeface-league-spartan')
+require('typeface-work-sans')
+
+<Metatags
+  title="Coffee brewing guide | May 13 | CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail="https://cssgrid31.brett.cool/opengraph/may-13.png"
+  url="https://cssgrid31.brett.cool"
+  pathname="/may-13"
+/>
+
+
+
+<div className={Layout.page}>
+  <div className={Layout.billboard}>
+    <h1>A guide to pourover coffee</h1>
+    <div className={Layout.summary}>
+      <dl>
+        <dt>30g</dt>
+        <dd>Coffee</dd>
+      </dl>
+      <dl>
+        <dt>500ml</dt>
+        <dd>Water</dd>
+      </dl>
+      <dl>
+        <dt>00:02:25</dt>
+        <dd>Brew time</dd>
+      </dl>
+    </div>
+  </div>
+  <div className={Layout.introduction}>
+    <div className={Layout.leading}>
+      <p><em>Slow Coffee</em></p>
+      <h2>A peaceful morning ritual</h2>
+    </div>
+    <div className={Layout.description}>
+      <p>There's nothing quite like the smell of freshly ground filter coffee.</p>
+      <p>People used to dark, espresso roast coffee may surprised to hear me describe filter coffee as bright, with notes of fruit. Follow along to try!</p>
+    </div>
+    <div className={Layout.recipeImg}>
+      <img src={recipeImg} alt="Coffee grounds"/>
+    </div>
+    <div className={Layout.recipe}>
+      <h3>What you’ll need</h3>
+      <ul className={Layout.checklist}>
+        <li>30g fresh filter beans</li>
+        <li>600g water</li>
+        <li>Pourover dripper</li>
+        <li>Fresh filter paper</li>
+        <li>Scale</li>
+        <li>Timer</li>
+      </ul>
+    </div>
+  </div>
+  <div className={Layout.stepOdd}>
+    <div className={Layout.step_description}>
+      <h3>Step One</h3>
+      <p>Bring at least 600 grams of water to the boil.</p>
+      <p>Grind 30 grams of coffee to a coarseness resembling sea salt.</p>
+    </div>
+    <div className={Layout.step_image}>
+      <img src={stepOneImg} alt="Step 1"/>
+    </div>
+  </div>
+  <div className={Layout.stepEven}>
+    <div className={Layout.step_description}>
+      <h3>Step Two</h3>
+      <p>Add a paper filter to your dripper, place the brewer on a carafe.</p>
+      <p>Pre-wet the filter paper, discard water in carafe, and add coffee to the brewer.</p>
+      <p>Place the carafe and brewer on a scale, and tare the scale to read 0.</p>
+    </div>
+    <div className={Layout.step_image}>
+      <img src={stepTwoImg} alt="Step 2"/>
+    </div>
+  </div>
+  <div className={Layout.stepOdd}>
+    <div className={Layout.step_description}>
+      <h3>Step Three</h3>
+      <p>There are four pours total for this brew.</p>
+      <p>Start a timer, and begin pouring water, starting from the outer rim and working in circular motions to the center.</p>
+      <p>Stop when you’ve reached 60 grams and allow to bloom for 30 seconds.</p>
+    </div>
+    <div className={Layout.step_image}>
+      <img src={stepThreeImg} alt="Step 3"/>
+    </div>
+  </div>
+  <div className={Layout.stepEven}>
+    <div className={Layout.step_description}>
+      <h3>Step Four</h3>
+      <p>After the bloom has passed, pour 90 grams — starting in the center of the grounds, working your way outward in a circular motion and back, for a total of 150 grams.</p>
+      <p>As the mixture from the second pour drops through the filter, continue to pour water up to the level of grounds, up to 250 grams.</p>
+    </div>
+    <div className={Layout.step_image}>
+      <img src={stepFourImg} alt="Step 4"/>
+    </div>
+  </div>
+  <div className={Layout.stepOdd}>
+    <div className={Layout.step_description}>
+      <h3>Step Five</h3>
+      <p>When the water and coffee from the third pour drops to the bottom, complete with the final pour, adding 100 grams, bringing the total to 350 grams.</p>
+    </div>
+    <div className={Layout.step_image}>
+      <img src={stepFiveImg} alt="Step 5"/>
+    </div>
+  </div>
+  <div className={Layout.stepEven}>
+    <div className={Layout.step_description}>
+      <h3>Step Six</h3>
+      <p>Once the coffee filters through, serve, and enjoy!</p>
+    </div>
+    <div className={Layout.step_image}>
+      <img src={stepSixImg} alt="Step 6"/>
+    </div>
+  </div>
+</div>
+
+<Footer date={13} prev={true}>
+
+Ah coffee. I sure could have had a few more of these for the creation of today’s CSS Grid.
+
+My current pourover brewer of choice is the [Blue Bottle Coffee Dripper][b], a modified Bonmac filter. It uses wave filters, and I find it the most consistent brewer for my purposes.
+
+I borrowed their brew guide instructions whole-cloth for today’s exercise, which provides an excellent morning brew.
+
+[b]: https://bluebottlecoffee.com/store/blue-bottle-coffee-dripper
+
+</Footer>
