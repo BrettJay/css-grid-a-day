@@ -1,10 +1,45 @@
 import BoardingPass from "../components/boarding-pass/boardingPass.module.scss"
+import Barcode from "../images/boarding-pass/barcode.svg"
+import Plane from "../images/boarding-pass/plane.svg"
 
-<div className={BoardingPass.container}> 
-  <div className={BoardingPass.main}>
-    Hi
-  </div>
-  <div className={BoardingPass.sidebar}>
-    Ho
+<div className={BoardingPass.canvas}>
+  <div className={BoardingPass.container}> 
+    <div className={BoardingPass.header}>
+      <dl>
+        <dt>Passenger</dt>
+        <dd>Mr. Brett Michael Jones</dd>
+      </dl>
+    </div>
+    <div className={BoardingPass.main}>
+      <img src={Barcode} alt="Barcode" />
+      <div className={BoardingPass.main_details}>
+        <dl>
+          <dt>Terminal</dt>
+          <dd>1</dd>
+        </dl>
+        <dl>
+          <dt>Gate</dt>
+          <dd>52</dd>
+        </dl>
+        <dl>
+          <dt>Boarding</dt>
+          <dd>12:30 <span className={BoardingPass.sc}>pm</span></dd>
+        </dl>
+        <div className={BoardingPass.journey}>
+          <dl>
+            <dt>Departs</dt>
+            <dd>Perth <span className={BoardingPass.sc}>per</span></dd>
+          </dl>
+          <img src={Plane} alt="Perth to Tokyo"/>
+          <dl>
+            <dt>Arrives</dt>
+            <dd>Tokyo <span className={BoardingPass.sc}>nrt</span></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+    <div className={BoardingPass.side}>
+      Ho
+    </div>
   </div>
 </div>
