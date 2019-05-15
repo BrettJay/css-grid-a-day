@@ -1,3 +1,6 @@
+@import "../../styles/_tools.fluid_scale.sass";
+@import "../../styles/_tools.respond_to.sass";
+
 .canvas {
   min-height: 100vh;
   display: flex;
@@ -9,13 +12,13 @@
   }
   dt {
     margin: 0;
-    font-size: 15px;
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 13px, 15px);
     line-height: 1.2;
     color: #29476B;
   }
   dd {
     margin: 0;
-    font-size: 21px;
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 15px, 21px);
     line-height: 1.2;
     color: #223146;
   }
@@ -33,6 +36,13 @@
   grid-template-rows: 110px 210px;
   grid-template-areas: "header header" "main side";
   overflow: hidden;
+  transition: 0.2s ease transform;
+  transform: rotate(0deg);
+  @include respond-to(0, 899px) {
+    transform: rotate(-90deg);
+    width: 72vh;
+    transform-origin: 35% 50%;
+  }
 }
 
 .header {
