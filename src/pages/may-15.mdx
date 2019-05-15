@@ -21,7 +21,7 @@ import Metatags from "../components/metatags"
       </dl>
     </div>
     <div className={BoardingPass.main}>
-      <img src={Barcode} alt="Barcode" />
+      <img className={BoardingPass.barcode} src={Barcode} alt="Barcode" />
       <div className={BoardingPass.main_details}>
         <dl>
           <dt>Terminal</dt>
@@ -47,13 +47,25 @@ import Metatags from "../components/metatags"
       </div>
     </div>
     <div className={BoardingPass.side}>
-      <dl>
+      <dl className={BoardingPass.side_full_span}>      
         <dt>Passenger</dt>
         <dd>Mr. Brett Michael Jones</dd>
+      </dl>
+      <dl>
         <dt>Origin</dt>
         <dd>Perth <span className={BoardingPass.sc}>per</span></dd>
+      </dl>
+      <dl>
         <dt>Destination</dt>
         <dd>Tokyo <span className={BoardingPass.sc}>nrt</span></dd>
+      </dl>
+      <dl>
+        <dt>Gate</dt>
+        <dd>52</dd>
+      </dl>
+      <dl>
+        <dt>Seat</dt>
+        <dd>2</dd>
       </dl>
     </div>
     <div className={BoardingPass.dots}/>
