@@ -32,8 +32,8 @@
   box-shadow: 0 4px 25px 0 rgba(0,0,0,0.26), 0 1px 5px 0 rgba(0,0,0,0.50);
   border-radius: 20px;
   display: grid;
-  grid-template-columns: 75% 25%;
-  grid-template-rows: 110px 210px;
+  grid-template-columns: 70% [stroke] 30%;
+  grid-template-rows: [top] 110px 210px;
   grid-template-areas: "header header" "main side";
   overflow: hidden;
   transition: 0.2s ease transform;
@@ -43,6 +43,16 @@
     width: 72vh;
     transform-origin: 35% 50%;
   }
+}
+
+.dots {
+  grid-column: stroke;
+  grid-row: top / span 2;
+  width: 8px;
+  background: url(../../images/boarding-pass/dot.png) 0 42% repeat-y;
+  background-size: 100% auto;
+  z-index: 1;
+  transform: translateX(-50%);
 }
 
 .header {
@@ -74,7 +84,7 @@
 
 .main {
   grid-area: main;
-  padding: 45px 50px;
+  padding: 45px 25px 45px 50px;
   display: grid;
   grid-template-columns: 60px 1fr;
   grid-gap: 40px;
@@ -98,5 +108,6 @@
 
 .side {
   grid-area: side;
+  padding: 45px 50px 45px 25px;
 }
 
