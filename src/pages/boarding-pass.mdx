@@ -25,17 +25,15 @@ import Plane from "../images/boarding-pass/plane.svg"
           <dt>Boarding</dt>
           <dd>12:30 <span className={BoardingPass.sc}>pm</span></dd>
         </dl>
-        <div className={BoardingPass.journey}>
-          <dl>
-            <dt>Departs</dt>
-            <dd>Perth <span className={BoardingPass.sc}>per</span></dd>
-          </dl>
-          <img src={Plane} alt="Perth to Tokyo"/>
-          <dl>
-            <dt>Arrives</dt>
-            <dd>Tokyo <span className={BoardingPass.sc}>nrt</span></dd>
-          </dl>
-        </div>
+        <dl>
+          <dt>Departs</dt>
+          <dd>Perth <span className={BoardingPass.sc}>per</span></dd>
+        </dl>
+        <img className={BoardingPass.detail_icon} src={Plane} alt="Perth to Tokyo"/>
+        <dl>
+          <dt>Arrives</dt>
+          <dd>Tokyo <span className={BoardingPass.sc}>nrt</span></dd>
+        </dl>
       </div>
     </div>
     <div className={BoardingPass.side}>

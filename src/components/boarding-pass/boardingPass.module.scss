@@ -73,15 +73,15 @@
 .main_details {
   display: grid;
   grid-gap: 20px;
+  max-width: 360px;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  dl {
+  dl,
+  .detail_icon {
     grid-column: span 2;
   }
-  .journey {
-    grid-column: span 6;
-    display: flex;
-    justify-content: space-between;
+  .detail_icon {
+    place-self: center;
   }
 }
 
