@@ -66,6 +66,7 @@
 .icon {
   width: 30px;
   height: 30px; 
+  padding: 3px 0;
   margin-left: auto;
   margin-right: auto;
 }
@@ -73,26 +74,6 @@
 .label {
   line-height: 30px;
   transition: color 0.2s ease;
-}
-
-.home {
-  background: url(../../images/responsive-menu/home.svg) 50% 50% no-repeat;
-}
-
-.search {
-  background: url(../../images/responsive-menu/search.svg) 50% 50% no-repeat;
-}
-
-.add {
-  background: url(../../images/responsive-menu/add.svg) 50% 50% no-repeat;
-}
-
-.notifications {
-  background: url(../../images/responsive-menu/notifications.svg) 50% 50% no-repeat;
-}
-
-.profile {
-  background: url(../../images/responsive-menu/profile.svg) 50% 50% no-repeat;
 }
 
 @include respond-to(ipad-up) {
@@ -119,5 +100,9 @@
   box-shadow: inset 0 -3px 0 #800080;
   .label {
     color: #800080;
+  }
+  .icon svg,
+  .icon g {
+    fill: #800080;
   }
 } 

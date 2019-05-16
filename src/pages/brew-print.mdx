@@ -1,7 +1,53 @@
 import Menu from "../components/responsive-menu/menu.module.scss"
+import BrewingPrint from "../components/brewing-print/print.module.scss"
 import Header from "../components/responsive-menu/header"
 
-<div className={Menu.container}>
-  <Header active={'profile'} />
+import Profile from "../images/markdown/avatar.jpg"
+import Photo from "../images/brewing-print/photo.jpg"
+import PourChart from "../images/brewing-print/pour.svg"
 
+<div className={BrewingPrint.canvas}>
+  <div className={Menu.container}>
+    <Header active={'profile'} />
+  </div>
+  <div className={BrewingPrint.body}>
+    <div className={BrewingPrint.post}>
+      <div className={BrewingPrint.photo}>
+        <div className={BrewingPrint.chart}>
+          <div className={BrewingPrint.timeline}>
+            <img src={PourChart} alt="Pour chart"/>
+          </div>
+          <div className={BrewingPrint.legend}>
+            <div className={BrewingPrint.tick}>0:00</div>
+            <div className={BrewingPrint.tick}>0:35</div>
+            <div className={BrewingPrint.tick}>1:10</div>
+            <div className={BrewingPrint.tick}>1:35</div>
+            <div className={BrewingPrint.tick}>2:20</div>
+          </div>
+        </div>
+        <img src={Photo} alt="Coffee"/>
+      </div>
+      <div className={BrewingPrint.account}>
+        <img src={Profile} alt="brettjay" className={BrewingPrint.avatar}/>
+        brettjay
+      </div>
+      <div className={BrewingPrint.caption}>
+        A pretty good caff, 10/10 would drink again!
+      </div>
+      <div className={BrewingPrint.stats}>
+        <dl>
+          <dt className={BrewingPrint.iconCoffee}>Coffee</dt>
+          <dd>13.5g</dd>
+        </dl>
+        <dl>
+          <dt className={BrewingPrint.iconWater}>Water</dt>
+          <dd>202.5g</dd>
+        </dl>
+        <dl>
+          <dt className={BrewingPrint.iconTimer}>Time</dt>
+          <dd>02:17</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
 </div>
