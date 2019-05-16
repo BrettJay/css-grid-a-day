@@ -10,12 +10,14 @@ class Seat extends React.Component {
   }
 
   render() {
-    const { seat, available } = this.props
+    const { seat, available, currentSeat } = this.props
     const isAvailable = available
+    const isCurrent = currentSeat === seat
+    const availableButtonClasses = isCurrent ? `${SeatStyle.button} ${SeatStyle.current}` : `${SeatStyle.button}`
     return (
       <React.Fragment>
         { isAvailable ? (
-          <button onClick={this.setSeat} ref={this.seatRef} value={seat} className={SeatStyle.button} />
+          <button onClick={this.setSeat} ref={this.seatRef} value={seat} className={availableButtonClasses} />
         ) : (
           <div title={`Seat ${seat} is unavailable`} className={`${SeatStyle.button} ${SeatStyle.button_unavailable}`}/>
         )}

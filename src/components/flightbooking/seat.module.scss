@@ -35,15 +35,16 @@
   opacity: 1;
   cursor: not-allowed;
   position: relative;
-  z-index: 2;
+  z-index: 2;  
 }
 
 button.button {
   cursor: pointer;
 }
 
+button.button:focus,
 button.button:active,
-button.button:focus {
+button.current {
   opacity: 1;
   outline: 0 none;
   background: url(../../images/flightbooking/seat_active.svg) 50% 50% no-repeat;
