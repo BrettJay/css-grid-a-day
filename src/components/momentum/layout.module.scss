@@ -14,7 +14,7 @@
   @include respond-to(1000px, 1500px) {
     grid-template-columns: 2% repeat(4, 1fr) 2%;
   }
-  @include respond-to(0, 999px) {
+  @include respond-to(501px, 999px) {
     grid-template-columns: 1% repeat(4, 1fr) 1%;
     grid-gap: 20px 15px;
     grid-template-areas:
@@ -22,7 +22,13 @@
     ". content content content content .";
   }
   @include respond-to(0, 500px) {
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1% 1fr 10fr 1%;
+    grid-gap: 20px 15px;
+    grid-template-areas:
+    "photo photo photo photo"
+    ". . header ."
+    ". . content .";
   }
   h1, h2 {
     font-family: 'Open Sans', OpenSans, sans-serif;
@@ -36,7 +42,7 @@
     margin-bottom: 0;
   }
   h2 {
-    @include fluid-scale(font-size, $responsive_min, $responsive_max, 13px, 17px);
+    font-size: 16px;
     margin: 1.5em 0 0.3em;
   }
   p,
@@ -44,7 +50,6 @@
   p em {
     font-family: 'Cardo', cardo, serif;
     margin: 0;
-    @include fluid-scale(font-size, $responsive_min, $responsive_max, 12px, 16px);
   }
   p:not(:first-child):first-letter {
     padding-left: 1em;
@@ -69,9 +74,10 @@
   column-gap: 30px;
   @include respond-to(0, 999px) {
     column-gap: 15px;
+    columns: 2;
   }
   @include respond-to(0, 500px) {
-    columns: 2;
+    columns: 1;
   }
 }
 
