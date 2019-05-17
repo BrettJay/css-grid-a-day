@@ -5,7 +5,7 @@
   display: grid;
   grid-template-columns: 10% repeat(4, 1fr) 10%;
   grid-gap: 40px 30px;
-  grid-template-rows: 56vh 54vh;
+  grid-template-rows: 50% 1fr;
   min-height: 100vh;
   background: #fefefe;
   grid-template-areas:
@@ -20,6 +20,9 @@
     grid-template-areas:
     ". header header photo photo photo"
     ". content content content content .";
+  }
+  @include respond-to(0, 500px) {
+    grid-template-rows: 1fr 2fr;
   }
   h1, h2 {
     font-family: 'Open Sans', OpenSans, sans-serif;
@@ -66,6 +69,9 @@
   column-gap: 30px;
   @include respond-to(0, 999px) {
     column-gap: 15px;
+  }
+  @include respond-to(0, 500px) {
+    columns: 2;
   }
 }
 
