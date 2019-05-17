@@ -1,7 +1,17 @@
 import Layout from "../components/momentum/layout.module.scss"
 import Hero from "../images/momentum/hero.jpg"
+import Footer from "../components/footer"
+import Metatags from "../components/metatags"
 require('typeface-open-sans')
 require('typeface-cardo')
+
+<Metatags
+  title="Magazine Layout | May 17 | CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail="https://cssgrid31.brett.cool/opengraph/may-17.png"
+  url="https://cssgrid31.brett.cool"
+  pathname="/may-17"
+/>
 
 <div className={Layout.container}>
 
@@ -47,3 +57,6 @@ Nevertheless, I’m going to try my best to stick to my target of a Grid a Day�
 
 </div>
 </div>
+
+<Footer date={17} prev={true}>
+</Footer>
