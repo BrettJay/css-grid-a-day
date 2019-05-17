@@ -10,3 +10,7 @@ p {
   @include fluid-scale(font-size, $responsive_min, $responsive_max, 16px, 17px);
   line-height: 1.66;
 }
+
+.sc {
+  font-variant: small-caps;
+}
