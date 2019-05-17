@@ -5,7 +5,7 @@
   display: grid;
   grid-template-columns: 10% repeat(4, 1fr) 10%;
   grid-gap: 40px 30px;
-  grid-template-rows: 50% 1fr;
+  grid-template-rows: 1fr auto;
   min-height: 100vh;
   background: #fefefe;
   grid-template-areas:
@@ -72,6 +72,7 @@
   grid-area: content;
   columns: 3;
   column-gap: 30px;
+  padding-bottom: 30px;
   @include respond-to(0, 999px) {
     column-gap: 15px;
     columns: 2;
