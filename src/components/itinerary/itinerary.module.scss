@@ -1,7 +1,7 @@
 .container {
   display: grid;
   min-height: 100vh;
-  grid-template-columns: 2fr 3fr 1fr;
+  grid-template-columns: minmax(375px, 2fr) 3fr 1fr;
   grid-template-rows: 50px 1fr;
   grid-gap: 1px;
   background: #eee;

@@ -1,9 +1,13 @@
 import React from "react"
 import DayStyles from "./day.module.scss"
+
+import Feb6 from "./feb-6"
 class Day extends React.Component {
   render() {
     return (
-      <div className={DayStyles.container}>I am Feb 6</div>
+      <div className={DayStyles.container}>
+        a
+      </div>
     )
   }
 }

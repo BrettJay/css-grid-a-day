@@ -41,7 +41,8 @@ button.button {
     cursor: pointer;
   }
   &:focus,
-  &:active {
+  &:active,
+  &.activeButton {
     background: #c11;
     color: #fff;
     outline: 0 none;

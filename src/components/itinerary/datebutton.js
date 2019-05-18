@@ -6,9 +6,11 @@ class CalendarButton extends React.Component {
     this.props.setActiveDate(this.props.date, this.props.label)
   }
   render() {
-    const { date, label, buttonLabel } = this.props
+    const { date, label, buttonLabel, activeDate } = this.props
+    const isActive = date === activeDate
+    const dateClasses = isActive ? `${CalendarStyles.button} ${CalendarStyles.activeButton}` : `${CalendarStyles.button}`
     return (
-      <button className={`${CalendarStyles.button} ${CalendarStyles[date]}`} date={date} label={label} onClick={this.handleClick}>{buttonLabel}</button>
+      <button className={dateClasses} date={date} label={label} onClick={this.handleClick}>{buttonLabel}</button>
     )
   }
 }

@@ -21,12 +21,9 @@ class Itinerary extends React.Component {
   }
 
   render() {
-    const activeClassName = `date-is-${this.state.activeDate}`
     return (
-      <div className={`${ItineraryStyles.container} ${CalendarStyles[activeClassName]}`}>
-        <div className={ItineraryStyles.header}>
-          <div>Itinerary — {this.state.activeDateLabel}</div>
-        </div>
+      <div className={ItineraryStyles.container}>
+        <div className={ItineraryStyles.header}><div>Itinerary — {this.state.activeDateLabel}</div></div>
         <Calendar activeDate={this.state.activeDate} setActiveDate={this.setActiveDate} />
         <Day activeDate={this.state.activeDate}/>
         <Detail/>
