@@ -1,0 +1,60 @@
+.container {
+  display: grid;
+  padding: 20px;
+  grid-template-columns: 240px repeat(6, 1fr);
+  grid-gap: 15px 10px;
+  grid-template-rows: 100px [above_line] 1fr [line] 10px [below_line] 1fr;
+  * {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+  }
+  p {
+    line-height: 1.2;
+  }
+}
+
+.header {
+  grid-column: 1 / -1;
+  grid-row: 1 / span 1;
+  h1 {
+    font-weight: normal;
+  }
+}
+
+.instructions {
+  grid-column: span 1;
+  border-right: 1px solid #000;
+  padding-right: 10px;
+  h2 {
+    margin-bottom: 6px;
+    font-size: 26px;
+  }
+  h3 {
+    font-size: 28px;
+    margin: 8px 0 5px;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+.above_line {
+  grid-row: above_line;
+}
+
+.instructionArrow {
+  background: url('../../images/ballot/arrow.svg') 100% 50% no-repeat;
+  padding: 2px 8px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 26px;
+}
+
+.theLine {
+  grid-row: line;
+  grid-column: 1 / -1;
+  background: #000;
+}
+
+.below_line {
+  grid-row: below_line;
+}

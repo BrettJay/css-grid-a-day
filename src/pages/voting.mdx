@@ -1,0 +1,32 @@
+import Senate from "../components/ballot/senate.module.scss"
+
+
+
+<div className={Senate.container}>
+  <div className={Senate.header}>
+    <h1>
+      Senate Ballot Paper<br/>
+      <strong>State</strong> — Election of 6 Senators
+    </h1>
+  </div>
+
+  <div className={`${Senate.instructions} ${Senate.above_line}`}>
+    <h2>
+      You may<br/>
+      vote in one of<br/>
+      two ways
+    </h2>
+    <div className={Senate.instructionArrow}>Either</div>
+    <h3>Lazily</h3>
+    <p>By numbering at least <strong>6</strong> of these boxes in the order of your choice (with number 1 as your first choice).</p>
+  </div>
+
+  <div className={Senate.theLine}/>
+
+  <div className={`${Senate.instructions} ${Senate.below_line}`}>
+    <div className={Senate.instructionArrow}>Or</div>
+    <h3>Properly</h3>
+    <p>By numbering at least <strong>12</strong> of these boxes in the order of your choice (with number 1 as your first choice).</p>
+  </div>
+
+</div>
