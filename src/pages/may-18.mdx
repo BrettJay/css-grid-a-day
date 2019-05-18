@@ -2,7 +2,17 @@ import Senate from "../components/ballot/senate.module.scss"
 import AboveParty from "../components/ballot/partyAbove"
 import BelowParty from "../components/ballot/partyBelow"
 import Polly from "../components/ballot/pollyVote"
+import Footer from "../components/footer"
+import Metatags from "../components/metatags"
 require('typeface-roboto-condensed')
+
+<Metatags
+  title="Australian Ballot | May 17 | CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail="https://cssgrid31.brett.cool/opengraph/may-18.png"
+  url="https://cssgrid31.brett.cool"
+  pathname="/may-18"
+/>
 
 <div className={Senate.container}>
   <div className={Senate.header}>
@@ -79,3 +89,15 @@ require('typeface-roboto-condensed')
   </BelowParty>
 
 </div>
+
+<Footer date={18} prev={true}>
+
+Hey it’s [#democracysausage][ds] day in Australia!
+
+In case you haven’t looked at a ballot sheet long enough today, here it is, recreated in CSS Grid and *slightly less* racism.
+
+Also, not to drag anyone who actually voted above the line (I sure did).
+
+[ds]: https://twitter.com/hashtag/democracysausage
+
+</Footer>
