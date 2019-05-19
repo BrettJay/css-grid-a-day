@@ -75,10 +75,10 @@
   transition: opacity 0.35s ease-out, transform 9s ease-out;
 }
 
-.Banner-animateIn {
-  .image,
-  .title,
-  .subtitle {
+:global(.animate-in) {
+  :local(.image),
+  :local(.title),
+  :local(.subtitle) {
     transform: scale(1) translateY(0%);
     opacity: 1 !important;
   }
