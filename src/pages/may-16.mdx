@@ -1,0 +1,81 @@
+import Menu from "../components/responsive-menu/menu.module.scss"
+import BrewingPrint from "../components/brewing-print/print.module.scss"
+import Header from "../components/responsive-menu/header"
+
+import Profile from "../images/markdown/avatar.jpg"
+import Photo from "../images/brewing-print/photo.jpg"
+import PourChart from "../images/brewing-print/pour.svg"
+
+import Footer from "../components/footer"
+import Metatags from "../components/metatags"
+
+<Metatags
+  title="Brewing print | May 16 | CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail="https://cssgrid31.brett.cool/opengraph/may-16.png"
+  url="https://cssgrid31.brett.cool"
+  pathname="/may-16"
+/>
+
+<div className={BrewingPrint.canvas}>
+  <div className={Menu.container}>
+    <Header active={'profile'} />
+  
+    <div className={BrewingPrint.body}>
+      <div className={BrewingPrint.post}>
+        <div className={BrewingPrint.photo}>
+          <div className={BrewingPrint.chart}>
+            <div className={BrewingPrint.timeline}>
+              <img src={PourChart} alt="Pour chart"/>
+            </div>
+            <div className={BrewingPrint.legend}>
+              <div className={BrewingPrint.tick}>0:00</div>
+              <div className={BrewingPrint.tick}>0:35</div>
+              <div className={BrewingPrint.tick}>1:10</div>
+              <div className={BrewingPrint.tick}>1:35</div>
+              <div className={BrewingPrint.tick}>2:20</div>
+            </div>
+          </div>
+          <img src={Photo} alt="Coffee"/>
+        </div>
+        <div className={BrewingPrint.account}>
+          <img src={Profile} alt="brettjay" className={BrewingPrint.avatar}/>
+          brettjay
+        </div>
+        <div className={BrewingPrint.caption}>
+          A pretty good caff, 10/10 would drink again!
+        </div>
+        <div className={BrewingPrint.stats}>
+          <dl>
+            <dt className={BrewingPrint.iconCoffee}>Coffee</dt>
+            <dd>13.5g</dd>
+          </dl>
+          <dl>
+            <dt className={BrewingPrint.iconWater}>Water</dt>
+            <dd>202.5g</dd>
+          </dl>
+          <dl>
+            <dt className={BrewingPrint.iconTimer}>Time</dt>
+            <dd>02:17</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<Footer date={16} prev={true} next={true}>
+
+The Third in the series of Milligram mockups. This one explores a 'Brewing Print' view. Back in 2015, I bought an [Acaia Pearl Coffee Scale][a]. It came with a handy app that allowed you to record your pourover brews with charts and nerdy details.
+
+That app hasn’t seen a lot of love in recent years, it’s still not optimsed for iPhone 6 sized screens, let alone the new X-class devices.
+
+Anyway I spent a little of this entry [refactoring][b] (and [re-refactoring][c]) the original Milligram navigation, so this entry ended up being less ambitious than I originally planned.
+
+Still, I’d love me a good, modern application with brew charts and nerdy details. [Filtru] looks like a pretty cool modern app for these purposes.
+
+[a]: https://acaia.co/
+[b]: https://github.com/BrettJay/css-grid-a-day/commit/3f93b8faa82c7a6cb2895e64ba606afb6d89d673
+[c]: https://github.com/BrettJay/css-grid-a-day/commit/2b42be0b16f7fc13047e9f70aa75cd715aab4536#diff-8f967d13c636d776ee606596d0685555L11
+[Filtru]: https://getfiltru.com/
+</Footer>

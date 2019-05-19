@@ -1,0 +1,160 @@
+@import "../../styles/_tools.respond_to.sass";
+
+.canvas {
+  background: #FAF9FA;
+  @include respond-to(small-up) {
+    min-height: 100vh;
+  }
+}
+
+.body {
+  grid-column: span 2;
+  @include respond-to(840px, 0) {
+    padding: 80px 0;
+  }
+}
+
+.post {
+  background: #FFFFFF;
+  max-width: 840px;
+  height: 420px;
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 80px 1fr 80px;
+  grid-template-areas:
+    "photo header"
+    "photo body"
+    "photo footer";
+  box-shadow: 0 3px 12px 0 rgba(128,0,128,0.11), 0 1px 3px 0 rgba(128,0,128,0.11);
+  @include respond-to(0, 839px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto 80px;
+    height: auto;
+    grid-template-areas:
+      "header"
+      "photo"
+      "body"
+      "footer";
+  }
+}
+
+.chart {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 33%;
+  background-image: linear-gradient(180deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.66) 100%);
+  z-index: 1;
+  padding: 30px;
+}
+
+.legend {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+}
+
+.tick {
+  text-align: center;
+  color: #fff;
+  font-size: 11px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.50);
+}
+
+.photo {
+  grid-area: photo;
+  position: relative;
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+}
+
+.avatar {
+  height: 30px;
+  width: 30px;
+  display: block;
+  border-radius: 15px;
+  overflow: hidden;
+  float: left;
+  margin-right: 10px;
+}
+
+.account {
+  grid-area: header;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 30px 0 20px;
+  box-shadow: inset 0 -1px 0 hsla(300,100,50,0.05);
+  margin: 0 30px;
+  line-height: 30px;
+  @include respond-to(mobile-down) {
+    margin: 0 15px;
+  }
+}
+
+.timeline {
+  background: url(../../images/brewing-print/sparks.svg) 0 100% repeat-x;
+}
+
+.caption {
+  grid-area: body;
+  padding: 30px;
+  color: #3C173C;
+  @include respond-to(mobile-down) {
+    padding: 30px 15px;
+    font-size: 15px;
+  }
+}
+
+.stats {
+  grid-area: footer;
+  background: #FDF1FD;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  dl {
+    margin: 10px 0;
+    padding: 0;
+    vertical-align: middle;
+    width: 100%;
+    text-align: center;
+  }
+  dt,
+  dd {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  dt {
+    text-indent: -9999em;
+    user-select: none;
+  }
+
+  dt {
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.iconCoffee {
+  background: url(../../images/brewing-print/coffee.svg) 50% 50% no-repeat;
+}
+
+.iconWater {
+  background: url(../../images/brewing-print/water.svg) 50% 50% no-repeat;
+}
+
+.iconTimer {
+  background: url(../../images/brewing-print/timer.svg) 50% 50% no-repeat;
+}
