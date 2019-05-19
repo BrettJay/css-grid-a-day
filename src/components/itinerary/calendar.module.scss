@@ -1,6 +1,8 @@
 .container {
   grid-area: calendar;
   background: #fcfcfc;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .header,

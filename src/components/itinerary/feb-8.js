@@ -1,18 +1,21 @@
-const Feb7 = {
+const Feb8 = {
   morning: {
-    label: "Kita / Chuo Ward",
+    label: "Osaka to Kyoto",
     activities:
     [
       { label: 'Coffee at Lilo Coffee', icon: 'coffee'},
-      { label: 'Visit Umeda Sky Building', icon: 'sight'},
-      { label: 'Visit Osaka-Jo Shrine', icon: 'shrine'},
+      { label: 'Check out of Hotel Code', icon: 'sight'},
+      { label: 'Osaka to Kyoto', icon: 'train'},
+      { label: 'Drop bags at Imu Hotel', icon: 'hotel'},
+      { label: 'See Bukkoji Temple', icon: 'shrine'},
+      { label: 'Visit Tokyu Hands Kyoto', icon: 'shop'},
     ],
   },
 
   lunch: {
-    label: 'Torisoba Zagin Niboshi',
-    description: 'Highly rated Chicken Ramen found by Alyssa',
-    icon: 'noodles'
+    label: 'Nishiki Markets',
+    description: 'Explore street food in the area',
+    icon: 'street'
   }, 
 
   afternoon: {
@@ -39,4 +42,4 @@ const Feb7 = {
   },
 };
 
-export default Feb7;
+export default Feb8;

@@ -9,27 +9,31 @@ class Day extends React.Component {
     const { schedule } = this.props
     return (
       <div className={DayStyles.container}>
-        <Activities
-          time="morning"
-          label={schedule.morning.label}
-          activities={schedule.morning.activities}
-          />
-        <Meal
-          label={schedule.lunch.label}
-          icon={schedule.lunch.iconn}/>
-        <Activities
-          time="afternoon"
-          label={schedule.afternoon.label}
-          activities={schedule.afternoon.activities}
-          />
-        <Meal
-          label={schedule.dinner.label}
-          icon={schedule.dinner.iconn}/>
-        <Activities
-          time="evening"
-          label={schedule.evening.label}
-          activities={schedule.evening.activities}
-          />
+        <div className={DayStyles.scroller}>
+          <Activities
+            time="morning"
+            label={schedule.morning.label}
+            activities={schedule.morning.activities}
+            />
+          <Meal
+            label={schedule.lunch.label}
+            icon={schedule.lunch.icon}
+            description={schedule.lunch.description}/>
+          <Activities
+            time="afternoon"
+            label={schedule.afternoon.label}
+            activities={schedule.afternoon.activities}
+            />
+          <Meal
+            label={schedule.dinner.label}
+            icon={schedule.dinner.icon}
+            description={schedule.dinner.description}/>
+          <Activities
+            time="evening"
+            label={schedule.evening.label}
+            activities={schedule.evening.activities}
+            />
+        </div>
       </div>
     )
   }

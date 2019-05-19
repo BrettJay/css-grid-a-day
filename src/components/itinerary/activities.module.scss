@@ -10,7 +10,6 @@ $content--secondary: #555;
 $link: rgb(0, 110, 212);
 
 .container {
-  margin-top: 5px;
   font-size: 11px;
   line-height: 1.3;
 }
@@ -46,4 +45,16 @@ $link: rgb(0, 110, 212);
 
 .hotel::before {
   background: url(../../images/itinerary/places/hotel.svg) 50% 50% no-repeat;
+}
+
+.sight::before {
+  background: url(../../images/itinerary/places/sight.svg) 50% 50% no-repeat;
+}
+
+.shop::before {
+  background: url(../../images/itinerary/places/shop.svg) 50% 50% no-repeat;
+}
+
+.shrine::before {
+  background: url(../../images/itinerary/places/shrine.svg) 50% 50% no-repeat;
 }

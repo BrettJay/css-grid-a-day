@@ -9,6 +9,7 @@ const Feb6 = {
 
   lunch: {
     label: 'Meal Service',
+    description: 'Served onboard SQ224',
     icon: 'default'
   }, 
 
@@ -22,6 +23,7 @@ const Feb6 = {
 
   dinner: {
     label: 'Meal Service',
+    description: 'Served onboard SQ622',
     icon: 'default'
   }, 
 

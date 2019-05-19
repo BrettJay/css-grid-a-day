@@ -2,6 +2,7 @@ import React from "react"
 import CalendarStyles from "./calendar.module.scss"
 import Feb6 from "./feb-6"
 import Feb7 from "./feb-7"
+import Feb8 from "./feb-8"
 
 import DateButton from "./datebutton"
 
@@ -22,8 +23,8 @@ class Calendar extends React.Component {
             <div className={CalendarStyles.button}>5</div>
             <DateButton activeDate={this.props.activeDate} date="Feb6" schedule={Feb6} buttonLabel="6" label="Feb 6" setActiveDate={this.props.setActiveDate}/>
             <DateButton activeDate={this.props.activeDate} date="Feb7" schedule={Feb7} buttonLabel="7" label="Feb 7" setActiveDate={this.props.setActiveDate}/>
+            <DateButton activeDate={this.props.activeDate} date="Feb8" schedule={Feb8} buttonLabel="8" label="Feb 8" setActiveDate={this.props.setActiveDate}/>
             <DateButton activeDate={this.props.activeDate} date="Feb9" schedule={Feb7} buttonLabel="9" label="Feb 9" setActiveDate={this.props.setActiveDate}/>
-            <DateButton activeDate={this.props.activeDate} date="Feb8" schedule={Feb7} buttonLabel="8" label="Feb 8" setActiveDate={this.props.setActiveDate}/>
             <DateButton activeDate={this.props.activeDate} date="Feb10" schedule={Feb7} buttonLabel="10" label="Feb 10" setActiveDate={this.props.setActiveDate}/>
             <DateButton activeDate={this.props.activeDate} date="Feb11" schedule={Feb7} buttonLabel="11" label="Feb 11" setActiveDate={this.props.setActiveDate}/>
             <DateButton activeDate={this.props.activeDate} date="Feb12" schedule={Feb7} buttonLabel="12" label="Feb 12" setActiveDate={this.props.setActiveDate}/>

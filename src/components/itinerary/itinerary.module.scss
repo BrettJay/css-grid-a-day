@@ -2,7 +2,9 @@
 
 .container {
   display: grid;
-  min-height: 100vh;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
   grid-template-columns: minmax(375px, 2fr) 3fr;
   grid-template-rows: 50px 1fr;
   grid-gap: 1px;
@@ -12,7 +14,7 @@
     "calendar day day";
   @include respond-to(small-down) {
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 1fr 2fr;
+    grid-template-rows: 50px 220px 2fr;
     grid-template-areas:
       "header"
       "calendar"

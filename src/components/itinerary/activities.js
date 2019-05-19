@@ -14,6 +14,11 @@ function Activities(props) {
   const { label, activities, time } = props
   return (
     <div className={`${Day.section} ${Day[time]}`}>
+      <div className={Day.timeline}>
+        <div className={Day.path_before}/>
+        <div className={Day.icon}/>
+        <div className={Day.path_after}/>
+      </div>
       <div className={Day.body}>
         <div className={Day.label}>{label}</div>
         <div className={ActivitiesStyles.container}>
