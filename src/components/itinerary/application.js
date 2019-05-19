@@ -5,7 +5,6 @@ import Day from "./day"
 import Detail from "./detail"
 
 import ItineraryStyles from "./itinerary.module.scss"
-import CalendarStyles from "./calendar.module.scss"
 
 import Feb6 from "./feb-6"
 
@@ -14,9 +13,8 @@ class Itinerary extends React.Component {
     super(props)
     this.state =
     {
-      activeDate: 'feb6',
+      activeDate: 'Feb6',
       activeDateLabel: 'Feb 6',
-      
       day: Feb6
     }
   }
@@ -39,7 +37,6 @@ class Itinerary extends React.Component {
         <div className={ItineraryStyles.header}><div>Itinerary — {this.state.activeDateLabel}</div></div>
         <Calendar activeDate={this.state.activeDate} setActiveDate={this.setActiveDate} />
         <Day activeDate={this.state.activeDate} schedule={this.state.day}/>
-        <Detail/>
       </div>
     )
   }

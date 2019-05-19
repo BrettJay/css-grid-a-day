@@ -3,31 +3,34 @@ const Feb6 = {
     label: "Flight SQ224",
     activities:
     [
-      'Perth to Singapore'
+      { label: 'Perth to Singapore', icon: 'flight'},
     ],
   },
 
-  lunch: 'Plane Meal',
+  lunch: {
+    label: 'Meal Service',
+    icon: 'default'
+  }, 
 
   afternoon: {
     label: "Flight SQ622",
     activities:
     [
-      'Singapore to Osaka'
+      { label: 'Singapore to Osaka', icon: 'flight'},
     ],
   },
 
-  dinner: 'Plane Meal',
+  dinner: {
+    label: 'Meal Service',
+    icon: 'default'
+  }, 
 
   evening: {
-    label: "Flight SQ622",
+    label: "Arriving in Osaka",
     activities:
     [
-      'Airport to Osaka',
-      {
-        place: 'hotel-code',
-        verb: 'Check in to'
-      },
+      { label: 'Train from KIX to Osaka', icon: 'train'},
+      { label: 'Check in to Hotel Code', icon: 'hotel'},
     ],
   },
 };

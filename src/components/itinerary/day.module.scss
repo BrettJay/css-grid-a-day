@@ -1,4 +1,54 @@
 .container {
   grid-area: day;
   background: #fff;
+  padding: 15px;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  position: relative;
+  grid-gap: 15px;
+  grid-template-areas: "icon content";
+  &:before {
+    content: '';
+    grid-area: icon;
+    display: block;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+    justify-self: center;
+  }
+}
+
+.body {
+  grid-area: content;
+}
+
+.morning:before {
+  background: url('../../images/itinerary/morning.png') 50% 50% no-repeat;
+  background-size: 30px 30px;
+}
+
+.afternoon:before {
+  background: url('../../images/itinerary/afternoon.png') 50% 50% no-repeat;
+  background-size: 30px 30px;
+}
+
+.evening:before {
+  background: url('../../images/itinerary/night.png') 50% 50% no-repeat;
+  background-size: 30px 30px;
+}
+
+.meal:before {
+  background: #F5A623 url('../../images/itinerary/food.svg') 6px 50% no-repeat;
+  border-radius: 12px;
+  width: 24px;
+  height: 24px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.2;
 }
