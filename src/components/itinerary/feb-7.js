@@ -1,6 +1,6 @@
-const Feb6 = {
+const Feb7 = {
   morning: {
-    label: "Flight SQ224",
+    label: "Feb 7",
     activities:
     [
       'Perth to Singapore'
@@ -32,4 +32,4 @@ const Feb6 = {
   },
 };
 
-export default Feb6;
+export default Feb7;

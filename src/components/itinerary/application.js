@@ -7,16 +7,29 @@ import Detail from "./detail"
 import ItineraryStyles from "./itinerary.module.scss"
 import CalendarStyles from "./calendar.module.scss"
 
+import Feb6 from "./feb-6"
+
 class Itinerary extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { activeDate: 'feb-6', activeDateLabel: 'Feb 6' }
+    this.state =
+    {
+      activeDate: 'feb6',
+      activeDateLabel: 'Feb 6',
+      
+      day: Feb6
+    }
   }
 
-  setActiveDate = (date, dateLabel) => {
+  componentDidMount () {
+    this.setState({ day: Feb6 })
+  }
+
+  setActiveDate = (date, dateLabel, schedule) => {
     this.setState(state => ({
       activeDate: date,
-      activeDateLabel: dateLabel
+      activeDateLabel: dateLabel,
+      day: schedule
     }))
   }
 
@@ -25,7 +38,7 @@ class Itinerary extends React.Component {
       <div className={ItineraryStyles.container}>
         <div className={ItineraryStyles.header}><div>Itinerary — {this.state.activeDateLabel}</div></div>
         <Calendar activeDate={this.state.activeDate} setActiveDate={this.setActiveDate} />
-        <Day activeDate={this.state.activeDate}/>
+        <Day activeDate={this.state.activeDate} schedule={this.state.day}/>
         <Detail/>
       </div>
     )

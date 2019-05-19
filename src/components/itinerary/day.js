@@ -1,12 +1,17 @@
 import React from "react"
 import DayStyles from "./day.module.scss"
+import Activities from "./activities"
 
-import Feb6 from "./feb-6"
 class Day extends React.Component {
   render() {
+    const { schedule } = this.props
     return (
       <div className={DayStyles.container}>
-        a
+        <Activities
+          time="morning"
+          label={schedule.morning.label}
+          activities={schedule.morning.activities}
+          />
       </div>
     )
   }
