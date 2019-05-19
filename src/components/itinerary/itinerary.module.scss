@@ -1,0 +1,32 @@
+@import "../../styles/_tools.respond_to.sass";
+
+.container {
+  display: grid;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  grid-template-columns: minmax(375px, 2fr) 3fr;
+  grid-template-rows: 50px 1fr;
+  grid-gap: 1px;
+  background: #eee;
+  grid-template-areas:
+    "header header header"
+    "calendar day day";
+  @include respond-to(small-down) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 220px 2fr;
+    grid-template-areas:
+      "header"
+      "calendar"
+      "day";
+  }
+}
+
+.header {
+  grid-area: header;
+  text-align: center;
+  background: #fff;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
