@@ -29,10 +29,10 @@ const Image = (props) => (
         return n.node.relativePath.includes(props.filename);
       });
       if (!image) { return null; }
-      
       const imageFluid = image.node.childImageSharp.fluid;
+      const { positioning } = props
       return (
-        <div className={`${PhotoessayStyles.image}`}>
+        <div className={`${PhotoessayStyles.image} ${PhotoessayStyles[positioning]}`}>
           <Img
             alt={props.alt}
             fluid={imageFluid}

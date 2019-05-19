@@ -24,8 +24,6 @@
   @include pb3();
 }
 
-
-
 .image {
   object-fit: cover;
 }
@@ -33,6 +31,12 @@
 .photoGrid .image {
   grid-column: span 6;
   grid-row: span 4;
+}
+
+.threeUp {
+  .image:last-child {
+    grid-column: span 6 / -3;
+  }
 }
 
 .fourUp {
@@ -45,4 +49,12 @@
 
 .twoSide {
   grid-template-rows: repeat(4, 1fr);
+}
+
+.singleRight {
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.singleRight .image {
+  grid-column: 4 / span 9;
 }
