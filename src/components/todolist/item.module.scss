@@ -1,0 +1,36 @@
+.item {
+  font-size: 12px;
+  line-height: 15px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.item + .item {
+  margin-top: 5px;
+}
+
+.item input {
+  width: 15px;
+  height: 15px;
+  -webkit-appearance: none;
+  border: 0 none;
+  background: rgba(0,0,0,0.5);
+  background-blend-mode: soft-light;
+  position: absolute;
+  left: 0;
+  &:after {
+    content: '';
+    display: block;
+    width: 13px;
+    height: 13px;
+    background: url(../../images/todolist/check.svg) 50% 50% no-repeat;
+    left: 1px;
+    top: 1px;
+    position: absolute;
+    transform: scale(0);
+    transition: transform 0.2s ease;
+  }
+  &:checked:after {
+    transform:scale(1);
+  }
+}

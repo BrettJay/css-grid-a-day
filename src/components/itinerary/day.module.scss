@@ -1,0 +1,136 @@
+.container {
+  grid-area: day;
+  background: #ffffff;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroller {
+  height: 100%;
+  padding: 15px 30px;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  position: relative;
+  grid-gap: 15px;
+  grid-template-areas: "timeline body";
+}
+
+.section + .section .body {
+  border-top: 1px solid rgba(238,238,238,0.5);
+}
+
+.timeline {
+  grid-area: timeline;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15px 30px 1fr;
+  grid-gap: 2px;
+  grid-template-areas:
+    "path_before"  
+    "icon"
+    "path_after";
+}
+
+.meal .timeline {
+  grid-template-rows: 15px 24px 1fr;
+}
+
+.morning .path_before,
+.evening .path_after {
+  display: none;
+}
+
+.icon {
+  grid-area: icon;
+  width: 30px;
+  height: 30px;
+  z-index: 1;
+  justify-self: center;
+}
+
+.path_before,
+.path_after {
+  border-radius: 1px;
+  width: 2px;
+  justify-self: center;
+  background: #eee;
+}
+
+.path_before {
+  grid-area: path_before;
+}
+
+.path_after {
+  grid-area: path_after;
+}
+.morning .icon {
+  background: url('../../images/itinerary/morning.png') 50% 50% no-repeat;
+  background-size: 30px 30px;
+}
+
+.afternoon .icon {
+  background: url('../../images/itinerary/afternoon.png') 50% 50% no-repeat;
+  background-size: 30px 30px;
+}
+
+.evening .icon {
+  background: url('../../images/itinerary/night.png') 50% 50% no-repeat;
+  background-size: 30px 30px;
+}
+
+.meal .icon {
+  background: #F5A623 url('../../images/itinerary/food.svg') 6px 50% no-repeat;
+  border-radius: 12px;
+  width: 24px;
+  height: 24px;
+}
+
+.body {
+  grid-area: body;
+  padding: 15px 0;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.2;
+  padding: 7px 0;
+}
+
+.meal .label {
+  padding: 4px 0;
+}
+
+.meta {
+  font-size: 11px;
+  line-height: 1.3;
+  color: #555;
+}
+
+
+.meal.street .icon {
+  background-image: url(../../images/itinerary/meals/street.svg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.meal.noodles .icon {
+  background-image: url(../../images/itinerary/meals/noodles.svg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.meal.pizza .icon {
+  background-image: url(../../images/itinerary/meals/pizza.svg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.meal.tofu .icon {
+  background-image: url(../../images/itinerary/meals/tofu.svg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}

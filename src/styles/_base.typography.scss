@@ -1,5 +1,5 @@
 * {
-  font-family: 'Inter UI', 'Inter-UI', 'InterUI', sans-serif;
+  font-family: 'Inter', Inter, sans-serif;
 }
 
 h1 {
@@ -9,4 +9,8 @@ h1 {
 p {
   @include fluid-scale(font-size, $responsive_min, $responsive_max, 16px, 17px);
   line-height: 1.66;
+}
+
+.sc {
+  font-variant: small-caps;
 }
