@@ -1,0 +1,34 @@
+.container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "image body"
+}
+
+.hero {
+  grid-area: image;
+  background: #F0F6FD;
+}
+
+.header {
+  grid-area: header;
+  margin: 0 60px;
+  align-self: end;
+  padding: 0 0 15px;
+  box-shadow: inset 0 -1px 0 0 #F0F6FD;
+  h1 {
+    font-size: 25px;
+    color: #2E4052;
+    margin: 0;
+  }
+}
+
+.body {
+  grid-area: body;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  padding: 60px;
+}
