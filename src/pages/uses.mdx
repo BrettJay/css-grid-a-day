@@ -1,14 +1,39 @@
 import Layout from "../components/uses/layout.module.scss"
 import Card from "../components/uses/card.module.scss"
+import AppCard from "../components/uses/application"
 
 <div className={Layout.container}>
-  <div className={Layout.hero}/>
+  <div className={Layout.hero}>
+    <h1>Just a few of my favourite things</h1>
+  </div>
 
   <div className={Layout.body}>
-    <div className={Card.container}>
-      <h2>VSCode</h2>
-      <p>Text editor of choice</p>
-    </div>
+    <h2>Everyday Carry</h2>
+    <h2>Applications</h2>
+    <AppCard
+      icon="sketch"
+      title="Sketch"
+      description="Design tool of choice. Fast to work in, with great export workflows."
+      link="sketchapp.com"
+      />
+    <AppCard
+      icon="vscode"
+      title="VSCode"
+      description="Feature rich text editor, with an impressive cadence of releases."
+      link="code.visualstudio.com"
+      />
+    <AppCard
+      icon="hyper"
+      title="Hyper"
+      description="A nice minimal, extensible Terminal client. I like it ‘cause it’s pretty."
+      link="hyper.is"
+      />
+    <AppCard
+      icon="hyper"
+      title="Screenflick"
+      description="Very high quality screen recording software."
+      link="hyper.is"
+      />
   </div>
 </div>
 
