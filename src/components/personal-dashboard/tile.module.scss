@@ -1,0 +1,76 @@
+@import "../../styles/_tools.fluid_scale.sass";
+
+.container {
+  padding: 30px;
+  background-image: linear-gradient(180deg, #4E576F 0%, #2F3649 100%);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+
+.list {
+  padding-right: 0;
+  padding-bottom: 0;
+}
+
+.primary {
+  grid-column: span 2;
+  grid-row: span 2;
+  background-image: linear-gradient(180deg, #3B91CF 0%, #2A72C4 100%);
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  img {
+    vertical-align: middle;
+    text-align: center;
+  }
+}
+
+.red {
+  background-image: linear-gradient(180deg, #EA057D 0%, #D00247 100%);
+}
+
+.green {
+  background-image: linear-gradient(180deg, #92C435 0%, #5FA415 100%);
+}
+
+.darkblue {
+  background-image: linear-gradient(180deg, #5C7DF5 0%, #2F46E8 100%);
+}
+
+.orange {
+  background-image: linear-gradient(180deg, #FBBE49 0%, #F58A23 100%);
+}
+
+.primaryLabel {
+  @include fluid-scale(font-size, $responsive_min, $responsive_max, 25px, 39px);
+  color: #fff;
+  margin: 0 0 0.2em;
+  font-weight: normal;
+}
+
+.secondaryLabel {
+  @include fluid-scale(font-size, $responsive_min, $responsive_max, 12px, 14px);
+  color: rgba(255,255,255,0.8);
+  margin: 0;
+}
+
+.emptystate {
+  text-align: center;
+  align-self: center;
+  h3 {
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 15px, 19px);
+    margin-top: 0;
+    color: rgba(255,255,255,0.9);
+  }
+  p {
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 12px, 14px);
+    color: rgba(255,255,255,0.7);
+  }
+}

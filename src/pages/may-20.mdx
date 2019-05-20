@@ -1,0 +1,132 @@
+import Footer from "../components/footer"
+import Metatags from "../components/metatags"
+
+import { graphql } from "gatsby"
+
+import Article from "../components/photoessay/article"
+import Banner from "../components/photoessay/banner"
+import Photogrid from "../components/photoessay/photogrid"
+import Image from "../components/photoessay/image"
+import PhotoessayStyles from "../components/photoessay/photoessay.module.scss"
+require('typeface-cardo')
+
+<Metatags
+  title="Photoessay | May 20 | CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail="https://cssgrid31.brett.cool/opengraph/may-20.png"
+  url="https://cssgrid31.brett.cool"
+  pathname="/may-20"
+/>
+
+<div className={PhotoessayStyles.container}>
+  <Banner
+    title="Arashiyama"
+    subtitle="and a Monkey Park"
+    file="banner"
+  />
+
+We emerged from our Hotel to find it lightly snowing.
+
+Walking through the gentle snowfall, we made our way towards Karasuma subway station.
+
+<Photogrid design="singleRight">
+  <Image filename="P2101453.jpg" alt="A photo" />
+</Photogrid>
+
+We rode the subway to Kyoto station.
+
+Picking up an onigiri en route from a convenience store station, we eventually found our way to the JR office, and activated our JR pass.
+
+We then used our pass to board a train bound for Arashiyama.
+
+<Photogrid design="fourUp">
+  <Image filename="P2101464.jpg" alt="Station platform"/>
+  <Image filename="P2101466.jpg" alt="View from the train"/>
+  <Image filename="P2101468.jpg" alt="Another view from the train"/>
+  <Image filename="P2101477.jpg" alt="Neighbourhood"/>
+</Photogrid>
+
+Within 20 minutes, we arrived at Arashiyama station. We made our way south, walking through quiet streets.
+
+<Photogrid design="twoSide">
+  <Image filename="P2101483.jpg" alt="JR Station"/>
+  <Image filename="P2101487.jpg" alt="Crowds walking"/>
+</Photogrid>
+
+As we headed south towards Katsura River, it began to snow lightly.
+
+<Photogrid design="twoSide">
+  <Image filename="P2101493.jpg" alt="Snowing"/>
+  <Image filename="P2101507.jpg" alt="Snowing"/>
+</Photogrid>
+
+We headed across Togetsu-kyō bridge.
+
+<Photogrid design="singleRight">
+  <Image filename="P2101527.jpg" alt="Across the bridge"/>
+</Photogrid>
+
+We continued south, admiring the beauty of the rivers and mountains.
+
+<Photogrid design="twoSide">
+  <Image filename="P2101534.jpg" alt="River views"/>
+  <Image filename="P2101532.jpg" alt="River views"/>
+</Photogrid>
+
+Following the coast, we made our way west towards the monkey park.
+
+<Photogrid design="singleRight">
+  <Image filename="P2101540.jpg" alt="Across the bridge"/>
+</Photogrid>
+
+Last time I’d visited, it had been closed due to snow. Today however, it was open for business.
+      
+We decided to make our way up the mountain.
+
+<Photogrid design="twoSide">
+  <Image filename="P2101542.jpg" alt="Climbing the mountain"/>
+  <Image filename="P2101546.jpg" alt="Climbing the mountain"/>
+</Photogrid>
+
+We continued up the mountain, beautiful aerial views of Arashiyama coming into view as we continued our climb.
+
+<Photogrid design="twoSide">
+  <Image filename="P2101547.jpg" alt="Climbing the mountain"/>
+  <Image filename="P2101553.jpg" alt="Climbing the mountain"/>
+</Photogrid>
+
+Eventually we approached the summit.
+
+<Photogrid design="singleRight">
+  <Image filename="P2101555.jpg" alt="Approaching the summit"/>
+</Photogrid>
+
+And we began to spot Monkeys.
+
+<Photogrid design="twoSide">
+  <Image filename="P2101556.jpg" alt="Monkey spotting"/>
+  <Image filename="P2101558.jpg" alt="Monkey spotting"/>
+</Photogrid>
+
+We continued to the observation deck, offering beautiful, panoramic views of Arashiyama.
+
+<Image filename="banner.jpg" alt="Banner image" />
+
+<Photogrid design="twoSide">
+  <Image filename="P2101564.jpg" alt="Monkey spotting"/>
+  <Image filename="P2101570.jpg" alt="Monkey spotting"/>
+</Photogrid>
+
+</div>
+
+<Footer date={20} prev={true}>
+
+One of my favourite projects in the past few years has been putting together [Photoessays][p] for travels and other events.
+
+I can certainly see a lot of potential with Gatsby, MDX, and CSS Grid to enhance future Photoessays.
+
+I also tried using [gatsby-image][gi] for this layout. I quite like the way it automates the process of optimising images, but unfortunately it’s a bit inflexible for positioning and scaling.
+
+[p]: https://brett.cool/photoessays/
+[gi]: https://www.gatsbyjs.org/packages/gatsby-image/
+</Footer>
