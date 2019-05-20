@@ -10,24 +10,24 @@
 .row2,
 .row3 {
   display: grid;
-  grid-template-rows: repeat(1, 7vw);
+  grid-template-rows: 9vw;
   grid-gap: 0.5vw;
   margin: 0.5vw auto;
 }
 
 .row1 {
-  grid-template-columns: repeat(10, 7vw);
-  max-width: calc(70vw + (0.5vw * 9));
+  grid-template-columns: repeat(10, 9vw);
+  max-width: calc(90vw + (0.5vw * 9));
 }
 
 .row2 {
-  grid-template-columns: repeat(9, 7vw);
-  max-width: calc(63vw + (0.5vw * 8));
+  grid-template-columns: repeat(9, 9vw);
+  max-width: calc(81vw + (0.5vw * 8));
 }
 
 .row3 {
-  grid-template-columns: repeat(8, 7vw);
-  max-width: calc(56vw + (0.5vw * 7));
+  grid-template-columns: repeat(8, 9vw);
+  max-width: calc(72vw + (0.5vw * 7));
 }
 
 .cap {
