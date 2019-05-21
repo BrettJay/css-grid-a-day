@@ -7,11 +7,15 @@ import ProductCard from "../components/uses/product"
   <div className={Layout.hero}>
     <div className={Layout.sidebar}>
       <h1>Just a few of my favourite things</h1>
+      <ol>
+        <li><a href="#edc">Everyday Carry</a></li>
+        <li><a href="#macos">macOS Applications</a></li>
+      </ol>
     </div>
   </div>
 
   <div className={Layout.body}>
-    <h2>Everyday Carry</h2>
+    <h2 id="edc">Everyday Carry</h2>
     <ProductCard
       image="iphone"
       title="iPhone XS"
@@ -24,7 +28,7 @@ import ProductCard from "../components/uses/product"
       description="13-inch, Late 2016, Four Thunderbolt 3 Ports"
       link="https://www.apple.com/au/macbook-pro/"
       />
-    <h2>macOS Applications</h2>
+    <h2 id="macos">macOS Applications</h2>
     <AppCard
       icon="sketch"
       title="Sketch"
