@@ -1,3 +1,5 @@
+@import "../../styles/_tools.respond_to.sass";
+
 .container {
   background: #FFFFFF;
   border-radius: 5px;
@@ -22,6 +24,9 @@
 
 .body {
   padding: 40px 30px 15px;
+  @include respond-to(small-down) {
+    padding: 15px 20px 10px;
+  }
 }
 
 .cover {
