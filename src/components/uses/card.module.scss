@@ -74,6 +74,10 @@
   box-shadow: inset 0 1px 0 0 #DFE8F0;
   font-size: 12px; 
   transition: color 0.2s ease;
+  @include respond-to(mobile-down) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .arrow {
