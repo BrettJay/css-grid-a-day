@@ -1,0 +1,81 @@
+@import "../../styles/_tools.respond_to.sass";
+
+.container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 34% 66%;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "hero body";
+  @include respond-to(small-down) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "hero"
+      "body";
+  }
+}
+
+.hero {
+  grid-area: hero;
+  background: #F0F6FD;
+  padding: 60px;
+  h1 {
+    align-self: end;
+    color: #1c334a;
+  }
+  @include respond-to(small-down) {
+    padding: 20px;
+  }
+}
+
+.header {
+  grid-area: header;
+  margin: 0 60px;
+  align-self: end;
+  padding: 0 0 15px;
+  box-shadow: inset 0 -1px 0 0 #F0F6FD;
+  position: relative;
+  h1 {
+    font-size: 25px;
+    color: #2E4052;
+    margin: 0;
+  }
+}
+
+.sidebar {
+  position: sticky;
+  top: 60px;
+  left: 0;
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+  }
+  li + li {
+    margin-top: 4px;  
+  }
+  a {
+    color: #005CFF;
+    text-decoration: none;
+    border-bottom: 1px solid hsla(218, 100%, 50%, 0.32);
+  }
+}
+
+.body {
+  grid-area: body;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  padding: 60px;
+  grid-gap: 30px;
+  h2 {
+    grid-column: 1 / -1;
+    color: #1c334a;
+  }
+  @include respond-to(small-down) {
+    padding: 20px;
+    grid-gap: 10px;
+  }
+}

@@ -1,0 +1,105 @@
+import Layout from "../components/uses/layout.module.scss"
+import Card from "../components/uses/card.module.scss"
+import AppCard from "../components/uses/application"
+import ProductCard from "../components/uses/product"
+
+import Footer from "../components/footer"
+import Metatags from "../components/metatags"
+
+<Metatags
+  title="“Uses” | May 21 | CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail="https://cssgrid31.brett.cool/opengraph/may-21.png"
+  url="https://cssgrid31.brett.cool"
+  pathname="/may-21"
+/>
+
+<div className={Layout.container}>
+  <div className={Layout.hero}>
+    <div className={Layout.sidebar}>
+      <h1>Just a few of my favourite things</h1>
+      <ol>
+        <li><a href="#edc">Everyday Carry</a></li>
+        <li><a href="#macos">macOS Applications</a></li>
+      </ol>
+    </div>
+  </div>
+
+  <div className={Layout.body}>
+    <h2 id="edc">Everyday Carry</h2>
+    <ProductCard
+      image="iphone"
+      title="iPhone XS"
+      description="Silver 256gb"
+      link="https://www.apple.com/au/iphone-xs/"
+      />
+    <ProductCard
+      image="macbookpro"
+      title="13” MacBook Pro"
+      description="13-inch, Late 2016, Four Thunderbolt 3 Ports"
+      link="https://www.apple.com/au/macbook-pro/"
+      />
+    <h2 id="macos">macOS Applications</h2>
+    <AppCard
+      icon="sketch"
+      title="Sketch"
+      description="Design tool of choice. Fast to work in, with great export workflows."
+      link="https://sketchapp.com"
+      />
+    <AppCard
+      icon="vscode"
+      title="VSCode"
+      description="Feature rich text editor, with an impressive cadence of releases."
+      link="https://code.visualstudio.com"
+      />
+    <AppCard
+      icon="hyper"
+      title="Hyper"
+      description="A nice minimal, extensible Terminal client. I like it mainly ‘cause it looks nice."
+      link="https://hyper.is"
+      />
+    <AppCard
+      icon="screenflick"
+      title="Screenflick"
+      description="Very high quality screen recording software, useful for recording hi-dpi, high framerate video."
+      link="https://www.araelium.com/screenflick-mac-screen-recorder"
+      />
+    <AppCard
+      icon="things"
+      title="Things 3"
+      description="A clean and simple task manager for all my life admin. Syncs with iPhone and Apple watch."
+      link="https://culturedcode.com/things/"
+      />
+    <AppCard
+      icon="iawriter"
+      title="iA Writer"
+      description="Writing app of choice. Beautiful and simple, with great Markdown support and exporting."
+      link="https://ia.net/writer"
+      />
+    <AppCard
+      icon="iconjar"
+      title="IconJar"
+      description="A handy application for organising, finding, using, and exporting icons and icon sets."
+      link="https://geticonjar.com/"  
+      />
+    <AppCard
+      icon="1password"
+      title="1Password"
+      description="Password manager. Syncs with iOS, supports Touch ID on Mac, and Touch + Face ID on iOS."
+      link="https://1password.com/"
+      />
+  </div>
+</div>
+
+
+
+<Footer date={21} prev={true}>
+
+
+Inspired by [Wes Bos’s “Uses”][w] page, here’s a list of products and applications I use.
+
+I’ll probably add more to this list later—I kind of ran out of time, plus I’m at the pub, and we’re got food to eat!
+
+[w]: https://wesbos.com/uses/
+
+</Footer>
