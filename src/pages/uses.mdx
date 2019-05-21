@@ -1,38 +1,77 @@
 import Layout from "../components/uses/layout.module.scss"
 import Card from "../components/uses/card.module.scss"
 import AppCard from "../components/uses/application"
+import ProductCard from "../components/uses/product"
 
 <div className={Layout.container}>
   <div className={Layout.hero}>
-    <h1>Just a few of my favourite things</h1>
+    <div className={Layout.sidebar}>
+      <h1>Just a few of my favourite things</h1>
+    </div>
   </div>
 
   <div className={Layout.body}>
     <h2>Everyday Carry</h2>
-    <h2>Applications</h2>
+    <ProductCard
+      image="iphone"
+      title="iPhone XS"
+      description="Silver 256gb"
+      link="https://www.apple.com/au/iphone-xs/"
+      />
+    <ProductCard
+      image="macbookpro"
+      title="13” MacBook Pro"
+      description="13-inch, Late 2016, Four Thunderbolt 3 Ports"
+      link="https://www.apple.com/au/macbook-pro/"
+      />
+    <h2>macOS Applications</h2>
     <AppCard
       icon="sketch"
       title="Sketch"
       description="Design tool of choice. Fast to work in, with great export workflows."
-      link="sketchapp.com"
+      link="https://sketchapp.com"
       />
     <AppCard
       icon="vscode"
       title="VSCode"
       description="Feature rich text editor, with an impressive cadence of releases."
-      link="code.visualstudio.com"
+      link="https://code.visualstudio.com"
       />
     <AppCard
       icon="hyper"
       title="Hyper"
-      description="A nice minimal, extensible Terminal client. I like it ‘cause it’s pretty."
-      link="hyper.is"
+      description="A nice minimal, extensible Terminal client. I like it mainly ‘cause it looks nice."
+      link="https://hyper.is"
       />
     <AppCard
-      icon="hyper"
+      icon="screenflick"
       title="Screenflick"
-      description="Very high quality screen recording software."
-      link="hyper.is"
+      description="Very high quality screen recording software, useful for recording hi-dpi, high framerate video."
+      link="https://www.araelium.com/screenflick-mac-screen-recorder"
+      />
+    <AppCard
+      icon="things"
+      title="Things 3"
+      description="A clean and simple task manager for all my life admin. Syncs with iPhone and Apple watch."
+      link="https://culturedcode.com/things/"
+      />
+    <AppCard
+      icon="iawriter"
+      title="iA Writer"
+      description="Writing app of choice. Beautiful and simple, with great Markdown support and exporting."
+      link="https://ia.net/writer"
+      />
+    <AppCard
+      icon="iconjar"
+      title="IconJar"
+      description="A handy application for organising, finding, using, and exporting icons and icon sets."
+      link="https://geticonjar.com/"  
+      />
+    <AppCard
+      icon="1password"
+      title="1Password"
+      description="Password manager. Syncs with iOS, supports Touch ID on Mac, and Touch + Face ID on iOS."
+      link="https://1password.com/"
       />
   </div>
 </div>
