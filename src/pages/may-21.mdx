@@ -3,6 +3,16 @@ import Card from "../components/uses/card.module.scss"
 import AppCard from "../components/uses/application"
 import ProductCard from "../components/uses/product"
 
+import Footer from "../components/footer"
+import Metatags from "../components/metatags"
+
+<Metatags
+  title="“Uses” | May 21 | CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail="https://cssgrid31.brett.cool/opengraph/may-21.png"
+  url="https://cssgrid31.brett.cool"
+  pathname="/may-21"
+/>
 
 <div className={Layout.container}>
   <div className={Layout.hero}>
@@ -83,3 +93,13 @@ import ProductCard from "../components/uses/product"
 
 
 
+<Footer date={21} prev={true}>
+
+
+Inspired by [Wes Bos’s “Uses”][w] page, here’s a list of products and applications I use.
+
+I’ll probably add more to this list later—I kind of ran out of time, plus I’m at the pub, and we’re got food to eat!
+
+[w]: https://wesbos.com/uses/
+
+</Footer>
