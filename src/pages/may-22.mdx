@@ -2,6 +2,17 @@ import Table from "../components/periodic-table/table.module.scss"
 import Element from "../components/periodic-table/element"
 import Empty from "../components/periodic-table/empty"
 
+import Footer from "../components/footer"
+import Metatags from "../components/metatags"
+
+<Metatags
+  title="Periodic Table of Web Elements | May 22 | CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail="https://cssgrid31.brett.cool/opengraph/may-22.png"
+  url="https://cssgrid31.brett.cool"
+  pathname="/may-22"
+/>
+
 <div className={Table.container}>
   <Element
     abbr="Ba"
@@ -113,3 +124,8 @@ import Empty from "../components/periodic-table/empty"
     title="WCAG compliant"
     background="#005B10"/>
 </div>
+
+<Footer date={22} prev={true}>
+
+hi
+</Footer>
