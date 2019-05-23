@@ -21,18 +21,21 @@ import FormStyles from "../components/responsive-form/form.module.scss"
       <div className={LayoutStyles.content}>
         <form className={FormStyles.form}>
           <label for="name">Your name</label>
-          <input id="name" type="text" placeholder="Bob Smith" />
+          <input id="name" defaultValue="Brett Jones" type="text"/>
+          <label for="name">Username</label>
+          <input id="name" defaultValue="@brett_jay" type="text"/>
           <label for="email">Email</label>
-          <input id="email" type="email" placeholder="hello@example.com" />
+          <input id="email" type="email" defaultValue="hello@example.com" />
           <p className={FormStyles.hint}>
             Your email is used to sign in, and notifications will be delivered
             there.
           </p>
-          <label>Lorem ipsum</label>
+          <label>Newsletter</label>
           <select>
-            <option>Bing</option>
-            <option>Bing</option>
-            <option>Wahoo</option>
+            <option>Daily</option>
+            <option>Weekly</option>
+            <option>Monthly</option>
+            <option>Off</option>
           </select>
           <input type="submit" value="Save changes"/>          
         </form>

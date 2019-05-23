@@ -14,7 +14,7 @@
   }
 }
 
-@include respond-to(376px, 0) {
+@include respond-to(480px, 0) {
 
   .form input,
   .form select,
@@ -23,7 +23,7 @@
   }
 }
 
-@include respond-to(0px, 375px) {
+@include respond-to(0px, 479px) {
   .form {
     grid-template-columns: 1fr;
     grid-gap: 10px;
@@ -35,7 +35,7 @@
   }
 }
 
-@include respond-to(376px, 767px) {
+@include respond-to(480px, 767px) {
   .form {
     grid-template-columns: 1fr 3fr;
     grid-gap: 30px 15px;
@@ -100,4 +100,5 @@ input[type="submit"] {
   box-shadow: 0 1px 3px 0 rgba(92, 92, 92, 0.21);
   cursor: pointer;
   font-weight: bold;
+  margin-top: 40px;
 }
