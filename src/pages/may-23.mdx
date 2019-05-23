@@ -1,0 +1,69 @@
+import Footer from "../components/footer"
+import Metatags from "../components/metatags"
+
+import LayoutStyles from "../components/responsive-form/layout.module.scss"
+import FormStyles from "../components/responsive-form/form.module.scss"
+
+<Metatags
+  title="Responsive form | May 23 | CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail="https://cssgrid31.brett.cool/opengraph/may-23.png"
+  url="https://cssgrid31.brett.cool"
+  pathname="/may-23"
+/>
+
+<div className={LayoutStyles.container}>
+  <div className={LayoutStyles.menu}>
+    <ol>
+      <li>Home</li>
+      <li>Inbox</li>
+      <li>Tasks</li>
+      <li>Groups</li>
+      <li className={LayoutStyles.menuActive}>Your account</li>
+    </ol>
+  </div>
+  <div className={LayoutStyles.header}>
+    <h1>Your account</h1>
+    <ol>
+      <li className={LayoutStyles.sectionActive}>Profile</li>
+      <li>Settings</li>
+      <li>Billing</li>
+    </ol>
+  </div>
+  <div className={LayoutStyles.form}>
+    <form className={FormStyles.form}>
+      <label for="name">Your name</label>
+      <input id="name" defaultValue="Brett Jones" type="text"/>
+      <label for="name">Username</label>
+      <input id="name" defaultValue="@brett_jay" type="text"/>
+      <label for="email">Email</label>
+      <input id="email" type="email" defaultValue="hello@example.com" />
+      <p className={FormStyles.hint}>
+        Your email is used to sign in, and notifications will be delivered
+        there.
+      </p>
+      <label>Newsletter</label>
+      <select>
+        <option>Daily</option>
+        <option>Weekly</option>
+        <option>Monthly</option>
+        <option>Off</option>
+      </select>
+    </form>
+    <form className={`${FormStyles.form} ${FormStyles.formSubmission}`}>
+      <input type="submit" value="Save changes"/>
+    </form>
+  </div>
+
+</div>
+
+<Footer date={23} prev={true}>
+
+Exploring a responsive dashboard form using CSS grid.
+
+Forms for me are one of those notoriously tricky things to get right.
+
+As tempting as it is to make them span the full width of the display, they really seem to need to be contained within a reasonable width, and then stacking elements—inputs, labels, or otherwise—on the same line often leads to issues with fluid layouts.
+
+CSS Grid solves some of these problems quite nicely, with its repeat column/row flow, so assuming your forms follow a similar pattern, you can get away with rather minimal markup, compared to other methods of aligning form elements.
+</Footer>
