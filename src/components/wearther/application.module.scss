@@ -32,10 +32,31 @@
   .today {
     grid-area: t;
     text-align: center;
+    padding: 5vh 5vw;
   }
 
-  .next {
+  .d1,
+  .d2,
+  .d3,
+  .d4,
+  .d5 {
+    padding: 5vh 1vw;
+  }
+
+  .d1 {
     grid-area: d1;
+  }
+  .d2 {
+    grid-area: d2;
+  }
+  .d3 {
+    grid-area: d3;
+  }
+  .d4 {
+    grid-area: d4;
+  }
+  .d5 {
+    grid-area: d5;
   }
 }
 

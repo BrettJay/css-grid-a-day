@@ -16,7 +16,21 @@ class Wearther extends React.Component {
           </div>
         </div>
 
-        <div className={App.next}>Foo</div>
+        <div className={App.d1}>
+          Tomorrow 23°/17°
+        </div>
+        <div className={App.d2}>
+          Sunday 23°/17°
+        </div>
+        <div className={App.d3}>
+          Monday 23°/17°
+        </div>
+        <div className={App.d4}>
+          Tuesday 23°/17°
+        </div>
+        <div className={App.d5}>
+          Wednesday 23°/17°
+        </div>
       </div>
     )
   }
