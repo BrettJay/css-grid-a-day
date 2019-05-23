@@ -1,0 +1,87 @@
+@import "../../styles/_tools.respond_to.sass";
+
+.container {
+  background: #FFFFFF;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 3px 8px 0 rgba(94,116,141,0.21), 0 0 0 1px rgba(117,138,163,0.11), 0 1px 2px 0 rgba(117,138,163,0.37);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+  &:hover {
+    box-shadow: 0 5px 12px 0 rgba(94,116,141,0.21), 0 0 0 1px rgba(117,138,163,0.11), 0 1px 3px 0 rgba(117,138,163,0.70);
+    transform: translateY(-2px);
+    .arrow {
+      transform: translateX(4px);
+    }
+    .link {
+      color: #005CFF;
+    }
+  }
+}
+
+.body {
+  padding: 40px 30px 15px;
+  @include respond-to(small-down) {
+    padding: 15px 20px 10px;
+  }
+}
+
+.cover {
+  height: 0;
+  padding-top: 56%;
+  position: relative;
+  background: #000;
+}
+
+.coverImage {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  object-fit: cover;
+}
+
+.title {
+  font-size: 19px;
+  color: #3B4F63;
+  margin: 0;
+}
+
+.summary {
+  font-size: 13px;
+  color: #5982AB;
+  line-height: 1.53;
+}
+
+.appIcon {
+  max-width: 48px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.link {
+  display: block;
+  padding: 15px 30px;
+  color: #5982AB;
+  text-decoration: none;
+  background: #FBFDFF;
+  box-shadow: inset 0 1px 0 0 #DFE8F0;
+  font-size: 12px; 
+  transition: color 0.2s ease;
+  @include respond-to(mobile-down) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.arrow {
+  transition: transform 0.2s ease;
+  display: inline-block;
+  transform: translateX(1px);
+}

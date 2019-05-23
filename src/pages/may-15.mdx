@@ -1,0 +1,83 @@
+import BoardingPass from "../components/boarding-pass/boardingPass.module.scss"
+import Barcode from "../images/boarding-pass/barcode.svg"
+import Plane from "../images/boarding-pass/plane.svg"
+import Footer from "../components/footer"
+import Metatags from "../components/metatags"
+
+<Metatags
+  title="Boarding pass | May 15 | CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail="https://cssgrid31.brett.cool/opengraph/may-15.png"
+  url="https://cssgrid31.brett.cool"
+  pathname="/may-15"
+/>
+
+<div className={BoardingPass.canvas}>
+  <div className={BoardingPass.container}> 
+    <div className={BoardingPass.header}>
+      <dl>
+        <dt>Passenger</dt>
+        <dd>Mr. Brett Michael Jones</dd>
+      </dl>
+    </div>
+    <div className={BoardingPass.main}>
+      <img className={BoardingPass.barcode} src={Barcode} alt="Barcode" />
+      <div className={BoardingPass.main_details}>
+        <dl>
+          <dt>Terminal</dt>
+          <dd>1</dd>
+        </dl>
+        <dl>
+          <dt>Gate</dt>
+          <dd>52</dd>
+        </dl>
+        <dl>
+          <dt>Boarding</dt>
+          <dd>12:30 <span className={BoardingPass.sc}>pm</span></dd>
+        </dl>
+        <dl>
+          <dt>Origin</dt>
+          <dd>Perth <span className={BoardingPass.sc}>per</span></dd>
+        </dl>
+        <img className={BoardingPass.detail_icon} src={Plane} alt="Perth to Tokyo"/>
+        <dl>
+          <dt>Destination</dt>
+          <dd>Tokyo <span className={BoardingPass.sc}>nrt</span></dd>
+        </dl>
+      </div>
+    </div>
+    <div className={BoardingPass.side}>
+      <dl className={BoardingPass.side_full_span}>      
+        <dt>Passenger</dt>
+        <dd>Mr. Brett Michael Jones</dd>
+      </dl>
+      <dl>
+        <dt>Origin</dt>
+        <dd>Perth <span className={BoardingPass.sc}>per</span></dd>
+      </dl>
+      <dl>
+        <dt>Destination</dt>
+        <dd>Tokyo <span className={BoardingPass.sc}>nrt</span></dd>
+      </dl>
+      <dl>
+        <dt>Gate</dt>
+        <dd>52</dd>
+      </dl>
+      <dl>
+        <dt>Seat</dt>
+        <dd>2</dd>
+      </dl>
+    </div>
+    <div className={BoardingPass.dots}/>
+  </div>
+</div>
+
+<Footer date={15} prev={true} next={true}>
+
+Following up to yesterday’s flight booking UI, here’s a boarding pass created with CSS Grid.
+
+This one has a fair few magic numbers and hacky workarounds (particular for mobile), but it was a lot of fun.
+
+I’m not sure I’d ever be able to rotate the canvas by 90° and call it a day in any real world scenario, but hey, worked here.
+
+</Footer>

@@ -1,0 +1,20 @@
+.wrapper {
+  background: #f7f7f7;
+  min-height: 100vh;
+}
+
+.header {
+  padding: 10px 40px;
+  display: grid;
+  grid-template-columns: [logo] 40px 1fr [avatar] 40px;
+  background: #0E1D2F;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: block;
+  grid-column: avatar;
+}

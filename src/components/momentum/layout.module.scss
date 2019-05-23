@@ -1,0 +1,93 @@
+@import "../../styles/_tools.respond_to.sass";
+@import "../../styles/_tools.fluid_scale.sass";
+
+.container {
+  display: grid;
+  grid-template-columns: 10% repeat(4, 1fr) 10%;
+  grid-gap: 40px 30px;
+  grid-template-rows: 1fr auto;
+  min-height: 100vh;
+  background: #fefefe;
+  grid-template-areas:
+    ". header header photo photo photo"
+    ". content content content . .";
+  @include respond-to(1000px, 1500px) {
+    grid-template-columns: 2% repeat(4, 1fr) 2%;
+  }
+  @include respond-to(501px, 999px) {
+    grid-template-columns: 1% repeat(4, 1fr) 1%;
+    grid-gap: 20px 15px;
+    grid-template-areas:
+    ". header header photo photo photo"
+    ". content content content content .";
+  }
+  @include respond-to(0, 500px) {
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1% 1fr 10fr 1%;
+    grid-gap: 20px 15px;
+    grid-template-areas:
+    "photo photo photo photo"
+    ". . header ."
+    ". . content .";
+  }
+  h1, h2 {
+    font-family: 'Open Sans', OpenSans, sans-serif;
+  }
+  h1 {
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 21px, 70px);
+    font-style: italic;
+    font-weight: 800;
+    letter-spacing: -0.07em;
+    line-height: 1.21;
+    margin-bottom: 0;
+  }
+  h2 {
+    font-size: 16px;
+    margin: 1.5em 0 0.3em;
+  }
+  p,
+  p span,
+  p em {
+    font-family: 'Cardo', cardo, serif;
+    margin: 0;
+  }
+  p:not(:first-child):first-letter {
+    padding-left: 1em;
+  }
+  h2 + p:first-letter {
+    padding-left: 0 !important;
+  }
+  span {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+}
+
+.header {
+  grid-area: header;
+  align-self: end;
+}
+
+.content {
+  grid-area: content;
+  columns: 3;
+  column-gap: 30px;
+  padding-bottom: 30px;
+  @include respond-to(0, 999px) {
+    column-gap: 15px;
+    columns: 2;
+  }
+  @include respond-to(0, 500px) {
+    columns: 1;
+  }
+}
+
+.photo {
+  grid-area: photo;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}

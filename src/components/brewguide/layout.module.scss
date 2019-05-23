@@ -1,0 +1,187 @@
+@import "../../styles/_tools.respond_to.sass";
+@import "../../styles/_tools.fluid_scale.sass";
+
+.page {
+  h1, h2, h3 {
+    font-family: LeagueSpartan, 'League Spartan', sans-serif;
+  }
+
+  h1 {
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 21px, 72px);
+    line-height: 1.2;
+  }
+
+  h2 {
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 17px, 48px);
+    line-height: 1.45;
+  }
+
+  h3 {
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 15px, 29px);
+    letter-spacing: -0.23px;
+    line-height: 1.206896552;
+  }
+
+  .checklist {
+    list-style: none;
+    padding: 0;
+    li {
+      background: url(../../images/brewguide/check.svg) 0 50% no-repeat;
+      padding-left: 30px;
+      min-height: 20px;
+    }
+    li + li {
+      margin-top: 10px;
+    }
+  }
+
+  p, li {
+    font-family: 'Work Sans', WorkSans, WorkSans-Regular, sans-serif;
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 13px, 25px);
+    color: #545454;
+    letter-spacing: -0.05em;
+    line-height: 1.4;
+  }
+
+  dl {
+    margin: 0;
+    padding: 0;
+  }
+
+  em {
+    display: block;
+    text-transform: uppercase;
+    font-family: LeagueSpartan, 'League Spartan', sans-serif;
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 12px, 19px);
+    margin-bottom: 2em;
+    font-style: normal;
+    color: #000;
+    letter-spacing: 0.08em;
+  }
+  dt {
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 15px, 29px);
+    font-family: LeagueSpartan, 'League Spartan', sans-serif;
+    margin-bottom: 10px;
+  }
+
+  dd {
+    font-family: 'Work Sans', WorkSans, WorkSans-Regular, sans-serif;
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 11px, 24px);
+    text-transform: uppercase;
+    color: #666;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.billboard {
+  min-height: 100vh;
+  display: grid;
+  background: url(../../images/brewguide/P5023341.jpg) 66% 50% no-repeat;
+  background-size: cover;
+  grid-template-columns: 11.67% 28.33% 48.33% 11.67%;
+  grid-template-rows: 22% 44% 13.33% 20.67%;
+  grid-template-areas:
+    ". . . ."
+    ". t . ."
+    ". . . ."
+    ". . f f";
+  h1 {
+    color: #FFFFFF;
+    letter-spacing: 0;
+    grid-area: t;
+  }
+  @include respond-to(mobile-down) {
+    grid-template-columns: 5% 35% 55% 5%;
+    min-height: 85vh;
+  }
+  .summary {
+    grid-area: f;
+    background: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+.introduction {
+  @include pt4();  
+  @include pb4();
+  display: grid;
+  grid-template-columns: 11.67% 36% 6% 6% 28.66% 11.67%;
+  grid-template-areas:
+    ". leading . description description ."
+    ". leading . description description ."
+    ". . . . . ."
+    "pic pic pic . recipe ."
+    "pic pic pic . recipe ."
+    "pic pic pic . recipe ."
+    "pic pic pic . recipe .";
+  @include respond-to(mobile-down) {
+    grid-template-columns: 5% 42.67% 6% 6% 35.33% 5%;
+  }
+}
+
+.leading {
+  grid-area: leading;
+  @include pt4();
+  @include pb4();
+}
+
+.description {
+  grid-area: description;
+  @include pt4();
+  @include pb4();
+}
+
+.recipe {
+  grid-area: recipe;
+}
+
+.recipeImg {
+  grid-area: pic;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.stepOdd,
+.stepEven {
+  @include pt4();  
+  @include pb4();
+  display: grid;
+  grid-template-columns: 11.67% 36% 6% 6% 28.66% 11.67%;
+  @include respond-to(mobile-down) {
+    grid-template-columns: 5% 42.67% 6% 6% 35.33% 5%;
+  }
+}
+
+.stepOdd {
+  grid-template-areas: ". step . image image image";
+}
+
+.stepEven {
+  grid-template-areas: "image image . step step .";
+}
+
+.step_description {
+  grid-area: step;
+  @include pt2();  
+  @include pb2();
+  align-self: center;
+}
+
+.step_image {
+  grid-area: image;
+  @include pt2();  
+  @include pb2();
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+}
