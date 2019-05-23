@@ -1,0 +1,32 @@
+@import "../../styles/_tools.respond_to.sass";
+
+.canvas {
+  background: #15171D;
+}
+
+.logo {
+  background: #2B303D;
+  grid-area: logo;
+}
+
+.header {
+  background: #3E4451;
+  grid-area: header;
+  color: #fff;
+  text-align: Center;
+}
+
+.body {
+  grid-area: body;
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+  padding: 40px;
+  @include respond-to(small-down) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 20px;
+  }
+}

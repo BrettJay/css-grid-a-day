@@ -1,0 +1,27 @@
+import Application from "../components/itinerary/application"
+import Footer from "../components/footer"
+import Metatags from "../components/metatags"
+
+<Metatags
+  title="Itinerary application | May 19 | CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail="https://cssgrid31.brett.cool/opengraph/may-19.png"
+  url="https://cssgrid31.brett.cool"
+  pathname="/may-19"
+/>
+
+<Application/>
+
+<Footer date={19} prev={true} next={true}>
+
+Back in February, I used Middleman to prototype an [Itinerary application][a] for an upcoming trip to Japan.
+
+It proved to be very handy while we were there.
+
+Built over the course of a 3 hour flight from Perth to Melbourne, I refactored the code with React and Gatsby, and design with CSS Grid.
+
+Adding a split view design so that you could navigate by day without having to change screen was an obvious improvement, made simple thanks to React’s state lifecycle methods.
+
+[a]: https://itinerary.brett.cool
+
+</Footer>
