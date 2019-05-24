@@ -1,52 +1,61 @@
+@import "../../styles/_tools.respond_to.sass";
+
 .icon {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   flex: 0 1 auto;
   opacity: 0.6;
   margin: 10px;
   cursor: pointer;
   transition: opacity 0.2s ease;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   &:hover {
     opacity: 1;
+  }
+  @include respond-to(small-down) {
+    width: 30px;
+    height: 30px;
   }
 }
 
 .skirt {
   composes: icon;
-  background: url(../../images/wearthere/clothes/skirt.svg) 50% 50% no-repeat;
+  background-image: url(../../images/wearthere/clothes/skirt.svg);
 }
 
 .tights {
   composes: icon;
-  background: url(../../images/wearthere/clothes/tights.svg) 50% 50% no-repeat;
+  background-image: url(../../images/wearthere/clothes/tights.svg);
 }
 
 .jeans {
   composes: icon;
-  background: url(../../images/wearthere/clothes/jeans.svg) 50% 50% no-repeat;
+  background-image: url(../../images/wearthere/clothes/jeans.svg);
 }
 
 .shirt {
   composes: icon;
-  background: url(../../images/wearthere/clothes/shirt.svg) 50% 50% no-repeat;
+  background-image: url(../../images/wearthere/clothes/shirt.svg);
 }
 
 .wshirt {
   composes: icon;
-  background: url(../../images/wearthere/clothes/wshirt.svg) 50% 50% no-repeat;
+  background-image: url(../../images/wearthere/clothes/wshirt.svg);
 }
 
 .sweater {
   composes: icon;
-  background: url(../../images/wearthere/clothes/sweater.svg) 50% 50% no-repeat;
+  background-image: url(../../images/wearthere/clothes/sweater.svg);
 }
 
 .coat {
   composes: icon;
-  background: url(../../images/wearthere/clothes/coat.svg) 50% 50% no-repeat;
+  background-image: url(../../images/wearthere/clothes/coat.svg);
 }
 
 .umbrella {
   composes: icon;
-  background: url(../../images/wearthere/clothes/umbrella.svg) 50% 50% no-repeat;
+  background-image: url(../../images/wearthere/clothes/umbrella.svg);
 }
