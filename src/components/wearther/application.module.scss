@@ -7,17 +7,77 @@
   color: #fff;
 }
 
+.today {
+  grid-area: t;
+  text-align: center;
+  padding: 5vh 5vw;
+  text-shadow: 0 1px 3px #004D99;
+}
+
+.d1,
+.d2,
+.d3,
+.d4,
+.d5,
+.d6 {
+  box-shadow: 0 1px 0 rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  text-shadow: 0 1px 3px #004D99;
+  h2 {
+    display: flex;
+    flex: 0 1 100%;
+    justify-content: space-between;
+    margin: 0 auto;
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 16px, 21px);
+  }
+  .forecastLabel {
+    text-align: left;
+  }
+  .forecastHighLow {
+    text-align: right;
+    font-weight: normal;
+    padding-left: 40px;
+  }
+  .forecastLow {
+    color: rgba(255,255,255,0.33);
+  }
+}
+
+.d1 { grid-area: d1; }
+.d2 { grid-area: d2; }
+.d3 { grid-area: d3; }
+.d4 { grid-area: d4; }
+.d5 { grid-area: d5; }
+.d6 { grid-area: d6; }
+
 @include respond-to(small-down) {
   .container {
-    background-image: radial-gradient(50% 100%, #00B0DD 0%, #004D99 100%);
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    background-image: radial-gradient(ellipse at top center, #00B0DD 0%, #004D99 100%);
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr repeat(5, 60px);
+    grid-template-areas:
+      "t"
+      "d1"
+      "d2"
+      "d3"
+      "d4"
+      "d5"
+      "d6";
+  }
+  .d1,
+  .d2,
+  .d3,
+  .d4,
+  .d5,
+  .d6 {
+    padding: 0 15px;
   }
 }
 
 @include respond-to(ipad-up) {
   .container {
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 1.6fr 1fr;
     grid-template-rows: repeat(6, 1fr);
     background-image: radial-gradient(farthest-corner at 37% 0%, #00B0DD 0%, #004D99 100%);
     grid-template-areas:
@@ -26,37 +86,15 @@
       "t d3"
       "t d4"
       "t d5"
-      "t d6"
+      "t d6";
   }
-
-  .today {
-    grid-area: t;
-    text-align: center;
-    padding: 5vh 5vw;
-  }
-
   .d1,
   .d2,
   .d3,
   .d4,
-  .d5 {
-    padding: 5vh 1vw;
-  }
-
-  .d1 {
-    grid-area: d1;
-  }
-  .d2 {
-    grid-area: d2;
-  }
-  .d3 {
-    grid-area: d3;
-  }
-  .d4 {
-    grid-area: d4;
-  }
-  .d5 {
-    grid-area: d5;
+  .d5,
+  .d6 {
+    padding: 0 30px 0 0;
   }
 }
 
