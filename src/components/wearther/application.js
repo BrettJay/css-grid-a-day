@@ -2,6 +2,9 @@ import React from "react"
 
 import App from "./application.module.scss"
 import Weather from "./weather.module.scss"
+import Clothes from "./clothes.module.scss"
+
+import RainLg from "../../images/wearthere/large/rain.svg"
 
 class Wearther extends React.Component {
   render() {
@@ -9,10 +12,21 @@ class Wearther extends React.Component {
       <div className={App.container}>
         <div className={App.today}>
           <div className={App.temperatures}>
-            <div className={App.now}>17°</div>
+            <div className={App.now}>
+              <img src={RainLg} alt="Rain"/>17°
+            </div>
+          </div>
+          <div className={App.summary}>
+            Partly cloudy with showers in the evening.
+          </div>
+          <div className={App.clothes}>
+            <div title="Wear pants or jeans" className={Clothes.jeans}/>
+            <div title="Wear a shirt" className={Clothes.shirt}/>
+            <div title="Wear a sweater" className={Clothes.sweater}/>
+            <div title="Bring a coat" className={Clothes.coat}/>
+            <div title="Bring an umbrella" className={Clothes.umbrella}/>
           </div>
         </div>
-
         <div className={App.d1}>
           <h2>
             <div className={App.forecastLabel}>Today</div>

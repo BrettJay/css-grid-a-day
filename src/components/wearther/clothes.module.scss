@@ -1,0 +1,37 @@
+.icon {
+  width: 60px;
+  height: 60px;
+  flex: 0 1 auto;
+  opacity: 0.6;
+  margin: 10px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.jeans {
+  composes: icon;
+  background: url(../../images/wearthere/clothes/jeans.svg) 50% 50% no-repeat;
+}
+
+.shirt {
+  composes: icon;
+  background: url(../../images/wearthere/clothes/shirt.svg) 50% 50% no-repeat;
+}
+
+.sweater {
+  composes: icon;
+  background: url(../../images/wearthere/clothes/sweater.svg) 50% 50% no-repeat;
+}
+
+.coat {
+  composes: icon;
+  background: url(../../images/wearthere/clothes/coat.svg) 50% 50% no-repeat;
+}
+
+.umbrella {
+  composes: icon;
+  background: url(../../images/wearthere/clothes/umbrella.svg) 50% 50% no-repeat;
+}

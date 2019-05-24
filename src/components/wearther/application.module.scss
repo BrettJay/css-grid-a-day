@@ -11,7 +11,36 @@
   grid-area: t;
   text-align: center;
   padding: 5vh 5vw;
+  position: relative;
   text-shadow: 0 1px 3px #004D99;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 3fr 1fr 2fr;
+  grid-template-areas:
+    "current current current current"
+    ". b b ."
+    "c c c c";
+}
+
+.temperatures {
+  grid-area: current;
+  align-self: end;
+}
+
+.clothes {
+  grid-area: c;
+  align-self: start;
+  display: flex;
+  justify-content: center;
+}
+
+.summary {
+  @include fluid-scale(font-size, $responsive_min, $responsive_max, 15px, 19px);
+  line-height: 1.4;
+  grid-area: b;
+  text-align: center;
+  text-shadow: 0 1px 3px #004D99;
+  align-self: center;
 }
 
 .d1,
@@ -20,7 +49,7 @@
 .d4,
 .d5,
 .d6 {
-  box-shadow: 0 1px 0 rgba(255,255,255,0.1);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
   display: flex;
   align-items: center;
   text-shadow: 0 1px 3px #004D99;
@@ -29,6 +58,7 @@
     flex: 0 1 100%;
     justify-content: space-between;
     margin: 0 auto;
+    line-height: 30px;
     @include fluid-scale(font-size, $responsive_min, $responsive_max, 16px, 21px);
   }
   .forecastLabel {
@@ -55,7 +85,7 @@
   .container {
     background-image: radial-gradient(ellipse at top center, #00B0DD 0%, #004D99 100%);
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr repeat(5, 60px);
+    grid-template-rows: 1fr repeat(6, 60px);
     grid-template-areas:
       "t"
       "d1"
@@ -99,7 +129,12 @@
 }
 
 .now {
-  @include fluid-scale(font-size, $responsive_min, $responsive_max, 48px, 144px);
+  @include fluid-scale(font-size, $responsive_min, $responsive_max, 64px, 144px);
+  vertical-align: middle;
+  img {
+    vertical-align: middle;
+    margin-right: 20px;
+  }
 }
 
 .lowhi {
