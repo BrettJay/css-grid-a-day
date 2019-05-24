@@ -7,10 +7,49 @@ import Clothes from "./clothes.module.scss"
 import RainLg from "../../images/wearthere/large/rain.svg"
 
 class Wearther extends React.Component {
+  constructor(props) {
+    super(props)
+    this.enablePants = this.enablePants.bind(this);
+    this.disablePants = this.disablePants.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+    this.state = {
+      pants: true,
+      menu: false,
+    }
+  }
+
+  handleClick() {
+    this.setState(state => ({
+      menu: !state.menu
+    }));
+  }
+
+  enablePants() {
+    this.setState(state => ({
+      pants: true,
+      menu: false
+    }))
+  }
+
+  disablePants() {
+    this.setState(state => ({
+      pants: false,
+      menu: false
+    }))
+  }
+
   render() {
+    const settingMenuClasses = this.state.menu ? `${App.settingMenu} ${App.settingMenuActive}` : `${App.settingMenu}`
+    const pantCostumeSetClasses = this.state.pants ? `${App.clothingSet} ${App.clothingSetActive}` : `${App.clothingSet}`
+    const nopantCostumeSetClasses = this.state.pants ? `${App.clothingSet}` : `${App.clothingSet} ${App.clothingSetActive}`
     return (
       <div className={App.container}>
         <div className={App.today}>
+          <button onClick={this.handleClick} className={App.settingButton} />
+          <div className={settingMenuClasses}>
+            <button onClick={this.enablePants}>I prefer pants</button>
+            <button onClick={this.disablePants}>I prefer skirts</button>
+          </div>
           <div className={App.temperatures}>
             <div className={App.now}>
               <img src={RainLg} alt="Rain"/>17°
@@ -20,11 +59,21 @@ class Wearther extends React.Component {
             Partly cloudy with showers in the evening.
           </div>
           <div className={App.clothes}>
-            <div title="Wear pants or jeans" className={Clothes.jeans}/>
-            <div title="Wear a shirt" className={Clothes.shirt}/>
-            <div title="Wear a sweater" className={Clothes.sweater}/>
-            <div title="Bring a coat" className={Clothes.coat}/>
-            <div title="Bring an umbrella" className={Clothes.umbrella}/>
+            <div className={pantCostumeSetClasses}>
+              <div title="Wear pants or jeans" className={Clothes.jeans}/>
+              <div title="Wear a shirt" className={Clothes.shirt}/>
+              <div title="Wear a sweater" className={Clothes.sweater}/>
+              <div title="Bring a coat" className={Clothes.coat}/>
+              <div title="Bring an umbrella" className={Clothes.umbrella}/>
+            </div>
+            <div className={nopantCostumeSetClasses}>
+              <div title="Wear warm tights" className={Clothes.tights}/>
+              <div title="Wear a skirt" className={Clothes.skirt}/>
+              <div title="Wear a shirt" className={Clothes.wshirt}/>
+              <div title="Wear a sweater" className={Clothes.sweater}/>
+              <div title="Bring a coat" className={Clothes.coat}/>
+              <div title="Bring an umbrella" className={Clothes.umbrella}/>
+            </div>
           </div>
         </div>
         <div className={App.d1}>

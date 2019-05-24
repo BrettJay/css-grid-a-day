@@ -11,6 +11,16 @@
   }
 }
 
+.skirt {
+  composes: icon;
+  background: url(../../images/wearthere/clothes/skirt.svg) 50% 50% no-repeat;
+}
+
+.tights {
+  composes: icon;
+  background: url(../../images/wearthere/clothes/tights.svg) 50% 50% no-repeat;
+}
+
 .jeans {
   composes: icon;
   background: url(../../images/wearthere/clothes/jeans.svg) 50% 50% no-repeat;
@@ -19,6 +29,11 @@
 .shirt {
   composes: icon;
   background: url(../../images/wearthere/clothes/shirt.svg) 50% 50% no-repeat;
+}
+
+.wshirt {
+  composes: icon;
+  background: url(../../images/wearthere/clothes/wshirt.svg) 50% 50% no-repeat;
 }
 
 .sweater {
