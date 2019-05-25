@@ -2,14 +2,14 @@ const Msg5 = {
   subject: 'Announcing our brand new email application',
   date: 'Yesterday',
   contact: {
-    name: 'Hipstamail',
-    email: 'hip@stermail.com'
+    name: 'Raven',
+    email: 'caww@ravenmail.com'
   },  
-  excerpt: 'Hipstamail is a brand new, cross-platform email app...',
+  excerpt: 'Raven is a brand new, cross-platform email app...',
   body: `
 ## Introducing a revolutionary email app
 
-Hipstamail is a brand new, cross-platfor email app
+Raven is a brand new, cross-platform email application.
 `
 }
 
