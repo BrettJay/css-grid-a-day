@@ -1,11 +1,18 @@
 @import "../../styles/_tools.fluid_scale.sass";
+@import "../../styles/_tools.respond_to.sass";
+
+.canvas {
+  display: flex;
+  flex-direction: column;
+  background: #123;
+  justify-content: center;
+  min-height: 100vh;
+}
 
 .container {
   display: grid;
   grid-template-columns: repeat(8, 12.5%);
-  grid-template-rows: repeat(4, 25vh);
-  min-height: 100vh;
-  background: #123;
+  grid-template-rows: repeat(4, 12.5vw);
 }
 
 .element {
