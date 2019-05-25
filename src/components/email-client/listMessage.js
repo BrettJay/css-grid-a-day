@@ -6,9 +6,11 @@ class ListMessage extends React.Component {
     this.props.setActiveEmail(this.props.message)
   }
   render() {
+    const isActiveMessage = this.props.message === this.props.activeMessage
     const { contact, date, subject, excerpt } = this.props.message
+    const listContainerClasses = (isActiveMessage) ? `${Message.container} ${Message.containerisActive}` : `${Message.container}`
     return (
-      <div className={Message.container} onClick={this.handleClick}>
+      <div className={listContainerClasses} onClick={this.handleClick}>
         <h2 className={Message.contact}>{contact.name}</h2>
         <time className={Message.date}>{date}</time>
         <h3 className={Message.subject}>{subject}</h3>

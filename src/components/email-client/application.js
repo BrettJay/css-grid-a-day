@@ -61,7 +61,8 @@ class EmailApplication extends React.Component {
             <ListMessage
               key={message.subject}
               message={message}
-              setActiveEmail={this.setActiveEmail}/>
+              setActiveEmail={this.setActiveEmail}
+              activeMessage={this.state.message}/>
           ))}
         </div>
         <div className={viewClasses}>
