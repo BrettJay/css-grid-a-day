@@ -26,7 +26,16 @@ class EmailApplication extends React.Component {
     const viewClasses = this.state.view ? `${Application.view} ${Application.viewActive}` : `${Application.view}`
     return (
       <div className={Application.container}>
-        <div className={Application.header}/>
+        <div className={Application.header}>
+          <div className={Application.headmenu}>
+            <button>Menu</button>
+            <button>Compose</button>
+          </div>
+          <div className={Application.headlist}>
+            <input type="text" placeholder="Search"/>
+          </div>
+          <div className={Application.headview}/>
+        </div>
         <div className={sideBarClasses}>
           <ol className={Application.menu}>
             <li>Inbox</li>
