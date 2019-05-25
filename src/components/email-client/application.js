@@ -5,6 +5,9 @@ import Email from "./email.module.scss"
 import ListMessage from "./listMessage"
 import Msg1 from "./msg1"
 import Msg2 from "./msg2"
+import Msg3 from "./msg3"
+import Msg4 from "./msg4"
+import Msg5 from "./msg5"
 
 class EmailApplication extends React.Component {
   constructor(props) {
@@ -14,13 +17,19 @@ class EmailApplication extends React.Component {
       sidebar: false,
       view: false,
       message: Msg1,
-      messages: [ Msg1, Msg2 ]
+      messages: [ Msg1, Msg2, Msg3, Msg4, Msg5 ]
     }
   }
 
   getRawMarkup() {
     const md = new Remarkable();
     return { __html: md.render(this.state.message.body) };
+  }
+
+  toggleSidebar() {
+    this.setState(state => ({
+      sidebar: true
+    }))
   }
 
   setActiveEmail = (message) => {
@@ -36,7 +45,7 @@ class EmailApplication extends React.Component {
       <div className={Application.container}>
         <div className={Application.header}>
           <div className={Application.headmenu}>
-            <button>Menu</button>
+            <button onClick={this.toggleSidebar}>Menu</button>
             <button>Compose</button>
           </div>
           <div className={Application.headlist}>

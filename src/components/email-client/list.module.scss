@@ -45,4 +45,7 @@
 
 .message {
   grid-area: message;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
