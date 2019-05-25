@@ -5,9 +5,9 @@ const Msg2 = {
     name: 'Virgin Australia',
     email: 'noreply@virginaustralia.com'
   },  
-  excerpt: 'Hey',
+  excerpt: 'Thanks for choosing Virgin Australia',
   body: `
-Hello world
+Here’s your flight booking details for Melbourne
 `
 }
 

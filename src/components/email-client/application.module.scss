@@ -21,7 +21,6 @@
   grid-template-columns: 200px 1fr 1.3fr;
   grid-template-rows: 1fr;
   align-items: center;
-
   button,
   input {
     background: #FFFFFF;
@@ -45,10 +44,23 @@
   }
 }
 
+.trafficlights {
+  background: url(../../images/email-client/traffic-lights.svg) 50% 50%;
+  width: 52px;
+  height: 12px;
+  margin-left: 8px;
+}
+
 .headmenu,
 .headlist,
 .headview {
   padding: 0 6px;
+}
+
+.headmenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .sidebar {

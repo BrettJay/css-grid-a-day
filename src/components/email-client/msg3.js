@@ -5,11 +5,11 @@ const Msg2 = {
     name: 'Hipstamail',
     email: 'hip@stermail.com'
   },  
-  excerpt: 'Hey',
+  excerpt: 'It is a bittersweet day for us as we announce',
   body: `
-## Sunnsetting Hipstamail
+## Sunsetting Hipstamail
 
-It is a bittersweet day for us as we announcne the 
+It is a bittersweet day for us as we announce the 
 `
 }
 

@@ -45,7 +45,8 @@ class EmailApplication extends React.Component {
       <div className={Application.container}>
         <div className={Application.header}>
           <div className={Application.headmenu}>
-            <button onClick={this.toggleSidebar}>Menu</button>
+            <div className={Application.trafficlights}/>
+            {/* <button onClick={this.toggleSidebar}>Menu</button> */}
             <button>Compose</button>
           </div>
           <div className={Application.headlist}>

@@ -1,15 +1,18 @@
 const Msg2 = {
-  subject: 'Another email',
+  subject: 'Top Melbourne Recs',
   date: 'Today',
   contact: {
     name: 'John Smith',
     email: 'hip@stermail.com'
   },  
-  excerpt: 'Haha did you see this amazing website?',
+  excerpt: 'Hey, it’s me again',
   body: `
-## Hey there
+Hey, it’s me again, here are my unsolicited best picks in Melbounre:
 
-Haha did you see this amazing website?
+* Bodega
+* Something else
+* Foo
+* Bar
 `
 }
 

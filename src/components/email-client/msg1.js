@@ -1,4 +1,3 @@
-import Img from "../../images/email-client/IMG_3947.jpg"
 const Msg1 = {
   subject: 'Have you been to this bar?',
   date: 'Today',
@@ -12,8 +11,11 @@ Hey,
 
 Long time, no see!
 
-Have you been to this Cocktail bar in Melbourne? It’s pretty cool. The kind of place you can.
+Have you been to [this Cocktail bar in Melbourne][s]? It’s pretty cool. The kind of place you can!
 
+![seamstress](https://cssgrid31.brett.cool/email-client/IMG_3947.jpg)
+
+[s]: http://www.seamstress.com.au/
 `
 }
 
