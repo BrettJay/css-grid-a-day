@@ -38,7 +38,7 @@
     }
   }
   button + button {
-    margin-left: 14px;
+    margin-left: 6px;
   }
   input {
     width: 100%;
@@ -48,7 +48,7 @@
 .headmenu,
 .headlist,
 .headview {
-  padding: 0 7px;
+  padding: 0 6px;
 }
 
 .sidebar {
@@ -103,10 +103,11 @@
 .view {
   grid-area: view;
   background: #fff;
-  padding: 0 50px;
+  padding: 0;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 120px 1fr;
+  height: calc(100vh - 50px);
 }
 
 @include respond-to(0px, 700px) {

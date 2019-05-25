@@ -4,6 +4,7 @@ import Application from "./application.module.scss"
 import Email from "./email.module.scss"
 import ListMessage from "./listMessage"
 import Msg1 from "./msg1"
+import Msg2 from "./msg2"
 
 class EmailApplication extends React.Component {
   constructor(props) {
@@ -12,13 +13,20 @@ class EmailApplication extends React.Component {
     {
       sidebar: false,
       view: false,
-      message: Msg1
+      message: Msg1,
+      messages: [ Msg1, Msg2 ]
     }
   }
 
   getRawMarkup() {
     const md = new Remarkable();
     return { __html: md.render(this.state.message.body) };
+  }
+
+  setActiveEmail = (message) => {
+    this.setState(state => ({
+      message: message
+    }))
   }
   
   render() {
@@ -49,26 +57,12 @@ class EmailApplication extends React.Component {
           </ol>
         </div>
         <div className={Application.list}>
-          <ListMessage
-            contact="John Smith"
-            date="Today"
-            subject="Hello world"
-            message="This is my first email"/>
-          <ListMessage
-            contact="John Smith"
-            date="Today"
-            subject="Hello world"
-            message="This is my first email"/>
-          <ListMessage
-            contact="John Smith"
-            date="Today"
-            subject="Hello world"
-            message="This is my first email"/>
-          <ListMessage
-            contact="John Smith"
-            date="Today"
-            subject="Hello world"
-            message="This is my first email"/>
+          {this.state.messages.map(message => (
+            <ListMessage
+              key={message.subject}
+              message={message}
+              setActiveEmail={this.setActiveEmail}/>
+          ))}
         </div>
         <div className={viewClasses}>
           <div className={Email.header}>
