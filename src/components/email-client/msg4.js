@@ -2,17 +2,22 @@ const Msg2 = {
   subject: 'Top Melbourne Recs',
   date: 'Today',
   contact: {
-    name: 'John Smith',
-    email: 'hip@stermail.com'
+    name: 'Brett Jones',
+    email: 'hello@brettjones.me'
   },  
   excerpt: 'Hey, it’s me again',
   body: `
-Hey, it’s me again, here are my unsolicited best picks in Melbounre:
+Hey,
 
-* Bodega
-* Something else
-* Foo
-* Bar
+It’s me again, here are my unsolicited best picks in Melbourne:
+
+* [Bodega](https://www.broadsheet.com.au/melbourne/restaurants/bodega-underground)
+* [Smiths & Daughters](http://www.smithanddaughters.com/)
+
+Cheers,
+
+— Brett
+ 
 `
 }
 

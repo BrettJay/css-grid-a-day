@@ -16,6 +16,10 @@ Have you been to [this Cocktail bar in Melbourne][s]? It’s pretty cool. The ki
 ![seamstress](https://cssgrid31.brett.cool/email-client/IMG_3947.jpg)
 
 [s]: http://www.seamstress.com.au/
+
+Cheers,
+
+— Brett
 `
 }
 

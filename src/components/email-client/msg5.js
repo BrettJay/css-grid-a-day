@@ -4,8 +4,8 @@ const Msg5 = {
   contact: {
     name: 'Raven',
     email: 'caww@ravenmail.com'
-  },  
-  excerpt: 'Raven is a brand new, cross-platform email app...',
+  },
+  excerpt: 'Raven is a brand new, cross-platform email application',
   body: `
 ## Introducing a revolutionary email app
 
