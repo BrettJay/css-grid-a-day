@@ -1,18 +1,79 @@
 import React from "react"
+import Remarkable from "remarkable"
 import Application from "./application.module.scss"
+import Email from "./email.module.scss"
+import ListMessage from "./listMessage"
+import Msg1 from "./msg1"
 
 class EmailApplication extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state =
+    {
+      sidebar: false,
+      view: false,
+      message: Msg1
+    }
+  }
+
+  getRawMarkup() {
+    const md = new Remarkable();
+    return { __html: md.render(this.state.message.body) };
+  }
+  
   render() {
+    const sideBarClasses = this.state.sidebar ? `${Application.sidebar} ${Application.sidebarActive}` : `${Application.sidebar}`
+    const viewClasses = this.state.view ? `${Application.view} ${Application.viewActive}` : `${Application.view}`
     return (
       <div className={Application.container}>
         <div className={Application.header}/>
-        <div className={Application.sidebar}>
-
+        <div className={sideBarClasses}>
+          <ol className={Application.menu}>
+            <li>Inbox</li>
+            <li>Unread</li>
+            <li>Archive</li>
+            <li>All Mail</li>
+            <li>Sent</li>
+            <li>Drafts</li>
+            <li>Trash</li>
+            <li>Spam</li>
+          </ol>
         </div>
         <div className={Application.list}>
-
+          <ListMessage
+            contact="John Smith"
+            date="Today"
+            subject="Hello world"
+            message="This is my first email"/>
+          <ListMessage
+            contact="John Smith"
+            date="Today"
+            subject="Hello world"
+            message="This is my first email"/>
+          <ListMessage
+            contact="John Smith"
+            date="Today"
+            subject="Hello world"
+            message="This is my first email"/>
+          <ListMessage
+            contact="John Smith"
+            date="Today"
+            subject="Hello world"
+            message="This is my first email"/>
         </div>
-        <div className={Application.view}>
+        <div className={viewClasses}>
+          <div className={Email.header}>
+            <h1 className={Email.subject}>
+              {this.state.message.subject}
+            </h1>
+            <h2 className={Email.contact}>
+              <div className={Email.contactName}>{this.state.message.contact.name}</div>
+              <div className={Email.contactEmail}>{this.state.message.contact.email}</div>
+            </h2>
+          </div>
+          <div className={Email.body}>
+            <div dangerouslySetInnerHTML={this.getRawMarkup()} />
+          </div>
         </div>
       </div>
     )
