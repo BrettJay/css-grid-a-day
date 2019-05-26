@@ -1,5 +1,25 @@
+@import "../../styles/_tools.fluid_scale.sass";
+
+.altbg {
+  background: #fbfbfb;
+}
+
 .container {
   min-height: 100vh;
+  display: grid;
   grid-template-columns: repeat(8, 12.5%);
   grid-template-rows: repeat(8, 12.5%);
+  h2 {
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 25px, 32px);
+  }
+}
+
+.questionsCopy {
+  grid-column: 2 / span 2;
+  grid-row: 2 / -2;
+}
+
+.questions {
+  grid-column: 5 / -1;
+  grid-row: 1 / -1;
 }

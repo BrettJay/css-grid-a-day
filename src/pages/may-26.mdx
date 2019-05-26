@@ -1,0 +1,77 @@
+import Footer from "../components/footer"
+import Metatags from "../components/metatags"
+
+import HeroStyles from "../components/blank-canvas-anxiety/hero.module.scss"
+import Section from "../components/blank-canvas-anxiety/section.module.scss"
+import Selection from "../components/blank-canvas-anxiety/selection.module.scss"
+import Sketch from "../components/blank-canvas-anxiety/Sketch.module.scss"
+import SelectionTags from "../components/blank-canvas-anxiety/handles"
+
+import Hero from "../images/blank-canvas-anxiety/rectangle.png"
+import Artboards from "../videos/blank-canvas-anxiety/artboards.mp4"
+
+<Metatags
+  title="Blank Canvas Anxiety | May 26 | CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail="https://cssgrid31.brett.cool/opengraph/may-26.png"
+  url="https://cssgrid31.brett.cool"
+  pathname="/may-26"
+/>
+
+<div className={HeroStyles.canvas}>
+  <div className={HeroStyles.lock} />
+  <div className={HeroStyles.stroke_v} />
+  <div className={HeroStyles.stroke_v2} />
+  <div className={HeroStyles.stroke_h} />
+  <h1 className={Selection.box}>
+    Blank
+    <br />
+    Canvas
+    <br />
+    Anxiety
+    <SelectionTags />
+  </h1>
+  <div className={HeroStyles.rectangles}>
+    <img src={Hero} alt="Dragging out a rectangle in Sketch" width="585" />
+  </div>
+  <div className={HeroStyles.video}>
+    <video className={HeroStyles.artboardVideo} src={Artboards} autoPlay={true} loop={true}/>
+  </div>
+  <div className={`${HeroStyles.subtitle} ${Selection.box}`}>
+    <p>A blank document illuminates my screen. I tap the <kbd>A</kbd> key, and draw an artboard.</p>
+    <p>…What now?</p>
+    <SelectionTags />
+  </div>
+</div>
+
+<div className={`${Section.container} ${Section.altbg}`}>
+
+<div className={Section.questionsCopy}>
+<h2>Questions begin</h2>
+
+A dozen questions rush through my head as I begin scrolling 
+</div>
+
+<div className={Section.questions}>
+  <div className={Sketch.collection}>
+    <div className={Sketch.box}>What dimensions should I make this artboard?</div>
+    <div className={Sketch.box}>What base spacing size should I use?</div>
+    <div className={Sketch.box}>How wide should the container be?</div>
+    <div className={Sketch.box}>How many columns?</div>
+    <div className={Sketch.box}>Should I align this to the content or padding pox?</div>
+    <div className={Sketch.box}>How do I best word this?</div>
+    <div className={Sketch.box}>Should I include a ½ sized outer gutter on container?</div>
+    <div className={Sketch.box}>What icon can I draw to best illustrate this concept?</div>
+    <div className={Sketch.box}>Will this ever look right?</div>
+    <div className={Sketch.boxHighlighted}>Am I even any good at this?</div>
+  </div>
+</div>
+
+
+</div>
+
+<Footer date={26} prev={true}>
+
+Ahh, starting a design from scratch.
+
+</Footer>
