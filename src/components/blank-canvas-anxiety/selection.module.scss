@@ -1,0 +1,68 @@
+$offset: -5px;
+
+.box {
+  border: 0.5px solid rgba(0, 0, 0, 0.11);
+  padding: 3px;
+  position: relative;
+  display: inline-block;
+}
+
+.handle {
+  background: url(../../images/blank-canvas-anxiety/handle.svg) 50% 0 no-repeat;
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+}
+
+.top_left {
+  top: $offset;
+  left: $offset;
+  cursor: nwse-resize;
+}
+
+.top_center {
+  left: 50%;
+  transform: translateX(-50%);
+  top: $offset;
+  cursor: ns-resize;
+}
+
+.top_right {
+  right: $offset;
+  top: $offset;
+  cursor: nesw-resize;
+}
+
+.middle_left {
+  top: 50%;
+  transform: translateY(-50%);
+  left: $offset;
+  cursor: ew-resize;
+}
+
+.middle_right {
+  right: $offset;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: ew-resize;
+}
+
+.bottom_left {
+  bottom: $offset;
+  left: $offset;
+  cursor: nesw-resize;
+}
+
+.bottom_center {
+  bottom: $offset;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: ns-resize;
+}
+
+.bottom_right {
+  bottom: $offset;
+  right: $offset;
+  cursor: nwse-resize;
+}
