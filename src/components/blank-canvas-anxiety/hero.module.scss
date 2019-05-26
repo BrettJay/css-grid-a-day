@@ -10,6 +10,17 @@
   min-height: 100vh;
   overflow: hidden;
   position: relative;
+  &:after {
+    position: absolute;
+    content: '';
+    display: block;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 40px;
+    background-image: linear-gradient(180deg, rgba(251,251,251,0.00) 0%, #fbfbfb 100%);
+    pointer-events: none;
+  }
   h1 {
     @include fluid-scale(font-size, $responsive_min, $responsive_max, 35px, 48px);
     line-height: 1.2;
