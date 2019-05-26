@@ -1,3 +1,5 @@
+@import "../../styles/_tools.respond_to.sass";
+
 .collection {
   max-width: 360px;
   margin: 0 auto;
@@ -6,15 +8,32 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  .box:nth-child(1) { margin-left: -20%; }
-  .box:nth-child(2) { margin-right: -20%; }
-  .box:nth-child(3) { margin-left: -30%; }
-  .box:nth-child(4) { margin-right: -30%; }
-  .box:nth-child(5) { margin-left: -20%; }
-  .box:nth-child(6) { margin-right: -20%; }
-  .box:nth-child(7) { margin-left: -30%; }
-  .box:nth-child(8) { margin-right: -30%; }
-  .box:nth-child(9) { margin-left: -30%; }
+  @include respond-to(901px, 0) {
+    .box:nth-child(1) { margin-left: -20%; }
+    .box:nth-child(2) { margin-right: -20%; }
+    .box:nth-child(3) { margin-left: -30%; }
+    .box:nth-child(4) { margin-right: -30%; }
+    .box:nth-child(5) { margin-left: -20%; }
+    .box:nth-child(6) { margin-right: -20%; }
+    .box:nth-child(7) { margin-left: -30%; }
+    .box:nth-child(8) { margin-right: -30%; }
+    .box:nth-child(9) { margin-left: -30%; }
+  }
+  @include respond-to(0, 900px) {
+    max-width: 90%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    .box {
+      margin: 5px;
+      max-width: 150px
+    }
+    .boxHighlighted {
+      max-width: 170px;
+    }
+     
+  }
 }
 
 .box {
@@ -42,4 +61,5 @@
   composes: box;
   background: #017AFF;
   color: #fff;
+  margin-left: 0 !important;
 }

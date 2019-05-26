@@ -5,9 +5,11 @@ import HeroStyles from "../components/blank-canvas-anxiety/hero.module.scss"
 import Section from "../components/blank-canvas-anxiety/section.module.scss"
 import Selection from "../components/blank-canvas-anxiety/selection.module.scss"
 import Sketch from "../components/blank-canvas-anxiety/Sketch.module.scss"
+import Diagram from "../components/blank-canvas-anxiety/diagram.module.scss"
 import SelectionTags from "../components/blank-canvas-anxiety/handles"
 
 import Hero from "../images/blank-canvas-anxiety/rectangle.png"
+import Sketchapp from "../images/blank-canvas-anxiety/sketch.png"
 import Artboards from "../videos/blank-canvas-anxiety/artboards.mp4"
 
 <Metatags
@@ -38,20 +40,23 @@ import Artboards from "../videos/blank-canvas-anxiety/artboards.mp4"
     <video className={HeroStyles.artboardVideo} src={Artboards} autoPlay={true} loop={true}/>
   </div>
   <div className={`${HeroStyles.subtitle} ${Selection.box}`}>
-    <p>A blank document illuminates my screen. I tap the <kbd>A</kbd> key, and draw an artboard.</p>
-    <p>…What now?</p>
+    <p>A blank document illuminates my screen. I tap the <kbd>A</kbd> key, and draw an artboard…</p>
     <SelectionTags />
   </div>
 </div>
 
 <div className={`${Section.container} ${Section.altbg}`}>
-
 <div className={Section.questionsCopy}>
-<h2>Questions begin</h2>
+<h2>The early stages</h2>
 
-A dozen questions rush through my head as I begin scrolling 
+Questions begin to emerge, as I start setting up my document.
+
+I draw out rectangles, set text, pick colours, toggle grids, rulers, and guides on, off, and on again.
+
+I place and move elements—in 1 and 10 pixel increments.
+
+Sometimes, it comes together quickly. But sometimes, the questions continue…
 </div>
-
 <div className={Section.questions}>
   <div className={Sketch.collection}>
     <div className={Sketch.box}>What dimensions should I make this artboard?</div>
@@ -59,15 +64,68 @@ A dozen questions rush through my head as I begin scrolling
     <div className={Sketch.box}>How wide should the container be?</div>
     <div className={Sketch.box}>How many columns?</div>
     <div className={Sketch.box}>Should I align this to the content or padding pox?</div>
-    <div className={Sketch.box}>How do I best word this?</div>
     <div className={Sketch.box}>Should I include a ½ sized outer gutter on container?</div>
+    <div className={Sketch.box}>How do I best word this?</div>
     <div className={Sketch.box}>What icon can I draw to best illustrate this concept?</div>
+    <div className={Sketch.box}>Is this layout working?</div>
     <div className={Sketch.box}>Will this ever look right?</div>
     <div className={Sketch.boxHighlighted}>Am I even any good at this?</div>
   </div>
 </div>
+</div>
 
+<div className={`${Section.container} ${Section.darkbg}`}>
 
+<div className={Section.murkyMiddle}>
+  <div className={Diagram.container}>
+    <div className={Diagram.atom}>
+      <div className={Diagram.atomLabel}>Where I am</div>
+    </div>
+    <div className={Diagram.atomEnd}>
+      <div className={Diagram.atomLabel}>Where I want to be</div>
+    </div>
+  </div>
+</div>
+
+<div className={Section.murkyMiddleCopy}>
+<h2>The murky middle process</h2>
+
+With visual design, compositions have a way of not looking *quite right* until all the pieces fall in to place.
+
+While there are principles that can guide your decision making, it can be demoralising while in the midst of a project, still moving from where you are with a design, to where you want to be.
+
+The most important thing to do at this point can be difficult, but it is simple.
+</div>
+</div>
+
+<div className={`${Section.container} ${Section.blackbg}`}>
+<div className={Section.Go}>
+<h2><span style={{fontWeight: '100'}}>Keep going</span><br/>
+<span style={{fontWeight: '200'}}>Keep going</span><br/>
+<span style={{fontWeight: '300'}}>Keep going</span><br/>
+<span style={{fontWeight: '400'}}>Keep going</span><br/>
+<span style={{fontWeight: '500'}}>Keep going</span><br/>
+<span style={{fontWeight: '600'}}>Keep going</span><br/>
+<span style={{fontWeight: '700'}}>Keep going</span><br/>
+<span style={{fontWeight: '800'}}>Keep going</span><br/>
+<span style={{fontWeight: '900'}}>Keep going</span></h2>
+</div>
+</div>
+
+<div className={`${Section.container} ${Section.altbg}`}>
+
+<div className={Section.summaryHeading}><h2>Timebox. Practice. Present. Receive feedback. Repeat.</h2></div>
+
+<div className={Section.summaryBody}>
+
+For me, it seems there are no shortcuts. No easy way out. It’s a numbers game. It all comes down to the hours you put in.
+
+If you’re like me, arbitrary deadlines are actually a very important tool. Don’t let side projects languish—finish them. Release them.
+
+And <mark>don’t let taste and perfectionism paralyse</mark> you.
+
+Something you finish that isn’t perfect is better than something perfect that you never finish.
+</div>
 </div>
 
 <Footer date={26} prev={true}>
