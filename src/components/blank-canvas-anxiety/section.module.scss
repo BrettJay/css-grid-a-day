@@ -72,21 +72,6 @@
   }
 }
 
-@include respond-to(0, 900px) {
-  .questions,
-  .murkyMiddle {
-    grid-column: 1 / -1;
-    grid-row: 1 / span 4;
-  }
-  
-  .questionsCopy,
-  .murkyMiddleCopy {
-    grid-column: 2 / -2;
-    grid-row: 5 / -1;
-    align-self: start;
-  }
-}
-
 .summaryHeading {
   grid-column: 2 / span 2;
   grid-row: 3 / span 2;
@@ -98,3 +83,31 @@
   grid-row: 3 / -2;
   p:first-child { margin-top: .75em; }
 }
+
+
+@include respond-to(0, 900px) {
+  .questions,
+  .murkyMiddle {
+    grid-column: 1 / -1;
+    grid-row: 1 / span 4;
+  }
+  
+  .questionsCopy {
+    grid-column: 2 / -2;
+    grid-row: 5 / -1;
+    align-self: start;
+  }
+
+  .murkyMiddleCopy {
+    grid-column: 2 / -2;
+    grid-row: 4 / -1;
+    align-self: start;
+  }
+
+  .summaryHeading,
+  .summaryBody {
+    grid-row: 2 / -1;
+  }
+
+}
+
