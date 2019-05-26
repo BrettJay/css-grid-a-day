@@ -1,0 +1,52 @@
+import Menu from "../components/responsive-menu/menu.module.scss"
+import Header from "../components/responsive-menu/header"
+import Image from "../components/responsive-menu/image"
+import Footer from "../components/footer"
+
+import Metatags from "../components/metatags"
+
+<Metatags
+  title="Milligram feed | May 9 | CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail="https://cssgrid31.brett.cool/opengraph/may-9.png"
+  url="https://cssgrid31.brett.cool"
+  pathname="/may-9"
+/>
+
+<div className={Menu.container}>
+  <Header active={'home'} />
+  <div className={Menu.posts}>
+    <Image
+      account="brettjay"
+      filename="P5023345"
+      caption="A pretty good caff"
+      />
+    <Image
+      account="brettjay"
+      filename="P5023353"
+      caption="Getting them beans"
+      />
+    <Image
+      account="brettjay"
+      filename="P5023364"
+      caption="Views from above"
+      />
+    <Image
+      account="brettjay"
+      filename="P5023384"
+      caption="Nearly ready ☕️👌"
+      />
+  </div>
+</div>
+
+<Footer date={9} prev={true} next={true}>
+
+Originally I had planned to just make a responsive menu example, going from a bottom tab bar on mobile, to a top navigation combined with the header for tablets and desktop.
+
+Then I thought, *“Oh, I probably need to add a bit of content for scrolling, just as an example...”*
+
+Before I knew it, I’d created a bit of an Instagram-like feed, figured I’d make it a follow-up to Milligram.
+
+So... Introducing Milligram—the social network for posting coffee—that apparently, only I use.
+
+</Footer>

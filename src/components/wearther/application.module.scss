@@ -1,0 +1,204 @@
+@import "../../styles/_tools.respond_to.sass";
+@import "../../styles/_tools.fluid_scale.sass";
+
+.container {
+  display: grid;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.today {
+  grid-area: t;
+  text-align: center;
+  padding: 5vh 5vw;
+  position: relative;
+  text-shadow: 0 1px 3px #004D99;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 3fr 1fr 2fr;
+  grid-template-areas:
+    "current current current current"
+    ". b b ."
+    "c c c c";
+}
+
+.settingButton {
+  width: 30px;
+  height: 30px;
+  background: transparent url(../../images/wearthere/settings.svg) 50% 50% no-repeat;
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+  position: absolute;
+  top: 5vw;
+  right: 5vw;
+  cursor: pointer;
+}
+
+.settingMenu {
+  position: absolute;
+  background: #fff;
+  border-radius: 5px;
+  top: 5vw;
+  right: 5vw;
+  opacity: 0;
+  margin: 40px -20px 0 0;
+  transform: scale(0);
+  transform-origin: 100% 0;
+  transition: 0.2s ease transform, 0.2s ease opacity;
+  box-shadow: 0 1px 3px #004D99;
+  button {
+    display: block;
+    background: transparent;
+    -webkit-appearance: none;
+    width: 100%;
+    border: 0 none;
+    text-align: left;
+    padding: 15px 20px;
+    cursor: pointer;
+  }
+  button + button {
+    border-top: 1px solid #eee;
+  }
+}
+
+.settingMenuActive {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.temperatures {
+  grid-area: current;
+  align-self: end;
+}
+
+.clothes {
+  grid-area: c;
+  align-self: start;
+  position: relative;
+}  
+
+.clothingSet {
+  align-self: start;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0) translateX(-50%);
+  transform-origin: 0% 50%;
+  transition: 0.2s ease transform, 0.2s ease opacity;
+  left: 50%;
+  padding-top: 10px;
+  position: absolute;
+}
+
+.clothingSetActive {
+  transform: scale(1) translateX(-50%);
+  opacity: 1;
+}
+
+.summary {
+  @include fluid-scale(font-size, $responsive_min, $responsive_max, 15px, 19px);
+  line-height: 1.4;
+  grid-area: b;
+  text-align: center;
+  text-shadow: 0 1px 3px #004D99;
+  align-self: center;
+}
+
+.d1,
+.d2,
+.d3,
+.d4,
+.d5,
+.d6 {
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  text-shadow: 0 1px 3px #004D99;
+  h2 {
+    display: flex;
+    flex: 0 1 100%;
+    justify-content: space-between;
+    margin: 0 auto;
+    line-height: 30px;
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 16px, 21px);
+  }
+  .forecastLabel {
+    text-align: left;
+  }
+  .forecastHighLow {
+    text-align: right;
+    font-weight: normal;
+    padding-left: 40px;
+  }
+  .forecastLow {
+    color: rgba(255,255,255,0.33);
+  }
+}
+
+.d1 { grid-area: d1; }
+.d2 { grid-area: d2; }
+.d3 { grid-area: d3; }
+.d4 { grid-area: d4; }
+.d5 { grid-area: d5; }
+.d6 { grid-area: d6; }
+
+@include respond-to(small-down) {
+  .container {
+    background-image: radial-gradient(ellipse at top center, #00B0DD 0%, #004D99 100%);
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr repeat(6, 60px);
+    grid-template-areas:
+      "t"
+      "d1"
+      "d2"
+      "d3"
+      "d4"
+      "d5"
+      "d6";
+  }
+  .d1,
+  .d2,
+  .d3,
+  .d4,
+  .d5,
+  .d6 {
+    padding: 0 15px;
+  }
+}
+
+@include respond-to(ipad-up) {
+  .container {
+    grid-template-columns: 1.6fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    background-image: radial-gradient(farthest-corner at 37% 0%, #00B0DD 0%, #004D99 100%);
+    grid-template-areas:
+      "t d1"
+      "t d2"
+      "t d3"
+      "t d4"
+      "t d5"
+      "t d6";
+  }
+  .d1,
+  .d2,
+  .d3,
+  .d4,
+  .d5,
+  .d6 {
+    padding: 0 30px 0 0;
+  }
+}
+
+.now {
+  @include fluid-scale(font-size, $responsive_min, $responsive_max, 64px, 144px);
+  vertical-align: middle;
+  img {
+    vertical-align: middle;
+    margin-right: 20px;
+  }
+}
+
+.lowhi {
+  @include fluid-scale(font-size, $responsive_min, $responsive_max, 19px, 25px);
+}

@@ -1,0 +1,103 @@
+import Senate from "../components/ballot/senate.module.scss"
+import AboveParty from "../components/ballot/partyAbove"
+import BelowParty from "../components/ballot/partyBelow"
+import Polly from "../components/ballot/pollyVote"
+import Footer from "../components/footer"
+import Metatags from "../components/metatags"
+require('typeface-roboto-condensed')
+
+<Metatags
+  title="Australian Senate Ballot | May 18 | CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail="https://cssgrid31.brett.cool/opengraph/may-18.png"
+  url="https://cssgrid31.brett.cool"
+  pathname="/may-18"
+/>
+
+<div className={Senate.container}>
+  <div className={Senate.header}>
+    <h1>
+      Senate Ballot Paper<br/>
+      <strong>State</strong> — Election of 6 Senators
+    </h1>
+  </div>
+
+  <div className={`${Senate.instructions} ${Senate.above_line}`}>
+    <h2>
+      You may<br/>
+      vote in one of<br/>
+      two ways
+    </h2>
+    <div className={Senate.instructionArrow}>Either</div>
+    <h3>Lazily</h3>
+    <p>By numbering at least <strong>6</strong> of these boxes in the order of your choice (with number 1 as your first choice).</p>
+  </div>
+
+  <AboveParty letter="A" name="The slightly racist party" />
+  <AboveParty letter="B" name="The overtly racist party" />
+  <AboveParty letter="C" name="The only looks okay by comparison party" />
+  <AboveParty letter="D" name="The good option party" />
+  <AboveParty letter="E" name="The single policy party" />
+  <AboveParty letter="F" name="The Deceptively-named party" />
+  <AboveParty letter="G" name="The other good option party" />
+  <AboveParty letter="H" name="The People who prefer sliced bread for democracy sausage party" />
+
+  <div className={Senate.theLine}/>
+
+  <div className={`${Senate.instructions} ${Senate.below_line}`}>
+    <div className={Senate.instructionArrow}>Or</div>
+    <h3>Properly</h3>
+    <p>By numbering at least <strong>12</strong> of these boxes in the order of your choice (with number 1 as your first choice), and struggling to decide who to preference last.</p>
+  </div>
+
+  <BelowParty name="The slightly racist party">
+    <Polly surname="Deemable" name="Irre" party="Slightly Racist Party"/>
+    <Polly surname="Dingbat" name="Yuge" party="Slightly Racist Party"/>
+  </BelowParty>
+
+  <BelowParty name="The overtly racist party">
+    <Polly surname="Phobic" name="Xeno" party="Overtly racist party"/>
+    <Polly surname="Supremacist" name="Wyatt" party="Overtly racist party"/>
+    <Polly surname="Hasnone" name="Ideas" party="Overtly racist party"/>
+  </BelowParty>
+ 
+  <BelowParty name="The only looks okay by comparison party">
+    <Polly surname="Eater" name="Onion" party="O.L.O.B.C Party"/>
+    <Polly surname="Visage" name="Potato" party="O.L.O.B.C Party"/>
+  </BelowParty>
+
+  <BelowParty name="The good option party">
+    <Polly surname="Green" name="Teresa" party="Good Option Party"/>
+    <Polly surname="Yuss" name="Gene E." party="Good Option Party"/>
+  </BelowParty>
+
+  <BelowParty name="The single policy party">
+    <Polly surname="Vision" name="Tunnel" party="Single Policy Party"/>
+  </BelowParty>
+
+  <BelowParty name="The Deceptively-named party">
+    <Polly surname="Hass" name="Jack" party="Deceptively-named Party"/>
+  </BelowParty>
+ 
+  <BelowParty name="The other good option party">
+    <Polly surname="Wrights" name="Cybil" party="Other Good Option Party"/>
+    <Polly surname="Eeya" name="Gladys" party="Other Good Option Party"/>
+  </BelowParty>
+
+  <BelowParty name="The People who prefer sliced bread for democracy sausage party">
+    <Polly surname="Wurst" name="Brät" party="Sausage Party"/>
+  </BelowParty>
+
+</div>
+
+<Footer date={18} prev={true} next={true}>
+
+Hey it’s [#democracysausage][ds] day in Australia!
+
+In case you haven’t looked at a ballot sheet long enough today, here it is, recreated in CSS Grid and *slightly less* racism.
+
+Also, not to drag anyone who actually voted above the line (I sure did).
+
+[ds]: https://twitter.com/hashtag/democracysausage
+
+</Footer>
