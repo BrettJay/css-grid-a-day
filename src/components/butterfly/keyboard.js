@@ -20,7 +20,7 @@ class ButterflyKeyboard extends React.Component {
           pressed.classList.remove("pressed")
         },
         100
-      );    
+      );
     }
   }
   render() {
