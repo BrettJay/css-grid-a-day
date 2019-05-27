@@ -1,0 +1,56 @@
+
+@import "../../styles/_tools.respond_to.sass";
+
+@keyframes pulse {
+  0%   { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.atom {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background: #FFFFFF;
+  box-shadow: 0 0 10px 0 rgba(255,255,255,0.50);
+  position: relative;
+}
+
+.atomEnd {
+  composes: atom;
+  animation: pulse 1s infinite alternate ease forwards;
+}
+
+.atomLabel {
+  position: absolute;
+  left: 0;
+  text-align: right;
+  transform: translateX(-100%) translateY(-50%);
+  width: 140px;
+  font-size: 12px;
+  padding-right: 8px;
+  color: rgba(255,255,255,0.7);
+  top: 50%;
+}
+
+@include respond-to(0, 900px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .atomLabel {
+    text-align: center;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) translateY(20px);
+    padding: 0;
+  }
+
+}
