@@ -1,0 +1,150 @@
+@import "../../styles/_tools.fluid_scale.sass";
+@import "../../styles/_tools.respond_to.sass";
+
+.category {
+  padding: 40px;
+  @include respond-to(0, 1400px) {
+    padding: 20px 10px;
+  }
+}
+
+.categoryBody {
+  background: #000;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  height: 100%;
+  position: relative;
+  text-shadow: 0 1px 2px #000;
+  overflow: hidden;
+  @include respond-to(0, 1400px) {
+    padding: 20px;
+  }
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+  h3 {
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 14px, 21px);
+    margin: 2em 0 0.5em;
+  }
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background: #000;
+  }
+}
+
+.filterCategory {
+  background: #000 url(../../images/ecommerce/filter.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  &:after {
+    opacity: 0.7;
+  }
+}
+
+.espressoCategory {
+  background: #000 url(../../images/ecommerce/espresso.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  &:after {
+    opacity: 0.7;
+  }
+}
+
+.item {
+  text-align: center;
+  padding: 40px;
+  background: #fcfcfc;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  &:hover {
+    background: #fff;
+    .image {
+      transform: scale(1.1);
+    }
+    @include respond-to(900px, 0) {
+      .actions {
+        transform: translateY(-40px);
+      }
+    }
+  }
+  @include respond-to(0, 1400px) {
+    padding: 20px 20px 40px;
+  }
+}
+
+.image {
+  width: 100%;
+  transform: scale(1);
+  transition: transform 0.2s ease;
+}
+
+.caption {
+  padding: 40px 0;
+  @include respond-to(0, 1400px) {
+    padding: 20px 0;
+  }
+}
+
+.name {
+  @include fluid-scale(font-size, $responsive_min, $responsive_max, 16px, 25px);
+}
+
+.price {
+  font-weight: normal;
+  letter-spacing: 0.05em;
+  color: rgba(80,80,80,0.8);
+}
+
+.actions {
+  display: flex;
+  transition: 0.2s ease transform;
+  @include respond-to(900px, 0) {
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+    right: 40px;
+    transform: translateY(100%);
+  }
+}
+
+.action {
+  border: 2px solid currentColor;
+  flex: 0 1 44%;
+  background: #fff;
+  color: currentColor;
+  padding: 10px 0;
+  cursor: pointer;
+  border-radius: 0 2px 2px 0;
+  font-weight: bold;
+  font-family: 'Work Sans', WorkSans, WorkSans-Regular, sans-serif;
+  @include respond-to(small-down) {
+    display: none;
+  }
+}
+
+.primaryAction {
+  composes: action;
+  flex: 0 1 56%;
+  background: currentColor;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 2px 0 0 2px;
+  @include respond-to(small-down) {
+    display: block;
+    flex: 0 1 100%;
+    border-radius: 3px;
+  }
+}
