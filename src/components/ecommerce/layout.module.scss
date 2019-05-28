@@ -37,11 +37,11 @@
 .billboard {
   grid-area: b;
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr 2fr 1fr;
+  grid-template-columns: 0.5fr 4fr 1fr 2fr 0.5fr;
   grid-template-rows:  2fr 3fr 2fr;
   position: relative;
   h1 {
-    @include fluid-scale(font-size, $responsive_min, $responsive_max, 21px, 80px);
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 21px, 78px);
     letter-spacing: -0.03em;
     text-transform: uppercase;
     margin-bottom: 0.4em;
@@ -78,9 +78,17 @@
 
 .heroImg {
   max-width: 720px;
-  position: absolute;
-  right: 7%;
-  width: 50%;
-  top: 50%;
-  transform: translateY(-45%);
+  @include respond-to(small-down) {
+    grid-column: span 3 / -1;
+    grid-row: 2 / span 1;
+    width: 100%;
+    align-self: center;
+  }
+  @include respond-to(ipad-up) {
+    position: absolute;
+    right: 6%;
+    width: 43%;
+    top: 50%;
+    transform: translateY(-45%);
+  }
 }

@@ -18,7 +18,7 @@ class Ecommerce extends React.Component {
           <div className={LayoutStyles.Bcaption}>
             <h2>Shop</h2>
             <h1>Fresh ‘Cawfee</h1>
-            <p>Brew the freshest coffee with the<br/>freshest beans from&nbsp;CAFFIEND.</p>
+            <p>Brew the freshest coffee with the freshest beans from&nbsp;CAFFIEND.</p>
           </div>
           <img src={HeroImg} className={LayoutStyles.heroImg} alt="Coffee"/>
         </div>
