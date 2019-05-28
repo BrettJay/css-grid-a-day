@@ -1,20 +1,12 @@
 import React from "react"
+import App from "./application.module.scss"
 import mapboxgl from 'mapbox-gl'
 
 mapboxgl.accessToken = process.env.MAPBOX_API_KEY
 
 class Map extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      lng: 5,
-      lat: 34,
-      zoom: 1.5
-    };
-  }
-
   componentDidMount() {
-    const { lng, lat, zoom } = this.state;
+    const { lng, lat, zoom } = this.props;
 
     const map = new mapboxgl.Map({
       container: this.mapContainer,
@@ -36,7 +28,7 @@ class Map extends React.Component {
 
   render() {
     return (
-      <div ref={el => this.mapContainer = el}/>
+      <div className={App.mapContainer} ref={el => this.mapContainer = el}/>
     )
   }
 }

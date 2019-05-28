@@ -1,7 +1,7 @@
 .layout {
   display: grid;
   min-height: 100vh;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 60px 1fr;
   background: #fcfcfc;
   grid-template-areas:
@@ -12,14 +12,31 @@
 .header {
   grid-area: header;
   background: #fefefe;
+  align-self: center;
+  font-weight: bold;
+  padding: 0 20px;
 }
 
 .main {
   grid-area: main;
   background: #ffffff;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
 }
 
 .map {
   grid-area: map;
   background: grey;
+  position: relative;
+}
+
+.mapContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
