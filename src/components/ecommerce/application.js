@@ -5,20 +5,22 @@ import Product from "./product"
 
 import FilterIcon from "../../images/ecommerce/filter.svg"
 import EspressoIcon from "../../images/ecommerce/espresso.svg"
+import HeroImg from "../../images/ecommerce/hero.png"
 class Ecommerce extends React.Component {
   render() {
     return (
       <div className={LayoutStyles.container}>
         <div className={LayoutStyles.sidebar}>
-          <div className={LayoutStyles.logo}>
-          </div>
+          <div className={LayoutStyles.logo}/>
+          <div className={LayoutStyles.cart}/>
         </div>
         <div className={LayoutStyles.billboard}>
           <div className={LayoutStyles.Bcaption}>
             <h2>Shop</h2>
             <h1>Fresh ‘Cawfee</h1>
-            <p>Brew the freshest beans with the freshest coffee from CAFFIEND.</p>
+            <p>Brew the freshest coffee with the<br/>freshest beans from&nbsp;CAFFIEND.</p>
           </div>
+          <img src={HeroImg} className={LayoutStyles.heroImg} alt="Coffee"/>
         </div>
         <div id="cawfee" className={LayoutStyles.products}>
           <div className={ProductStyles.category}>
