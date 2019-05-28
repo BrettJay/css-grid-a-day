@@ -2,6 +2,10 @@ import React from "react"
 import Place from "./place.module.scss"
 
 class MapPlace extends React.Component {
+  setPlace = (lat, lng) => {
+    this.props.mapPlace(lat, lng)
+  }
+
   render() {
     const { name, category, lat, lng } = this.props
     return (

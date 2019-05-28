@@ -1,6 +1,6 @@
 import React from "react"
 import App from "./application.module.scss"
-import mapboxgl from 'mapbox-gl'
+import ReactMapGL from 'react-map-gl';
 
 mapboxgl.accessToken = process.env.MAPBOX_API_KEY
 
@@ -24,6 +24,14 @@ class Map extends React.Component {
         zoom: map.getZoom().toFixed(2)
       });
     });
+  }
+
+  componentDidUpdate() {
+    const { lng, lat, zoom } = this.props;
+
+    map({
+      center: [lng, lat],
+    })
   }
 
   render() {

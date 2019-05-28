@@ -7,10 +7,17 @@ class MelbApplication extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      lng: 5,
-      lat: 34,
-      zoom: 1.5
+      lng: 144.9616,
+      lat: -37.811,
+      zoom: 13
     };
+  }
+
+  mapPlace = (lat, lng) => {
+    this.setState(state => ({
+      lat: lat,
+      lng: lng
+    }))
   }
 
   render() {
@@ -22,10 +29,12 @@ class MelbApplication extends React.Component {
         </div>
         <div className={App.main}>
           <Place
+            mapPlace={this.mapPlace}
             name="Smiths and Daughter"
-            category="Brunch"
-            lat="-37.80221421077744"
-            lng="144.97760832309723"/>
+            category="brunch"
+            summary="A good vegan brunch option, and who can say no to cocktails at brunch? (Unless you just happen to be supremely hungover)."
+            lat={-37.80221421077744}
+            lng={144.97760832309723}/>
         </div>
         <div className={App.map}>
           <Map
