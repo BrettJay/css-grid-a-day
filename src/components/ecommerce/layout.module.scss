@@ -1,11 +1,20 @@
 .container {
   display: grid;
   min-height: 100vh;
+  background: #FCFCFC;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 40px 1fr;
-  grid-template-areas: "h h h h""m m m m";
+  grid-template-areas:
+    "h h h h"
+    "m m m m";
 }
 
 .header {
   grid-area: h;
+}
+
+.products {
+  grid-area: m;
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
 }
