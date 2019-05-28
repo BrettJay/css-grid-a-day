@@ -77,7 +77,7 @@ class Ecommerce extends React.Component {
             color="#a02e6a"
             price={1600}/>
           <div className={ProductStyles.category}>
-            <div className={ProductStyles.categoryBody}>
+          <div className={`${ProductStyles.categoryBody} ${ProductStyles.espressoCategory}`}>
               <img src={EspressoIcon} alt="Espresso Roast"/>
               <h3>Espresso Roast</h3>
               <p>For coffees brewed with an espresso machine. Served black, or with milk.</p>

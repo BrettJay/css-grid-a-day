@@ -29,6 +29,10 @@
     position: relative;
     z-index: 1;
   }
+  h3 {
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 14px, 21px);
+    margin: 2em 0 0.5em;
+  }
   &:after {
     content: '';
     display: block;
@@ -44,6 +48,14 @@
 
 .filterCategory {
   background: #000 url(../../images/ecommerce/filter.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  &:after {
+    opacity: 0.7;
+  }
+}
+
+.espressoCategory {
+  background: #000 url(../../images/ecommerce/espresso.jpg) 50% 50% no-repeat;
   background-size: cover;
   &:after {
     opacity: 0.7;
@@ -82,7 +94,7 @@
 .caption {
   padding: 40px 0;
   @include respond-to(0, 1400px) {
-    padding: 20px 0 40px;
+    padding: 20px 0;
   }
 }
 
