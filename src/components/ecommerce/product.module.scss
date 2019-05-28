@@ -1,13 +1,84 @@
+.category {
+  padding: 80px 40px;
+}
+
+.categoryBody {
+  background: #000;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 40px;
+  border-radius: 5px;
+  height: 100%;
+}
+
 .item {
   text-align: center;
   padding: 40px;
+  background: #fcfcfc;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  &:hover {
+    background: #fff;
+    .image {
+      transform: scale(1.1);
+    }
+    .actions {
+      transform: translateY(-40px);
+    }
+  }
 }
 
 .image {
   width: 100%;
-  max-width: 400px
+  transform: scale(1);
+  transition: transform 0.2s ease;
 }
 
 .caption {
-  padding: 40px;
+  padding: 40px 0;
+}
+
+.name {
+  font-size: 25px;
+}
+
+.price {
+  font-weight: normal;
+  letter-spacing: 0.05em;
+  color: rgba(80,80,80,0.8);
+}
+
+.actions {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 40px;
+  right: 40px;
+  transform: translateY(100%);
+  transition: 0.2s ease transform;
+}
+
+.action {
+  border: 2px solid currentColor;
+  flex: 0 1 34%;
+  color: currentColor;
+  padding: 10px 0;
+  cursor: pointer;
+  border-radius: 0 2px 2px 0;
+  font-weight: bold;
+  font-family: 'Work Sans', WorkSans, WorkSans-Regular, sans-serif;
+}
+
+.primaryAction {
+  composes: action;
+  flex: 0 1 66%;
+  background: currentColor;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 2px 0 0 2px;
 }

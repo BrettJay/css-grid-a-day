@@ -2,11 +2,49 @@
   display: grid;
   min-height: 100vh;
   background: #FCFCFC;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 40px 1fr;
+  grid-template-columns: 60px 1fr;
+  grid-template-rows: 80vh 1fr;
   grid-template-areas:
-    "h h h h"
-    "m m m m";
+    "n b"
+    "n m";
+  h1, h2, h3 {
+    font-family: LeagueSpartan, 'League Spartan', sans-serif;
+  }
+  h4, h5, h6, p {
+    font-family: 'Work Sans', WorkSans, WorkSans-Regular, sans-serif;
+  }
+}
+
+.sidebar {
+  grid-area: n;
+  background: #37404A;
+  position: relative;
+}
+
+.logo {
+  background: #252C38 url(../../images/ecommerce/logo.svg) 50% 50% no-repeat;
+  background-size: 25px;
+  width: 60px;
+  height: 60px;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.billboard {
+  grid-area: b;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr 2fr 1fr;
+  grid-template-rows:  2fr 3fr 1fr 2fr 1fr;
+  h1 {
+    font-size: 72px;
+    text-transform: uppercase;
+  }
+}
+
+.Bcaption {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
 }
 
 .header {
