@@ -8,8 +8,12 @@
   flex-direction: column;
   justify-content: space-between;
   background: #fcfcfc;
+  transition: background 0.2s ease;
   &:hover {
     background: #fff;
+    .address {
+      opacity: 1;
+    }
   }
 }
 
@@ -18,6 +22,8 @@
   padding: 0 0 0 35px;
   margin: 20px 0 0;
   background: url(../../images/melb-places/pin.svg) 0 40% no-repeat;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
   p {
     @include fluid-scale(font-size, $responsive_min, $responsive_max, 13px, 14px);
     margin: 0;
@@ -33,6 +39,7 @@
 }
 
 .name {
+  @include fluid-scale(font-size, $responsive_min, $responsive_max, 15px, 21px);
   margin: 0.25em 0 0.6em;
 }
 
