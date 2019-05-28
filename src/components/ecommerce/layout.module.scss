@@ -16,12 +16,25 @@
   h4, h5, h6, p {
     font-family: 'Work Sans', WorkSans, WorkSans-Regular, sans-serif;
   }
+  @include respond-to(mobile-down) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px auto 1fr;
+    grid-template-areas:
+      "n"
+      "b"
+      "m";
+  }
 }
 
 .sidebar {
   grid-area: n;
   background: #37404A;
   position: relative;
+  @include respond-to(mobile-down) {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
 }
 
 .logo {
