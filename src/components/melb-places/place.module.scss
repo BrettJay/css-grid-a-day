@@ -1,4 +1,43 @@
+@import "../../styles/_tools.fluid_scale.sass";
+
 .container {
-  padding: 10px;
-  background: #eee;
+  color: inherit;
+  padding: 30px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fcfcfc;
+  &:hover {
+    background: #fff;
+  }
+}
+
+.address {
+  font-style: normal;
+  padding: 0 0 0 35px;
+  margin: 20px 0 0;
+  background: url(../../images/melb-places/pin.svg) 0 40% no-repeat;
+  p {
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 13px, 14px);
+    margin: 0;
+    line-height: 1.4;
+  }
+}
+
+.category {
+  margin: 0;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #808080;
+}
+
+.name {
+  margin: 0.25em 0 0.6em;
+}
+
+.summary {
+  margin: 0.6em 0;
+  line-height: 1.6;
+  @include fluid-scale(font-size, $responsive_min, $responsive_max, 14px, 15px);
 }

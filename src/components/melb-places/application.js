@@ -11,7 +11,16 @@ class MelbApplication extends React.Component {
         </div>
         <div className={App.main}>
           <Place
-            name="Smith and Daughter"
+            name="Maha"
+            category="restaurant"
+            summary="A high-end Middle Eastern restaurant with amazing bread, and 2, 4 and 6 course degustation options."
+            link="https://goo.gl/maps/kYftsnBAw9DLLdfR9"
+            address="21 Bond St"
+            suburb="Melbourne"
+            postcode="3000"
+            />
+          <Place
+            name="Smith and Daughters"
             category="brunch"
             summary="A good vegan brunch option, and who can say no to cocktails at brunch? (Unless you just happen to be supremely hungover)."
             link="https://goo.gl/maps/kYftsnBAw9DLLdfR9"
@@ -19,6 +28,7 @@ class MelbApplication extends React.Component {
             suburb="Fitzroy"
             postcode="3065"
             />
+          
         </div>
       </div>
     )
