@@ -23,13 +23,11 @@
       box-shadow: 0 1px 4px 0 rgba(144,194,215,0.65);
       position: sticky;
       top: 0;
-      z-index: 10;
     }
     .navigation {
       box-shadow: 0 0px 4px 0 rgba(144,194,215,0.65);
       position: sticky;
-      bottom: 0;
-      z-index: 10;
+      bottom: 0; 
     }
   }
 }
@@ -43,6 +41,7 @@
 .header {
   background: #fff url(../../images/responsive-menu/logo.svg) 50% 50% no-repeat;
   grid-area: header;
+  z-index: 100000;
 }
 
 .navigation {
@@ -51,6 +50,7 @@
   grid-area: navigation;
   color: #000;
   grid-template-columns: repeat(5, 1fr);
+  z-index: 100000;
   a {
     color: inherit;
     text-decoration: none;
