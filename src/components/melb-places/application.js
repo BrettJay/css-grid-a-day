@@ -11,9 +11,14 @@ class MelbApplication extends React.Component {
         </div>
         <div className={App.main}>
           <Place
-            name="Smiths and Daughter"
+            name="Smith and Daughter"
             category="brunch"
-            summary="A good vegan brunch option, and who can say no to cocktails at brunch? (Unless you just happen to be supremely hungover)."/>
+            summary="A good vegan brunch option, and who can say no to cocktails at brunch? (Unless you just happen to be supremely hungover)."
+            link="https://goo.gl/maps/kYftsnBAw9DLLdfR9"
+            address="175 Brunswick St"
+            suburb="Fitzroy"
+            postcode="3065"
+            />
         </div>
       </div>
     )

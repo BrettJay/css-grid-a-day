@@ -1,13 +1,10 @@
 import React from "react"
 import Place from "./place.module.scss"
 
-class MapPlace extends React.Component {
-  setPlace = (lat, lng) => {
-    this.props.mapPlace(lat, lng)
-  }
+class MelbPlace extends React.Component {
 
   render() {
-    const { name, category, lat, lng } = this.props
+    const { name, category, summary, link, address, suburb, postcode } = this.props
     return (
       <div className={Place.container}>
         <p className={Place.category}>{category}</p>
@@ -17,4 +14,4 @@ class MapPlace extends React.Component {
   }
 }
 
-export default MapPlace
+export default MelbPlace
