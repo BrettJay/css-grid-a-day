@@ -22,7 +22,7 @@ class Ecommerce extends React.Component {
         </div>
         <div id="cawfee" className={LayoutStyles.products}>
           <div className={ProductStyles.category}>
-            <div className={ProductStyles.categoryBody}>
+            <div className={`${ProductStyles.categoryBody} ${ProductStyles.filterCategory}`}>
               <img src={FilterIcon} alt="Filter Roast"/>
               <h3>Filter Roast</h3>
               <p>For pourover, aeropress, and chemex. Best served black.</p>

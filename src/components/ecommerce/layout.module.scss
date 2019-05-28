@@ -58,4 +58,10 @@
   grid-area: m;
   grid-template-columns: repeat(4, 1fr);
   display: grid;
+  @include respond-to(801px, 1400px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include respond-to(0, 800px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
