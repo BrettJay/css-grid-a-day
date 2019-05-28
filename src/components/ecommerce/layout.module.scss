@@ -1,3 +1,6 @@
+@import "../../styles/_tools.fluid_scale.sass";
+@import "../../styles/_tools.respond_to.sass";
+
 .container {
   display: grid;
   min-height: 100vh;
@@ -37,7 +40,7 @@
   grid-template-columns: 1fr 4fr 1fr 2fr 1fr;
   grid-template-rows:  2fr 3fr 1fr 2fr 1fr;
   h1 {
-    font-size: 72px;
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 21px, 72px);
     text-transform: uppercase;
   }
 }

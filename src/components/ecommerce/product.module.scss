@@ -1,3 +1,6 @@
+@import "../../styles/_tools.fluid_scale.sass";
+@import "../../styles/_tools.respond_to.sass";
+
 .category {
   padding: 40px;
 }
@@ -11,7 +14,7 @@
   text-align: center;
   color: #fff;
   padding: 40px;
-  border-radius: 5px;
+  border-radius: 10px;
   height: 100%;
 }
 
@@ -44,7 +47,7 @@
 }
 
 .name {
-  font-size: 25px;
+  @include fluid-scale(font-size, $responsive_min, $responsive_max, 16px, 25px);
 }
 
 .price {

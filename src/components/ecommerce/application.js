@@ -2,6 +2,9 @@ import React from "react"
 import LayoutStyles from "./layout.module.scss"
 import ProductStyles from "./product.module.scss"
 import Product from "./product"
+
+import FilterIcon from "../../images/ecommerce/filter.svg"
+import EspressoIcon from "../../images/ecommerce/espresso.svg"
 class Ecommerce extends React.Component {
   render() {
     return (
@@ -20,6 +23,7 @@ class Ecommerce extends React.Component {
         <div id="cawfee" className={LayoutStyles.products}>
           <div className={ProductStyles.category}>
             <div className={ProductStyles.categoryBody}>
+              <img src={FilterIcon} alt="Filter Roast"/>
               <h3>Filter Roast</h3>
               <p>For pourover, aeropress, and chemex. Best served black.</p>
             </div>
@@ -74,6 +78,7 @@ class Ecommerce extends React.Component {
             price={1600}/>
           <div className={ProductStyles.category}>
             <div className={ProductStyles.categoryBody}>
+              <img src={EspressoIcon} alt="Espresso Roast"/>
               <h3>Espresso Roast</h3>
               <p>For coffees brewed with an espresso machine. Served black, or with milk.</p>
             </div>
