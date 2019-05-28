@@ -1,0 +1,25 @@
+.layout {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 60px 1fr;
+  background: #fcfcfc;
+  grid-template-areas:
+    "header header"
+    "main map";
+}
+
+.header {
+  grid-area: header;
+  background: #fefefe;
+}
+
+.main {
+  grid-area: main;
+  background: #ffffff;
+}
+
+.map {
+  grid-area: map;
+  background: grey;
+}
