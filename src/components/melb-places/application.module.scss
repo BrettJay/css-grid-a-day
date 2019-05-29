@@ -24,10 +24,14 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
+  grid-gap: 20px;
+  padding: 20px;
   @include respond-to(ipad-down) {
     grid-template-columns: repeat(3, 1fr);
   }
   @include respond-to(small-down) {
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    padding: 5px;
   }
 }

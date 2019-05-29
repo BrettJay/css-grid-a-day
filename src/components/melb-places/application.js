@@ -30,7 +30,7 @@ class MelbApplication extends React.Component {
             />
           <Place
             name="Rockwell and Sons"
-            category="burgers"
+            category="restaurant"
             summary="Great—if small—smashed pattie brugers, but not the fondest of the extra crispy bacon they used."
             link="TMQ8CBoySge1vcUa6"
             address="288 Smith St"
@@ -76,7 +76,7 @@ class MelbApplication extends React.Component {
           <Place
             name="Lee Ho Fook"
             category="bar"
-            summary="An asian bar and restaurant With some excellent savoury pancakes.."
+            summary="An asian bar and restaurant, with some excellent savoury pancakes."
             link="MYzrUqgGkewmN6Sf7"
             address="11-15 Duckboard Pl"
             suburb="Melbourne"
@@ -94,7 +94,7 @@ class MelbApplication extends React.Component {
           <Place
             name="The Everleigh"
             category="bar"
-            summary="A fancy cocktail bar in Fitzoy with many  great spirits and wines."
+            summary="A fancy cocktail bar in Fitzoy with some great whiskies."
             link="6aa7Jq7Cw48HSPqu5"
             address="150-156 Gertrude St"
             suburb="Fitzroy"
