@@ -6,7 +6,7 @@ class MelbPlace extends React.Component {
   render() {
     const { name, category, summary, link, address, suburb, postcode } = this.props
     return (
-      <a className={Place.container} href={link}>
+      <a className={Place.container} href={`https://goo.gl/maps/${link}`}>
         <div>
           <p className={Place.category}>{category}</p>
           <h2 className={Place.name}>{name}</h2>

@@ -2,12 +2,12 @@
 
 .container {
   color: inherit;
-  padding: 30px;
+  padding: 40px;
   text-decoration: none;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: #fcfcfc;
+  background: #f7f7f7;
   transition: background 0.2s ease;
   &:hover {
     background: #fff;
@@ -33,9 +33,12 @@
 
 .category {
   margin: 0;
-  font-size: 13px;
-  text-transform: uppercase;
+  @include fluid-scale(font-size, $responsive_min, $responsive_max, 15px, 18px);
+  letter-spacing: 0.03em;
+  text-transform: lowercase;
   color: #808080;
+  font-variant: small-caps;
+  padding: 5px 0 5px;
 }
 
 .name {
