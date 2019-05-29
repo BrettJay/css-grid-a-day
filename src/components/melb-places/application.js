@@ -7,7 +7,7 @@ class MelbApplication extends React.Component {
     return (
       <div className={App.layout}>
         <div className={App.header}>
-          Melbourne Places
+          Wall of Melbourne Places
         </div>
         <div className={App.main}>
           <Place
@@ -49,7 +49,7 @@ class MelbApplication extends React.Component {
           <Place
             name="Slowbeer"
             category="beer"
-            summary="Great—if small—smashed pattie brugers, but not the fondest of the extra crispy bacon they used."
+            summary="A chill beer venue in Fitzroy. Affordable, with interesting beers on tap, and a pool table upstairs."
             link="yaT5JNn4aMrEhDjM8"
             address="351 Smith St"
             suburb="Fitzroy"
@@ -58,7 +58,7 @@ class MelbApplication extends React.Component {
           <Place
             name="Builders Arms Hotel"
             category="beer"
-            summary="Great—if small—smashed pattie brugers, but not the fondest of the extra crispy bacon they used."
+            summary="A convenient Fitzroy pub with casual bar fare and a dedicated dining area."
             link="Jf46eUi9NnRgHmfp9"
             address="211 Gertrude St"
             suburb="Fitzroy"
@@ -77,7 +77,7 @@ class MelbApplication extends React.Component {
             name="Lee Ho Fook"
             category="bar"
             summary="An asian bar and restaurant With some excellent savoury pancakes.."
-            link="gaYF6k2GxpPExjqNA"
+            link="MYzrUqgGkewmN6Sf7"
             address="11-15 Duckboard Pl"
             suburb="Melbourne"
             postcode="3000"
@@ -94,11 +94,29 @@ class MelbApplication extends React.Component {
           <Place
             name="The Everleigh"
             category="bar"
-            summary="A fanncy cocktail bar in Fitzoy"
-            link="wNpLoaDo49n5BAXK7"
+            summary="A fancy cocktail bar in Fitzoy with many  great spirits and wines."
+            link="6aa7Jq7Cw48HSPqu5"
             address="150-156 Gertrude St"
             suburb="Fitzroy"
             postcode="3065"
+            />
+          <Place
+            name="Heartbreaker"
+            category="bar"
+            summary="A dive bar with a pool table, decent beer, rock music, and pizza by the slice. What more could you want?"
+            link="fd1qJ7PLAtheDDti8"
+            address="234A Russell St"
+            suburb="Melbourne"
+            postcode="3000"
+            />
+          <Place
+            name="Magic Mountain Saloon"
+            category="restaurant"
+            summary="A thai restaurant and bar offering up some modern, innovative dishes. Vegan friendly."
+            link="8YBMXjJD6RPuJiGH8"
+            address="62 Little Collins St"
+            suburb="Melbourne"
+            postcode="3000"
             />
         </div>
       </div>

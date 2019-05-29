@@ -1,4 +1,5 @@
 @import "../../styles/_tools.fluid_scale.sass";
+@import "../../styles/_tools.respond_to.sass";
 
 .container {
   color: inherit;
@@ -14,6 +15,9 @@
     .address {
       opacity: 1;
     }
+  }
+  @include respond-to(small-down) {
+    padding: 20px;
   }
 }
 
