@@ -1,0 +1,37 @@
+@import "../../styles/_tools.respond_to.sass";
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+  grid-template-rows: 60px 1fr;
+  background: #f7f7f7;
+  grid-template-areas:
+    "header"
+    "main";
+}
+
+.header {
+  grid-area: header;
+  align-self: center;
+  font-weight: bold;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  padding: 20px;
+  @include respond-to(ipad-down) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include respond-to(small-down) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    padding: 5px;
+  }
+}
