@@ -23,13 +23,14 @@
 
 .address {
   font-style: normal;
-  padding: 0 0 0 35px;
+  padding: 0 0 0 20px;
   margin: 20px 0 0;
   background: url(../../images/melb-places/pin.svg) 0 40% no-repeat;
+  background-size: 12px;
   opacity: 0.8;
   transition: opacity 0.2s ease;
   p {
-    @include fluid-scale(font-size, $responsive_min, $responsive_max, 13px, 14px);
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 11px, 13px);
     margin: 0;
     line-height: 1.4;
   }
