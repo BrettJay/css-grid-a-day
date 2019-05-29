@@ -112,7 +112,7 @@ class MelbApplication extends React.Component {
           <Place
             name="Magic Mountain Saloon"
             category="restaurant"
-            summary="A thai restaurant and bar offering up some modern, innovative dishes. Vegan friendly."
+            summary="A thai restaurant and bar offering up some modern, innovative dishes. Vegan friendly too!"
             link="8YBMXjJD6RPuJiGH8"
             address="62 Little Collins St"
             suburb="Melbourne"
