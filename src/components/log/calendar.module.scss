@@ -1,0 +1,48 @@
+.container {
+  grid-area: calendar;
+  border-right: 1px solid rgba(207,219,225,0.30);
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 40px repeat(5, 70px);
+}
+
+.heading {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 13px;
+  color: #496370;
+  font-weight: bold;
+}
+
+.base {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 14px;
+}
+
+.placeholder {
+  composes: base;
+  color: #708691;
+  opacity: 0.5;
+}
+
+.day {
+  composes: base;
+  cursor: pointer;
+  color: #496370;
+  transition: color 0.2s ease, background 0.2s ease;
+  &:hover {
+    color: #324854;
+    background: #F7F9FA;
+  }
+}
+
+.active {
+  background: #F7F9FA;
+}
