@@ -12,9 +12,12 @@ Things were off to a bit of a slow start, as I left my computer mouse and a few 
 
 I continued work on video production and a few other tasks.
 
-Went to Hardware Société for their excellent Baked Eggs Deux with potato and chorizo sausage.
+We went to [Hardware Société][h] for their excellent Baked Eggs Deux with potato and chorizo sausage.
 
-I picked up some gifts in the evening from Miniso, and tonight I’ll probably be spending packing! 😅
+I picked up some gifts in the evening from [Miniso][m], and tonight I’ll probably be spending packing! 😅
+
+[h]: https://hardwaresociete.com/
+[m]: https://www.miniso-au.com/en-au/store
 `,
   locations:
   [

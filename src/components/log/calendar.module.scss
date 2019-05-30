@@ -1,0 +1,27 @@
+.container {
+  grid-area: calendar;
+  box-shadow: inset -1px 0 0 rgba(207,219,225,0.30);
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 70px);
+}
+
+.day {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #496370;
+  background: #fff;
+  transition: color 0.2s ease, background 0.2s ease;
+  &:hover {
+    color: #324854;
+    background: #F7F9FA;
+  }
+}
+
+.active {
+  background: #F7F9FA;
+}
