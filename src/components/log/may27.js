@@ -8,6 +8,8 @@ const May27 = {
 `
 This morning I woke up early to get a head-start on CSS Grid and some video work.
 
+The early morning hours evaporated, and before I knew it, it was time to head to work.
+
 Work went by in a flurry, I grabbed a nearby lunch at Brown Bagel.
 
 After work, we hit up a nearby pub called Saving Grace, where we tried some burgers from [Burger Boys][b]—they were pretty tasty!
