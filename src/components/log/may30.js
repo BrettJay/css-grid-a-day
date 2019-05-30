@@ -39,12 +39,6 @@ I picked up some gifts in the evening from [Miniso][m], and tonight I’ll proba
     conditions: 'rain',
     min: '11°',
     max: '13°',
-  },
-  music:
-  {
-    title: 'Wish You Were Here',
-    artist: 'Pink Floyd',
-    album: 'Wish You Were Here'
   }
 }
 

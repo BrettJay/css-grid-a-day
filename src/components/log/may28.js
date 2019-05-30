@@ -6,9 +6,11 @@ const May28 = {
   img: false,
   entry:
 `
-After work, we headed to Lee Hoo Fook for a beer and some of their savoury pancakes.
+We visited Maha for lunch today and had a 2-course meal. I chose a Vegan option and was very impressed with the food.
 
-A few beers later, we made a Chin Chin attempt, but the wait was too long, so instead, we made our way to Heartbreaker, and had beer and pizza for dinner.
+After work, we headed to Heartbreaker for a couple of beers. Somebody chose to play “Have a Cigar” by Pink Floyd on the Jukebox.
+
+Afterwards, I went home, and spent the next few hours feverishly working on the eCommerce CSS grid entry.
 
 `,
   locations:
@@ -18,34 +20,20 @@ A few beers later, we made a Chin Chin attempt, but the wait was too long, so in
       label: 'Melbourne Pin Office'
     },
     {
-      type: 'cafe',
-      label: 'Brown Bagel'
+      type: 'restaurant',
+      label: 'Maha'
     },
     {
       type: 'bar',
-      label: 'Lee Hoo Fook'
-    },
-    {
-      type: 'bar',
-      label: 'Hearbreaker'
-    },
-    {
-      type: 'shop',
-      label: 'Miniso'
+      label: 'Heartbreaker'
     },
   ],
   weather:
   {
-    conditions: 'rain',
-    min: '11°',
-    max: '13°',
+    conditions: 'cloudy',
+    min: '10°',
+    max: '14°',
   },
-  music:
-  {
-    title: 'Wish You Were Here',
-    artist: 'Pink Floyd',
-    album: 'Wish You Were Here'
-  }
 }
 
 export default May28

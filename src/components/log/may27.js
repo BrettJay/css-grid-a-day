@@ -6,11 +6,13 @@ const May27 = {
   img: false,
   entry:
 `
-Today was another busy day at the office.
+This morning I woke up early to get a head-start on CSS Grid and some video work.
 
-After work, we headed to Lee Hoo Fook for a beer and some of their savoury pancakes.
+Work went by in a flurry, I grabbed a nearby lunch at Brown Bagel.
 
-A few beers later, we made a Chin Chin attempt, but the wait was too long, so instead, we made our way to Heartbreaker, and had beer and pizza for dinner.
+After work, we hit up a nearby pub called Saving Grace, where we tried some burgers from [Burger Boys][b]—they were pretty tasty!
+
+[b]: http://burgerboys.com.au
 
 `,
   locations:
@@ -25,29 +27,15 @@ A few beers later, we made a Chin Chin attempt, but the wait was too long, so in
     },
     {
       type: 'bar',
-      label: 'Lee Hoo Fook'
-    },
-    {
-      type: 'bar',
-      label: 'Hearbreaker'
-    },
-    {
-      type: 'shop',
-      label: 'Miniso'
+      label: 'Saving Grace'
     },
   ],
   weather:
   {
     conditions: 'rain',
-    min: '11°',
-    max: '13°',
+    min: '6°',
+    max: '9°',
   },
-  music:
-  {
-    title: 'Wish You Were Here',
-    artist: 'Pink Floyd',
-    album: 'Wish You Were Here'
-  }
 }
 
 export default May27

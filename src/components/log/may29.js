@@ -32,7 +32,7 @@ We played a game of pool, and I set off to finish my CSS grid for the day.
     },
     {
       type: 'bar',
-      label: 'Hearbreaker'
+      label: 'Heartbreaker'
     },
     {
       type: 'shop',
@@ -44,12 +44,6 @@ We played a game of pool, and I set off to finish my CSS grid for the day.
     conditions: 'rain',
     min: '11°',
     max: '13°',
-  },
-  music:
-  {
-    title: 'Wish You Were Here',
-    artist: 'Pink Floyd',
-    album: 'Wish You Were Here'
   }
 }
 
