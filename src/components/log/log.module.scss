@@ -1,0 +1,115 @@
+@import "../../styles/_tools.fluid_scale.sass";
+
+.container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr 1.1fr;
+  grid-template-rows: 70px 350px 1fr;
+  grid-template-areas:
+    "navHead entryHead"
+    "navBody entryImage"
+    "navBody entryBody";
+}
+
+.navHead {
+  grid-area: navHead;
+}
+
+.entryHead {
+  display: flex;
+  padding: 15px;
+  align-items: center;
+  h1 {
+    font-size: 13px;
+    color: #2F5C73;
+    font-weight: bold;
+  }
+}
+
+.entryCal {
+  background: url(../../images/log/cal.svg) 50% 50% no-repeat;
+  width: 40px;
+  height: 40px;
+  padding: 4px 0;
+  display: flex;
+  margin: 0 8px 0 0;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.entryCalMonth {
+  font-size: 8px;
+  color: #73AAC5;
+}
+.entryCalDate {
+  font-size: 13px;
+  color: #2F5C73;
+  font-weight: bold;
+}
+
+.entryImage {
+  grid-area: entryImage;
+  background: #F7F9FA;
+  position: relative;
+  border: 1px solid rgba(207,219,225,0.20);
+  &:after {
+    content: 'Add a cover photo';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: 0;
+    font-size: 25px;
+    color: #7B97A5;
+    text-align: center;
+  }
+}
+
+.entryHead {
+  grid-area: entryHead;
+}
+
+.navBody {
+  grid-area: navBody;
+}
+
+.entryText {
+  padding: 20px 0;
+}
+
+.entryBody {
+  grid-area: entryBody;
+  padding: 20px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: inset 1px 0 0 rgba(207,219,225,0.30);
+  p {
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 13px, 19px);
+    color: #324854;
+  }
+}
+
+.entryMeta {
+  padding: 20px 0;
+  dl {
+    margin: 0; 
+    padding: 10px 0;
+    font-size: 13px;
+    line-height: 1.538461538;
+    box-shadow: inset 0 1px 0 0 rgba(207,219,225,0.30);
+  }
+  dt {
+    float: left;
+    color: #51595D;
+    font-weight: bold;
+  }
+  dd {
+    margin-left: 100px;
+    color: #7C8990;
+    div {
+      padding-left: 20px;
+    }
+  }
+}
