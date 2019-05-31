@@ -6,7 +6,8 @@
   background: $dark__background;
   color: $dark__primary;
   padding: 0;
-
+  position: relative;
+  z-index: 100;
   h3 {
     @include fluid-scale(font-size, $responsive_min, $responsive_max, 17px, 31px);
     line-height: 1.3;

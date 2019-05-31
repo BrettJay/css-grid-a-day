@@ -34,6 +34,12 @@
   }
 }
 
+.complete {
+  color: #14b749;
+  padding-left: 8 px;
+  background: url(../../images/tick.svg) 0 50% no-repeat;
+}
+
 .intro {
   @include pa3();
   background: $dark__background;

@@ -1,0 +1,118 @@
+import Footer from "../components/footer"
+import Metatags from "../components/metatags"
+import Layout from "../components/thanks/layout.module.scss"
+
+<Metatags
+  title="👋 Farewell! | May 31 | CSS Grid a day"
+  description="An example of using CSS grid every day, from May 1–31st, 2019."
+  thumbnail="https://cssgrid31.brett.cool/opengraph/may-31.png"
+  url="https://cssgrid31.brett.cool/"
+  pathname="/may-31"
+/>
+
+<div className={Layout.canvas}>
+  <div className={`${Layout.row} ${Layout.rowMb}`}>
+    <div className={Layout.wrapper}>
+      <div className={`${Layout.intro} ${Layout.grid}`}>
+        <div className={Layout.intro_caption}>
+          <div className={Layout.wave}>👋</div>
+          <h1>Farewell!</h1>
+          <p>This month has been a wild ride! From cramming to finish entries mere seconds before midnight, to hunched over on two different flights coding, not to mention pulling out my laptop to code in a Melbourne bar on a few occasions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div className={`${Layout.row} ${Layout.rowMb}`}>
+    <div className={Layout.wrapper}>
+      <div className={Layout.grid}>
+        <div className={Layout.caption}>
+          <h2>🛠 Tools &amp; tech</h2>
+        </div>
+        <a href="https://gatsbyjs.org" className={Layout.item}> 
+          <h3>Gatsby.js</h3>
+          <p>Gatsby JS is such a terrific framework, which among other things, generates static sites.</p>
+          <p>I feel a large part of my successful ability at keeping pace with deploying each day was Gatsby’s wonderful developer experience</p>
+        </a>
+        <a href="https://mdxjs.com/" className={Layout.item}> 
+          <h3>MDX</h3>
+          <p>Javascript and Markdown—together at last! MDX is a fascinating project which allows you to include Javascript components within Markdown files.</p>
+          <p>It works quite well, but there are occasional problems where it tries to parse code as Markdown if you include too much whitepace.</p>
+        </a>
+        <a href="https://github.com/css-modules/css-modules" className={Layout.item}> 
+          <h3>CSS Modules</h3>
+          <p>I’ve probably ended up repeating myself a lot in the last 31 days by mostly opting out of the global scope CSS cascade.</p>
+          <p>Nevertheless, I love how CSS Modules lets me write and compose CSS classes. Writing CSS without fear of poluting other entries was nice!</p>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div className={`${Layout.row} ${Layout.rowMb}`}>
+    <div className={Layout.wrapper}>
+      <div className={`${Layout.intro} ${Layout.grid}`}>
+        <div className={Layout.intro_caption}>
+          <p>This project was exhausting, but very rewarding! I kept expecting to miss a day, so</p>
+          <p>Thank you to everyone who provided feedback and encouragement, it was very motivating!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div className={`${Layout.row} ${Layout.rowMb}`}>
+    <div className={Layout.wrapper}>
+      <div className={Layout.grid}>
+        <div className={Layout.caption}>
+          <h2>📚 Resources</h2>
+        </div>
+        <a href="https://cssgrid.io" className={Layout.item}> 
+          <h3>CSS Grid by Wes Bos</h3>
+          <p>This tutorial video series by Wes Bos was the resource that first introduced me to the power of CSS Grid. And thanks to Mozilla for sponsoring!</p>
+        </a>
+        <a href="https://stuffandnonsense.co.uk/artdirectionfortheweb/" className={Layout.item}> 
+          <h3>Art Direction for the Web</h3>
+          <p>Andy Clarke’s Art Direction for the web is an inspiring read, and a reminder that not all websites have to look like cookie-cutter 12 column layouts.</p>
+        </a>
+        <a href="https://csstricks.com" className={Layout.item}> 
+          <h3>CSS Tricks</h3>
+          <p>CSS Grid’s excellent “Guide to Grid” was open almost the entire time I was developing these entries, invaluable!</p>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div className={`${Layout.row} ${Layout.rowMb}`}>
+    <div className={Layout.wrapper}>
+      <div className={`${Layout.intro} ${Layout.grid}`}>
+        <div className={Layout.intro_caption}>
+          <p>Thanks to Justin, Jacob, Grant, and Maya, for exercising patience while I occasionally hacked away in the middle of bars.</p>
+          <p>Thanks to Corey, Jess, and Kylie for the encouragement.</p>
+          <p>And extra special thanks to Alyssa for her endless support!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div className={Layout.background}>
+  <div className={Layout.ticka}/>
+  <div className={Layout.tickb}/>
+  <div className={Layout.tickc}/>
+  <div className={Layout.tickd}/>
+  <div className={Layout.ticke}/>
+  <div className={Layout.tickf}/>
+  <div className={Layout.tickg}/>
+  <div className={Layout.tickh}/>
+  <div className={Layout.ticki}/>
+  <div className={Layout.tickj}/>
+  <div className={Layout.tickk}/>
+  <div className={Layout.tickl}/>
+</div>
+
+<Footer date={31} prev={true}>
+
+The final CSS Grid entry!
+
+Thanks for being here with me for the ride. It’s been a real journey!
+
+And now I’m off to sleep. For a few days.
+
+Cheers!
+
+</Footer>

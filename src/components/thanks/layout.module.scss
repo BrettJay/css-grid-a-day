@@ -1,0 +1,218 @@
+@import "../../styles/_tools.respond_to.sass";
+@import "../../styles/_tools.fluid_scale.sass";
+
+.canvas {
+  min-height: 100vh;
+  background: #182e49;
+  color: #d7e3f1;
+  padding-top: 30vh;
+  overflow: hidden;
+  h1, h2, h3, p {
+    margin: 0;
+  }
+  h2 {
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 15px, 24px);
+    line-height: 20px;
+  }
+  h3 {
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 14px, 19px);
+    line-height: 20px;
+  }
+  .wave {
+    font-size: 32px;
+    position: absolute;
+    top: -32px;
+  }
+  p {
+    line-height: 1.44;
+    color: #8aa0bd;
+  }
+  p + p,
+  h1 + p,
+  h2 + p,
+  h3 + p {
+    margin-top: 1em;
+  }
+}
+
+.wrapper {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 25px 50px;
+  @include respond-to(small-down) {
+    grid-template-columns: [aside] 1fr [primary] 2fr;
+    .item {
+      grid-column: primary / span 1;
+    }
+    .item + .item {
+      padding-top: 25px;
+      &:before {
+        top: 0;
+        content: '';
+        display: block;
+        left: -100%;
+        right: -100%;
+        z-index: 1;
+        height: 26px;
+        position: absolute;
+        background: url(../../images/thanks/divider.svg) 0 0 repeat-x;
+      }
+    }
+  }
+}
+
+.item {
+  margin: -25px -25px 0;
+  padding: 25px;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  color: inherit;
+  p {
+    transition: color 0.2s ease;
+  }
+  &:after {
+    background-image: linear-gradient(180deg, #446F97 0%, #1E3E66 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: opacity 0.2s ease;
+    content: '';
+    opacity: 0;
+    display: block;
+    border-radius: 3px;
+    box-shadow:
+      0 1px 3px hsla(212, 62%, 12%, 0.878),
+      0 4px 10px hsla(212, 62%, 12%, 0.61);
+  }
+  
+  &:hover{
+    p {
+      color: rgba(255,255,255,0.7);
+    }
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+.row {
+  padding: 25px 0;
+  position: relative;
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    left: 0;
+    right: 0;
+    height: 26px;
+    position: absolute;
+  }
+  &:before {
+    top: 0;
+    background: url(../../images/thanks/divider.svg) 0 0 repeat-x;
+  }
+  &:after {
+    bottom: 0;
+    background: url(../../images/thanks/h_divider.svg) 0 0 repeat-x;
+  }
+}
+
+.rowMb {
+  margin-bottom: 12vh;
+  @include respond-to(small-down) {
+    margin-bottom: 6vh;
+  }
+  &:after {
+    background: url(../../images/thanks/divider.svg) 0 0 repeat-x;
+  }
+}
+
+.grid {
+  p {
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 13px, 14px);
+  }
+}
+
+
+.caption {
+  grid-column: 1 / span 1;
+  grid-row: 1 / -1;
+}
+
+
+.intro {
+  p {
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 13px, 19px);
+  }
+  .intro_caption {
+    grid-column: span 2;
+  }
+  @include respond-to(ipad-up) {
+    .intro_caption {
+      grid-column: 2 / span 2;
+    }
+  }
+}
+
+.background {
+  display: grid;
+  max-width: 1250px;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+  position: fixed;
+  grid-template-columns:
+    [a] 25px [b] 1fr [c] 25px
+    [d] 25px [e] 1fr [f] 25px
+    [g] 25px [h] 1fr [i] 25px
+    [j] 25px [k] 1fr [l] 25px;
+  @include respond-to(small-down) {
+    grid-template-columns:
+      [a] 25px [b] 1fr [c] 25px
+      [d] 25px [e] 2fr [f] 25px;
+  }
+}
+
+.tickv {
+  background: #2f4969;
+  width: 1px;
+  height: 100%;
+  opacity: 0.3;
+}
+
+.ticka { composes: tickv; grid-column: a; }
+.tickb { composes: tickv; grid-column: b; }
+.tickc { composes: tickv; grid-column: c; }
+.tickd { composes: tickv; grid-column: d; }
+.ticke { composes: tickv; grid-column: e; }
+.tickf { composes: tickv; grid-column: f; }
+.tickg { composes: tickv; grid-column: g; }
+.tickh { composes: tickv; grid-column: h; }
+.ticki { composes: tickv; grid-column: i; }
+.tickj { composes: tickv; grid-column: j; }
+.tickk { composes: tickv; grid-column: k; }
+.tickl { composes: tickv; grid-column: l; }
+
+@include respond-to(small-down) {
+  .tickg,
+  .tickh,
+  .ticki,
+  .tickj,
+  .tickk,
+  .tickl {
+    display: none;
+  }
+}
