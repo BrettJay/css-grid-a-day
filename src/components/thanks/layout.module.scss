@@ -1,0 +1,122 @@
+@import "../../styles/_tools.respond_to.sass";
+@import "../../styles/_tools.fluid_scale.sass";
+
+.canvas {
+  min-height: 100vh;
+  color: #1E3149;
+  h1, h2, h3, p {
+    margin-top: 0;
+  }
+  p {
+    line-height: 1.44;
+    color: #394b61;
+  }
+  p + p {
+    margin-top: 1em;
+  }
+}
+
+.wrapper {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 25px 50px;
+  @include respond-to(small-down) {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.row {
+  padding: 25px 0 0;
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    left: 0;
+    right: 0;
+    height: 26px;
+    position: absolute;
+    background: url(../../images/thanks/divider.svg) 0 0 repeat-x;
+  }
+  &:before {
+    top: 0;
+  }
+}
+
+.grid {
+  p {
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 13px, 16px);
+  }
+}
+
+.intro {
+  p {
+    @include fluid-scale(font-size, $responsive_min, $responsive_max, 13px, 19px);
+  }
+  @include respond-to(ipad-up) {
+    grid-template-rows: 200px;
+    p {
+      grid-column: span 2;
+    }
+  }
+}
+
+.background {
+  display: grid;
+  max-width: 1250px;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  bottom: 0;
+  z-index: 0;
+  position: fixed;
+  grid-template-columns:
+    [a] 25px [b] 1fr [c] 25px
+    [d] 25px [e] 1fr [f] 25px
+    [g] 25px [h] 1fr [i] 25px
+    [j] 25px [k] 1fr [l] 25px;
+  @include respond-to(small-down) {
+    grid-template-columns:
+      [a] 25px [b] 1fr [c] 25px
+      [d] 25px [e] 2fr [f] 25px;
+  }
+}
+
+.tickv {
+  background: #D8D8D8;
+  width: 1px;
+  height: 100%;
+  opacity: 0.3;
+}
+
+
+
+.ticka { composes: tickv; grid-column: a; }
+.tickb { composes: tickv; grid-column: b; }
+.tickc { composes: tickv; grid-column: c; }
+.tickd { composes: tickv; grid-column: d; }
+.ticke { composes: tickv; grid-column: e; }
+.tickf { composes: tickv; grid-column: f; }
+.tickg { composes: tickv; grid-column: g; }
+.tickh { composes: tickv; grid-column: h; }
+.ticki { composes: tickv; grid-column: i; }
+.tickj { composes: tickv; grid-column: j; }
+.tickk { composes: tickv; grid-column: k; }
+.tickl { composes: tickv; grid-column: l; }
+
+@include respond-to(small-down) {
+  .tickg,
+  .tickh,
+  .ticki,
+  .tickj,
+  .tickk,
+  .tickl {
+    display: none;
+  }
+}

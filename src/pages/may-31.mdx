@@ -1,5 +1,6 @@
 import Footer from "../components/footer"
 import Metatags from "../components/metatags"
+import Layout from "../components/thanks/layout.module.scss"
 
 <Metatags
   title="Thanks | May 31 | CSS Grid a day"
@@ -9,7 +10,45 @@ import Metatags from "../components/metatags"
   pathname="/may-31"
 />
 
-# Thanks
+<div className={Layout.canvas}>
+  <div className={Layout.row}>
+    <div className={Layout.wrapper}>
+      <div className={`${Layout.intro} ${Layout.grid}`}>
+        <h1> ❤️ Thanks!</h1>
+        <p>This month has been a wild ride! From cramming to finish entries minutes before midnight, to hunched over on two flights coding, not to mention pulling out my laptop to code in a Melbourne bar on a few occasions.</p>
+      </div>
+    </div>
+  </div>
+  <div className={Layout.row}>
+    <div className={Layout.wrapper}>
+      <div className={Layout.grid}>
+        <div className={Layout.caption}>
+          <h2>Built with</h2>
+        </div>
+        <div className={Layout.item}>
+          <h3>Gatsby.js</h3>
+          <p>Gatsby JS is such a terrific framework, which among other things, generates static sites.</p>
+          <p>I feel a large part of my successful ability at keeping pace with deploying each day was Gatsby’s wonderful developer experience</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div className={Layout.background}>
+  <div className={Layout.ticka}/>
+  <div className={Layout.tickb}/>
+  <div className={Layout.tickc}/>
+  <div className={Layout.tickd}/>
+  <div className={Layout.ticke}/>
+  <div className={Layout.tickf}/>
+  <div className={Layout.tickg}/>
+  <div className={Layout.tickh}/>
+  <div className={Layout.ticki}/>
+  <div className={Layout.tickj}/>
+  <div className={Layout.tickk}/>
+  <div className={Layout.tickl}/>
+</div>
 
 <Footer date={31} prev={true}>
 
